@@ -1,0 +1,1 @@
+HRESULT StiCreateInstanceW([In] HINSTANCE hinst, [In] uint dwVer, [ComOutPtr] [Out] IStillImageW* ppSti, [In] IUnknown punkOuter);

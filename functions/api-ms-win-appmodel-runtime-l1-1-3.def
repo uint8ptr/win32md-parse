@@ -1,0 +1,5 @@
+WIN32_ERROR GetPackagePathByFullName2([Const] [In] PWSTR packageFullName, [In] PackagePathType packagePathType, [In] [Out] uint* pathLength, [NativeArrayInfo(CountParamIndex = 2)] [Out] [Optional] PWSTR path);
+WIN32_ERROR GetStagedPackagePathByFullName2([Const] [In] PWSTR packageFullName, [In] PackagePathType packagePathType, [In] [Out] uint* pathLength, [NativeArrayInfo(CountParamIndex = 2)] [Out] [Optional] PWSTR path);
+WIN32_ERROR GetCurrentPackageInfo2([Const] [In] uint flags, [In] PackagePathType packagePathType, [In] [Out] uint* bufferLength, [MemorySize(BytesParamIndex = 2)] [Out] [Optional] byte* buffer, [Out] [Optional] uint* count);
+WIN32_ERROR GetCurrentPackagePath2([In] PackagePathType packagePathType, [In] [Out] uint* pathLength, [NativeArrayInfo(CountParamIndex = 1)] [Out] [Optional] PWSTR path);
+WIN32_ERROR GetPackageInfo2([In] _PACKAGE_INFO_REFERENCE* packageInfoReference, [Const] [In] uint flags, [In] PackagePathType packagePathType, [In] [Out] uint* bufferLength, [MemorySize(BytesParamIndex = 3)] [Out] [Optional] byte* buffer, [Out] [Optional] uint* count);

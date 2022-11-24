@@ -1,0 +1,2 @@
+HRESULT CheckGamingPrivilegeWithUI([In] uint privilegeId, [In] HSTRING scope, [In] HSTRING policy, [In] [Optional] HSTRING friendlyMessage, [In] GameUICompletionRoutine completionRoutine, [In] [Optional] void* context);
+HRESULT CheckGamingPrivilegeSilently([In] uint privilegeId, [In] HSTRING scope, [In] HSTRING policy, [Out] BOOL* hasPrivilege);

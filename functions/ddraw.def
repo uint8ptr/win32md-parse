@@ -1,0 +1,7 @@
+HRESULT DirectDrawEnumerateW([In] LPDDENUMCALLBACKW lpCallback, [In] [Out] void* lpContext);
+HRESULT DirectDrawEnumerateA([In] LPDDENUMCALLBACKA lpCallback, [In] [Out] void* lpContext);
+HRESULT DirectDrawEnumerateExW([In] LPDDENUMCALLBACKEXW lpCallback, [In] [Out] void* lpContext, [In] uint dwFlags);
+HRESULT DirectDrawEnumerateExA([In] LPDDENUMCALLBACKEXA lpCallback, [In] [Out] void* lpContext, [In] uint dwFlags);
+HRESULT DirectDrawCreate([In] [Out] Guid* lpGUID, [Out] IDirectDraw* lplpDD, [In] IUnknown pUnkOuter);
+HRESULT DirectDrawCreateEx([In] [Out] Guid* lpGuid, [In] [Out] void** lplpDD, [Const] [In] Guid* iid, [In] IUnknown pUnkOuter);
+HRESULT DirectDrawCreateClipper([In] uint dwFlags, [Out] IDirectDrawClipper* lplpDDClipper, [In] IUnknown pUnkOuter);

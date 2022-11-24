@@ -1,0 +1,1 @@
+HRESULT DWriteCreateFactory([In] DWRITE_FACTORY_TYPE factoryType, [Const] [In] Guid* iid, [ComOutPtr] [Out] void** factory);

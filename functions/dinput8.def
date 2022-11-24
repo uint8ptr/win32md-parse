@@ -1,0 +1,1 @@
+HRESULT DirectInput8Create([In] HINSTANCE hinst, [In] uint dwVersion, [Const] [In] Guid* riidltf, [In] [Out] void** ppvOut, [In] IUnknown punkOuter);

@@ -1,0 +1,2 @@
+uint AMGetErrorTextA([In] HRESULT hr, [NativeArrayInfo(CountParamIndex = 2)] [Out] PSTR pbuffer, [In] uint MaxLen);
+uint AMGetErrorTextW([In] HRESULT hr, [NativeArrayInfo(CountParamIndex = 2)] [Out] PWSTR pbuffer, [In] uint MaxLen);

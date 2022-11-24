@@ -1,0 +1,2 @@
+HRESULT MFCreateAVIMediaSink([In] IMFByteStream pIByteStream, [In] IMFMediaType pVideoMediaType, [In] [Optional] IMFMediaType pAudioMediaType, [Out] IMFMediaSink* ppIMediaSink);
+HRESULT MFCreateWAVEMediaSink([In] IMFByteStream pTargetByteStream, [In] IMFMediaType pAudioMediaType, [Out] IMFMediaSink* ppMediaSink);

@@ -1,0 +1,4 @@
+HRESULT WHvEmulatorCreateEmulator([Const] [In] WHV_EMULATOR_CALLBACKS* Callbacks, [Out] void** Emulator);
+HRESULT WHvEmulatorDestroyEmulator([In] void* Emulator);
+HRESULT WHvEmulatorTryIoEmulation([In] void* Emulator, [In] void* Context, [Const] [In] WHV_VP_EXIT_CONTEXT* VpContext, [Const] [In] WHV_X64_IO_PORT_ACCESS_CONTEXT* IoInstructionContext, [Out] WHV_EMULATOR_STATUS* EmulatorReturnStatus);
+HRESULT WHvEmulatorTryMmioEmulation([In] void* Emulator, [In] void* Context, [Const] [In] WHV_VP_EXIT_CONTEXT* VpContext, [Const] [In] WHV_MEMORY_ACCESS_CONTEXT* MmioInstructionContext, [Out] WHV_EMULATOR_STATUS* EmulatorReturnStatus);

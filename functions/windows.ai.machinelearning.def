@@ -1,0 +1,1 @@
+HRESULT MLCreateOperatorRegistry([ComOutPtr] [Out] IMLOperatorRegistry* registry);

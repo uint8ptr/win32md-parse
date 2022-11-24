@@ -1,0 +1,2 @@
+BOOL GetSystemTimeAdjustmentPrecise([Out] ulong* lpTimeAdjustment, [Out] ulong* lpTimeIncrement, [Out] BOOL* lpTimeAdjustmentDisabled);
+BOOL SetSystemTimeAdjustmentPrecise([In] ulong dwTimeAdjustment, [In] BOOL bTimeAdjustmentDisabled);

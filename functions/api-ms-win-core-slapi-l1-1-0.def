@@ -1,0 +1,1 @@
+HRESULT SLQueryLicenseValueFromApp([Const] [In] PWSTR valueName, [Out] [Optional] uint* valueType, [MemorySize(BytesParamIndex = 3)] [Out] [Optional] void* dataBuffer, [In] uint dataSize, [Out] uint* resultDataSize);

@@ -1,0 +1,11 @@
+IDirect3D9 Direct3DCreate9([In] uint SDKVersion);
+int D3DPERF_BeginEvent([In] uint col, [Const] [In] PWSTR wszName);
+int D3DPERF_EndEvent();
+void D3DPERF_SetMarker([In] uint col, [Const] [In] PWSTR wszName);
+void D3DPERF_SetRegion([In] uint col, [Const] [In] PWSTR wszName);
+BOOL D3DPERF_QueryRepeatFrame();
+void D3DPERF_SetOptions([In] uint dwOptions);
+uint D3DPERF_GetStatus();
+HRESULT Direct3DCreate9Ex([In] uint SDKVersion, [Out] IDirect3D9Ex* param1);
+HRESULT Direct3DCreate9On12Ex([In] uint SDKVersion, [In] [Out] D3D9ON12_ARGS* pOverrideList, [In] uint NumOverrideEntries, [Out] IDirect3D9Ex* ppOutputInterface);
+IDirect3D9 Direct3DCreate9On12([In] uint SDKVersion, [In] [Out] D3D9ON12_ARGS* pOverrideList, [In] uint NumOverrideEntries);

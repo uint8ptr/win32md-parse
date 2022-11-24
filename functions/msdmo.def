@@ -1,0 +1,11 @@
+HRESULT DMORegister([Const] [In] PWSTR szName, [Const] [In] Guid* clsidDMO, [Const] [In] Guid* guidCategory, [In] uint dwFlags, [In] uint cInTypes, [Const] [In] DMO_PARTIAL_MEDIATYPE* pInTypes, [In] uint cOutTypes, [Const] [In] DMO_PARTIAL_MEDIATYPE* pOutTypes);
+HRESULT DMOUnregister([Const] [In] Guid* clsidDMO, [Const] [In] Guid* guidCategory);
+HRESULT DMOEnum([Const] [In] Guid* guidCategory, [In] uint dwFlags, [In] uint cInTypes, [Const] [In] DMO_PARTIAL_MEDIATYPE* pInTypes, [In] uint cOutTypes, [Const] [In] DMO_PARTIAL_MEDIATYPE* pOutTypes, [Out] IEnumDMO* ppEnum);
+HRESULT DMOGetTypes([Const] [In] Guid* clsidDMO, [In] uint ulInputTypesRequested, [In] [Out] uint* pulInputTypesSupplied, [In] [Out] DMO_PARTIAL_MEDIATYPE* pInputTypes, [In] uint ulOutputTypesRequested, [In] [Out] uint* pulOutputTypesSupplied, [In] [Out] DMO_PARTIAL_MEDIATYPE* pOutputTypes);
+HRESULT DMOGetName([Const] [In] Guid* clsidDMO, [NativeArrayInfo(CountConst = 80)] [Out] PWSTR szName);
+HRESULT MoInitMediaType([In] [Out] DMO_MEDIA_TYPE* pmt, [In] uint cbFormat);
+HRESULT MoFreeMediaType([In] [Out] DMO_MEDIA_TYPE* pmt);
+HRESULT MoCopyMediaType([In] [Out] DMO_MEDIA_TYPE* pmtDest, [Const] [In] DMO_MEDIA_TYPE* pmtSrc);
+HRESULT MoCreateMediaType([In] [Out] DMO_MEDIA_TYPE** ppmt, [In] uint cbFormat);
+HRESULT MoDeleteMediaType([In] [Out] DMO_MEDIA_TYPE* pmt);
+HRESULT MoDuplicateMediaType([In] [Out] DMO_MEDIA_TYPE** ppmtDest, [Const] [In] DMO_MEDIA_TYPE* pmtSrc);

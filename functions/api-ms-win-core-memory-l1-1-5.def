@@ -1,0 +1,3 @@
+void* MapViewOfFileNuma2([In] HANDLE FileMappingHandle, [In] HANDLE ProcessHandle, [In] ulong Offset, [In] [Optional] void* BaseAddress, [In] nuint ViewSize, [In] uint AllocationType, [In] uint PageProtection, [In] uint PreferredNode);
+BOOL UnmapViewOfFile2([In] HANDLE Process, [In] void* BaseAddress, [In] UNMAP_VIEW_OF_FILE_FLAGS UnmapFlags);
+BOOL VirtualUnlockEx([In] [Optional] HANDLE Process, [In] void* Address, [In] nuint Size);

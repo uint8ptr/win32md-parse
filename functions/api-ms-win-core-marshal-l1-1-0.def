@@ -1,0 +1,4 @@
+uint HRGN_UserSize64([In] uint* param0, [In] uint param1, [In] HRGN* param2);
+byte* HRGN_UserMarshal64([In] uint* param0, [In] [Out] byte* param1, [In] HRGN* param2);
+byte* HRGN_UserUnmarshal64([In] uint* param0, [In] byte* param1, [Out] HRGN* param2);
+void HRGN_UserFree64([In] uint* param0, [In] HRGN* param1);

@@ -1,0 +1,1 @@
+uint GetCommPorts([NativeArrayInfo(CountParamIndex = 1)] [Out] uint* lpPortNumbers, [In] uint uPortNumbersCount, [Out] uint* puPortNumbersFound);

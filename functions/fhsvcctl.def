@@ -1,0 +1,7 @@
+HRESULT FhServiceOpenPipe([In] BOOL StartServiceIfStopped, [Out] FH_SERVICE_PIPE_HANDLE* Pipe);
+HRESULT FhServiceClosePipe([In] FH_SERVICE_PIPE_HANDLE Pipe);
+HRESULT FhServiceStartBackup([In] FH_SERVICE_PIPE_HANDLE Pipe, [In] BOOL LowPriorityIo);
+HRESULT FhServiceStopBackup([In] FH_SERVICE_PIPE_HANDLE Pipe, [In] BOOL StopTracking);
+HRESULT FhServiceReloadConfiguration([In] FH_SERVICE_PIPE_HANDLE Pipe);
+HRESULT FhServiceBlockBackup([In] FH_SERVICE_PIPE_HANDLE Pipe);
+HRESULT FhServiceUnblockBackup([In] FH_SERVICE_PIPE_HANDLE Pipe);

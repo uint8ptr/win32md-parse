@@ -1,0 +1,1 @@
+HRESULT GetGamingDeviceModelInformation([Out] GAMING_DEVICE_MODEL_INFORMATION* information);

@@ -1,0 +1,6 @@
+HRESULT TryCreatePackageDependency([In] PSID user, [Const] [In] PWSTR packageFamilyName, [In] PACKAGE_VERSION minVersion, [In] PackageDependencyProcessorArchitectures packageDependencyProcessorArchitectures, [In] PackageDependencyLifetimeKind lifetimeKind, [Const] [In] PWSTR lifetimeArtifact, [In] CreatePackageDependencyOptions options, [Out] [Optional] PWSTR* packageDependencyId);
+HRESULT DeletePackageDependency([Const] [In] PWSTR packageDependencyId);
+HRESULT AddPackageDependency([Const] [In] PWSTR packageDependencyId, [In] int rank, [In] AddPackageDependencyOptions options, [Out] PACKAGEDEPENDENCY_CONTEXT__** packageDependencyContext, [Out] [Optional] PWSTR* packageFullName);
+HRESULT RemovePackageDependency([In] PACKAGEDEPENDENCY_CONTEXT__* packageDependencyContext);
+HRESULT GetResolvedPackageFullNameForPackageDependency([Const] [In] PWSTR packageDependencyId, [Out] [Optional] PWSTR* packageFullName);
+HRESULT GetIdForPackageDependencyContext([In] PACKAGEDEPENDENCY_CONTEXT__* packageDependencyContext, [Out] [Optional] PWSTR* packageDependencyId);

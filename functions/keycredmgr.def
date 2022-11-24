@@ -1,0 +1,4 @@
+HRESULT KeyCredentialManagerGetOperationErrorStates([In] KeyCredentialManagerOperationType keyCredentialManagerOperationType, [Out] BOOL* isReady, [Out] KeyCredentialManagerOperationErrorStates* keyCredentialManagerOperationErrorStates);
+HRESULT KeyCredentialManagerShowUIOperation([In] HWND hWndOwner, [In] KeyCredentialManagerOperationType keyCredentialManagerOperationType);
+HRESULT KeyCredentialManagerGetInformation([Out] KeyCredentialManagerInfo** keyCredentialManagerInfo);
+void KeyCredentialManagerFreeInformation([In] KeyCredentialManagerInfo* keyCredentialManagerInfo);

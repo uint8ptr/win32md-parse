@@ -1,0 +1,17 @@
+LRESULT LresultFromObject([Const] [In] Guid* riid, [In] WPARAM wParam, [In] IUnknown punk);
+HRESULT ObjectFromLresult([In] LRESULT lResult, [Const] [In] Guid* riid, [In] WPARAM wParam, [Out] void** ppvObject);
+HRESULT WindowFromAccessibleObject([In] IAccessible param0, [Out] [Optional] HWND* phwnd);
+HRESULT AccessibleObjectFromWindow([In] HWND hwnd, [In] uint dwId, [Const] [In] Guid* riid, [Out] void** ppvObject);
+HRESULT AccessibleObjectFromEvent([In] HWND hwnd, [In] uint dwId, [In] uint dwChildId, [Out] IAccessible* ppacc, [Out] VARIANT* pvarChild);
+HRESULT AccessibleObjectFromPoint([In] POINT ptScreen, [Out] IAccessible* ppacc, [Out] VARIANT* pvarChild);
+HRESULT AccessibleChildren([In] IAccessible paccContainer, [In] int iChildStart, [In] int cChildren, [NativeArrayInfo(CountParamIndex = 2)] [Out] VARIANT* rgvarChildren, [Out] int* pcObtained);
+uint GetRoleTextA([In] uint lRole, [NativeArrayInfo(CountParamIndex = 2)] [Out] [Optional] PSTR lpszRole, [In] uint cchRoleMax);
+uint GetRoleTextW([In] uint lRole, [NativeArrayInfo(CountParamIndex = 2)] [Out] [Optional] PWSTR lpszRole, [In] uint cchRoleMax);
+uint GetStateTextA([In] uint lStateBit, [NativeArrayInfo(CountParamIndex = 2)] [Out] [Optional] PSTR lpszState, [In] uint cchState);
+uint GetStateTextW([In] uint lStateBit, [NativeArrayInfo(CountParamIndex = 2)] [Out] [Optional] PWSTR lpszState, [In] uint cchState);
+void GetOleaccVersionInfo([Out] uint* pVer, [Out] uint* pBuild);
+HRESULT CreateStdAccessibleObject([In] HWND hwnd, [In] int idObject, [Const] [In] Guid* riid, [Out] void** ppvObject);
+HRESULT CreateStdAccessibleProxyA([In] HWND hwnd, [Const] [In] PSTR pClassName, [In] int idObject, [Const] [In] Guid* riid, [Out] void** ppvObject);
+HRESULT CreateStdAccessibleProxyW([In] HWND hwnd, [Const] [In] PWSTR pClassName, [In] int idObject, [Const] [In] Guid* riid, [Out] void** ppvObject);
+HRESULT AccSetRunningUtilityState([In] HWND hwndApp, [In] uint dwUtilityStateMask, [In] ACC_UTILITY_STATE_FLAGS dwUtilityState);
+HRESULT AccNotifyTouchInteraction([In] HWND hwndApp, [In] HWND hwndTarget, [In] POINT ptTarget);

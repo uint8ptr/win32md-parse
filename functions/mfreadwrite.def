@@ -1,0 +1,5 @@
+HRESULT MFCreateSourceReaderFromURL([Const] [In] PWSTR pwszURL, [In] [Optional] IMFAttributes pAttributes, [Out] IMFSourceReader* ppSourceReader);
+HRESULT MFCreateSourceReaderFromByteStream([In] IMFByteStream pByteStream, [In] [Optional] IMFAttributes pAttributes, [Out] IMFSourceReader* ppSourceReader);
+HRESULT MFCreateSourceReaderFromMediaSource([In] IMFMediaSource pMediaSource, [In] [Optional] IMFAttributes pAttributes, [Out] IMFSourceReader* ppSourceReader);
+HRESULT MFCreateSinkWriterFromURL([Const] [In] [Optional] PWSTR pwszOutputURL, [In] [Optional] IMFByteStream pByteStream, [In] [Optional] IMFAttributes pAttributes, [Out] IMFSinkWriter* ppSinkWriter);
+HRESULT MFCreateSinkWriterFromMediaSink([In] IMFMediaSink pMediaSink, [In] [Optional] IMFAttributes pAttributes, [Out] IMFSinkWriter* ppSinkWriter);

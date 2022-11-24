@@ -1,0 +1,1 @@
+HRESULT CreateDispatcherQueueController([In] DispatcherQueueOptions options, [Out] DispatcherQueueController* dispatcherQueueController);

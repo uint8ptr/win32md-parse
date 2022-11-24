@@ -1,0 +1,3 @@
+BOOL WaitOnAddress([MemorySize(BytesParamIndex = 2)] [In] void* Address, [MemorySize(BytesParamIndex = 2)] [In] void* CompareAddress, [In] nuint AddressSize, [In] [Optional] uint dwMilliseconds);
+void WakeByAddressSingle([In] void* Address);
+void WakeByAddressAll([In] void* Address);

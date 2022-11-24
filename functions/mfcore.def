@@ -1,0 +1,2 @@
+HRESULT MFCreateExtendedCameraIntrinsics([ComOutPtr] [Out] IMFExtendedCameraIntrinsics* ppExtendedCameraIntrinsics);
+HRESULT MFCreateExtendedCameraIntrinsicModel([Const] [In] MFCameraIntrinsic_DistortionModelType distortionModelType, [ComOutPtr] [Out] IMFExtendedCameraIntrinsicModel* ppExtendedCameraIntrinsicModel);

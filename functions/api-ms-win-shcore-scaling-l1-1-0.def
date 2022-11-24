@@ -1,0 +1,3 @@
+DEVICE_SCALE_FACTOR GetScaleFactorForDevice([In] DISPLAY_DEVICE_TYPE deviceType);
+HRESULT RegisterScaleChangeNotifications([In] DISPLAY_DEVICE_TYPE displayDevice, [In] HWND hwndNotify, [In] uint uMsgNotify, [Out] uint* pdwCookie);
+HRESULT RevokeScaleChangeNotifications([In] DISPLAY_DEVICE_TYPE displayDevice, [In] uint dwCookie);

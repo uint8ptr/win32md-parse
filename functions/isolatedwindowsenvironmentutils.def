@@ -1,0 +1,1 @@
+HRESULT IsProcessInIsolatedWindowsEnvironment([Out] BOOL* isProcessInIsolatedWindowsEnvironment);

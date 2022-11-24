@@ -1,0 +1,1 @@
+BOOL DeriveCapabilitySidsFromName([Const] [In] PWSTR CapName, [Out] [Optional] PSID** CapabilityGroupSids, [Out] uint* CapabilityGroupSidCount, [Out] [Optional] PSID** CapabilitySids, [Out] uint* CapabilitySidCount);

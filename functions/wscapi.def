@@ -1,0 +1,6 @@
+HRESULT WscRegisterForChanges([In] [Out] void* Reserved, [In] [Out] HANDLE* phCallbackRegistration, [In] LPTHREAD_START_ROUTINE lpCallbackAddress, [In] [Out] void* pContext);
+HRESULT WscUnRegisterChanges([In] HANDLE hRegistrationHandle);
+HRESULT WscRegisterForUserNotifications();
+HRESULT WscGetSecurityProviderHealth([In] uint Providers, [In] [Out] WSC_SECURITY_PROVIDER_HEALTH* pHealth);
+HRESULT WscQueryAntiMalwareUri();
+HRESULT WscGetAntiMalwareUri([Out] PWSTR* ppszUri);

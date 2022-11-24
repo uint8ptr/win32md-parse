@@ -1,0 +1,1 @@
+HRESULT StgOpenLayoutDocfile([Const] [In] PWSTR pwcsDfName, [In] uint grfMode, [In] uint reserved, [Out] IStorage* ppstgOpen);

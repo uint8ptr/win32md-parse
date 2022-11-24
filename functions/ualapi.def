@@ -1,0 +1,4 @@
+HRESULT UalStart([In] UAL_DATA_BLOB* Data);
+HRESULT UalStop([In] UAL_DATA_BLOB* Data);
+HRESULT UalInstrument([In] UAL_DATA_BLOB* Data);
+HRESULT UalRegisterProduct([Const] [In] PWSTR wszProductName, [Const] [In] PWSTR wszRoleName, [Const] [In] PWSTR wszGuid);

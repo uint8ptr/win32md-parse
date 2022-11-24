@@ -1,0 +1,11 @@
+BOOL CopyFileFromAppW([Const] [In] PWSTR lpExistingFileName, [Const] [In] PWSTR lpNewFileName, [In] BOOL bFailIfExists);
+BOOL CreateDirectoryFromAppW([Const] [In] PWSTR lpPathName, [In] [Optional] SECURITY_ATTRIBUTES* lpSecurityAttributes);
+HANDLE CreateFileFromAppW([Const] [In] PWSTR lpFileName, [In] uint dwDesiredAccess, [In] uint dwShareMode, [In] [Optional] SECURITY_ATTRIBUTES* lpSecurityAttributes, [In] uint dwCreationDisposition, [In] uint dwFlagsAndAttributes, [In] [Optional] HANDLE hTemplateFile);
+HANDLE CreateFile2FromAppW([Const] [In] PWSTR lpFileName, [In] uint dwDesiredAccess, [In] uint dwShareMode, [In] uint dwCreationDisposition, [In] [Optional] CREATEFILE2_EXTENDED_PARAMETERS* pCreateExParams);
+BOOL DeleteFileFromAppW([Const] [In] PWSTR lpFileName);
+HANDLE FindFirstFileExFromAppW([Const] [In] PWSTR lpFileName, [In] FINDEX_INFO_LEVELS fInfoLevelId, [Out] void* lpFindFileData, [In] FINDEX_SEARCH_OPS fSearchOp, [Reserved] [In] [Out] void* lpSearchFilter, [In] uint dwAdditionalFlags);
+BOOL GetFileAttributesExFromAppW([Const] [In] PWSTR lpFileName, [In] GET_FILEEX_INFO_LEVELS fInfoLevelId, [Out] void* lpFileInformation);
+BOOL MoveFileFromAppW([Const] [In] PWSTR lpExistingFileName, [Const] [In] PWSTR lpNewFileName);
+BOOL RemoveDirectoryFromAppW([Const] [In] PWSTR lpPathName);
+BOOL ReplaceFileFromAppW([Const] [In] PWSTR lpReplacedFileName, [Const] [In] PWSTR lpReplacementFileName, [Const] [In] [Optional] PWSTR lpBackupFileName, [In] uint dwReplaceFlags, [Reserved] [In] [Out] void* lpExclude, [Reserved] [In] [Out] void* lpReserved);
+BOOL SetFileAttributesFromAppW([Const] [In] PWSTR lpFileName, [In] uint dwFileAttributes);

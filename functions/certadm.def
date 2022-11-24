@@ -1,0 +1,18 @@
+HRESULT CertSrvIsServerOnlineW([Const] [In] PWSTR pwszServerName, [In] [Out] BOOL* pfServerOnline);
+HRESULT CertSrvBackupGetDynamicFileListW([In] void* hbc, [Out] PWSTR* ppwszzFileList, [Out] uint* pcbSize);
+HRESULT CertSrvBackupPrepareW([Const] [In] PWSTR pwszServerName, [In] uint grbitJet, [In] CSBACKUP_TYPE dwBackupFlags, [In] [Out] void** phbc);
+HRESULT CertSrvBackupGetDatabaseNamesW([In] void* hbc, [Out] PWSTR* ppwszzAttachmentInformation, [Out] uint* pcbSize);
+HRESULT CertSrvBackupOpenFileW([In] [Out] void* hbc, [Const] [In] PWSTR pwszAttachmentName, [In] uint cbReadHintSize, [In] [Out] LARGE_INTEGER* pliFileSize);
+HRESULT CertSrvBackupRead([In] [Out] void* hbc, [In] [Out] void* pvBuffer, [In] uint cbBuffer, [In] [Out] uint* pcbRead);
+HRESULT CertSrvBackupClose([In] [Out] void* hbc);
+HRESULT CertSrvBackupGetBackupLogsW([In] void* hbc, [Out] PWSTR* ppwszzBackupLogFiles, [Out] uint* pcbSize);
+HRESULT CertSrvBackupTruncateLogs([In] [Out] void* hbc);
+HRESULT CertSrvBackupEnd([In] [Out] void* hbc);
+void CertSrvBackupFree([In] [Out] void* pv);
+HRESULT CertSrvRestoreGetDatabaseLocationsW([In] void* hbc, [Out] PWSTR* ppwszzDatabaseLocationList, [Out] uint* pcbSize);
+HRESULT CertSrvRestorePrepareW([Const] [In] PWSTR pwszServerName, [In] uint dwRestoreFlags, [In] [Out] void** phbc);
+HRESULT CertSrvRestoreRegisterW([In] [Out] void* hbc, [Const] [In] PWSTR pwszCheckPointFilePath, [Const] [In] PWSTR pwszLogPath, [In] [Out] CSEDB_RSTMAPW* rgrstmap, [In] int crstmap, [Const] [In] PWSTR pwszBackupLogPath, [In] uint genLow, [In] uint genHigh);
+HRESULT CertSrvRestoreRegisterThroughFile([In] [Out] void* hbc, [Const] [In] PWSTR pwszCheckPointFilePath, [Const] [In] PWSTR pwszLogPath, [In] [Out] CSEDB_RSTMAPW* rgrstmap, [In] int crstmap, [Const] [In] PWSTR pwszBackupLogPath, [In] uint genLow, [In] uint genHigh);
+HRESULT CertSrvRestoreRegisterComplete([In] [Out] void* hbc, [In] HRESULT hrRestoreState);
+HRESULT CertSrvRestoreEnd([In] [Out] void* hbc);
+HRESULT CertSrvServerControlW([Const] [In] PWSTR pwszServerName, [In] uint dwControlFlags, [In] [Out] uint* pcbOut, [In] [Out] byte** ppbOut);

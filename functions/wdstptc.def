@@ -1,0 +1,13 @@
+uint WdsTransportClientInitialize();
+uint WdsTransportClientInitializeSession([In] WDS_TRANSPORTCLIENT_REQUEST* pSessionRequest, [In] void* pCallerData, [Out] HANDLE* hSessionKey);
+uint WdsTransportClientRegisterCallback([In] HANDLE hSessionKey, [In] TRANSPORTCLIENT_CALLBACK_ID CallbackId, [In] void* pfnCallback);
+uint WdsTransportClientStartSession([In] HANDLE hSessionKey);
+uint WdsTransportClientCompleteReceive([In] HANDLE hSessionKey, [In] uint ulSize, [In] ULARGE_INTEGER* pullOffset);
+uint WdsTransportClientCancelSession([In] HANDLE hSessionKey);
+uint WdsTransportClientCancelSessionEx([In] HANDLE hSessionKey, [In] uint dwErrorCode);
+uint WdsTransportClientWaitForCompletion([In] HANDLE hSessionKey, [In] uint uTimeout);
+uint WdsTransportClientQueryStatus([In] HANDLE hSessionKey, [Out] uint* puStatus, [Out] uint* puErrorCode);
+uint WdsTransportClientCloseSession([In] HANDLE hSessionKey);
+uint WdsTransportClientAddRefBuffer([In] void* pvBuffer);
+uint WdsTransportClientReleaseBuffer([In] void* pvBuffer);
+uint WdsTransportClientShutdown();

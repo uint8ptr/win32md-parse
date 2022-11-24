@@ -1,0 +1,4 @@
+BOOL SetProcessValidCallTargets([In] HANDLE hProcess, [In] void* VirtualAddress, [In] nuint RegionSize, [In] uint NumberOfOffsets, [NativeArrayInfo(CountParamIndex = 3)] [In] [Out] CFG_CALL_TARGET_INFO* OffsetInformation);
+void* VirtualAllocFromApp([In] [Optional] void* BaseAddress, [In] nuint Size, [In] VIRTUAL_ALLOCATION_TYPE AllocationType, [In] uint Protection);
+BOOL VirtualProtectFromApp([In] void* Address, [In] nuint Size, [In] uint NewProtection, [Out] uint* OldProtection);
+HANDLE OpenFileMappingFromApp([In] uint DesiredAccess, [In] BOOL InheritHandle, [Const] [In] PWSTR Name);

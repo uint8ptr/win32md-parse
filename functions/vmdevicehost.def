@@ -1,0 +1,12 @@
+HRESULT HdvInitializeDeviceHost([In] HCS_SYSTEM computeSystem, [Out] void** deviceHostHandle);
+HRESULT HdvTeardownDeviceHost([In] void* deviceHostHandle);
+HRESULT HdvCreateDeviceInstance([In] void* deviceHostHandle, [In] HDV_DEVICE_TYPE deviceType, [Const] [In] Guid* deviceClassId, [Const] [In] Guid* deviceInstanceId, [Const] [In] void* deviceInterface, [In] [Optional] void* deviceContext, [Out] void** deviceHandle);
+HRESULT HdvReadGuestMemory([In] void* requestor, [In] ulong guestPhysicalAddress, [In] uint byteCount, [NativeArrayInfo(CountParamIndex = 2)] [Out] byte* buffer);
+HRESULT HdvWriteGuestMemory([In] void* requestor, [In] ulong guestPhysicalAddress, [In] uint byteCount, [Const] [NativeArrayInfo(CountParamIndex = 2)] [In] byte* buffer);
+HRESULT HdvCreateGuestMemoryAperture([In] void* requestor, [In] ulong guestPhysicalAddress, [In] uint byteCount, [In] BOOL writeProtected, [Out] void** mappedAddress);
+HRESULT HdvDestroyGuestMemoryAperture([In] void* requestor, [In] void* mappedAddress);
+HRESULT HdvDeliverGuestInterrupt([In] void* requestor, [In] ulong msiAddress, [In] uint msiData);
+HRESULT HdvRegisterDoorbell([In] void* requestor, [In] HDV_PCI_BAR_SELECTOR BarIndex, [In] ulong BarOffset, [In] ulong TriggerValue, [In] ulong Flags, [In] HANDLE DoorbellEvent);
+HRESULT HdvUnregisterDoorbell([In] void* requestor, [In] HDV_PCI_BAR_SELECTOR BarIndex, [In] ulong BarOffset, [In] ulong TriggerValue, [In] ulong Flags);
+HRESULT HdvCreateSectionBackedMmioRange([In] void* requestor, [In] HDV_PCI_BAR_SELECTOR barIndex, [In] ulong offsetInPages, [In] ulong lengthInPages, [In] HDV_MMIO_MAPPING_FLAGS MappingFlags, [In] HANDLE sectionHandle, [In] ulong sectionOffsetInPages);
+HRESULT HdvDestroySectionBackedMmioRange([In] void* requestor, [In] HDV_PCI_BAR_SELECTOR barIndex, [In] ulong offsetInPages);

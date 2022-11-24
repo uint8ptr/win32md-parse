@@ -1,0 +1,6 @@
+BOOL RasPhonebookDlgA([In] [Optional] PSTR lpszPhonebook, [In] [Optional] PSTR lpszEntry, [In] [Out] RASPBDLGA* lpInfo);
+BOOL RasPhonebookDlgW([In] [Optional] PWSTR lpszPhonebook, [In] [Optional] PWSTR lpszEntry, [In] [Out] RASPBDLGW* lpInfo);
+BOOL RasEntryDlgA([In] [Optional] PSTR lpszPhonebook, [In] [Optional] PSTR lpszEntry, [In] [Out] RASENTRYDLGA* lpInfo);
+BOOL RasEntryDlgW([In] [Optional] PWSTR lpszPhonebook, [In] [Optional] PWSTR lpszEntry, [In] [Out] RASENTRYDLGW* lpInfo);
+BOOL RasDialDlgA([In] [Optional] PSTR lpszPhonebook, [In] [Optional] PSTR lpszEntry, [In] [Optional] PSTR lpszPhoneNumber, [In] [Out] RASDIALDLG* lpInfo);
+BOOL RasDialDlgW([In] [Optional] PWSTR lpszPhonebook, [In] [Optional] PWSTR lpszEntry, [In] [Optional] PWSTR lpszPhoneNumber, [In] [Out] RASDIALDLG* lpInfo);

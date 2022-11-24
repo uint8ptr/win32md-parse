@@ -1,0 +1,15 @@
+nint EcOpenSubscriptionEnum([In] uint Flags);
+BOOL EcEnumNextSubscription([In] nint SubscriptionEnum, [In] uint SubscriptionNameBufferSize, [NativeArrayInfo(CountParamIndex = 1)] [Out] [Optional] PWSTR SubscriptionNameBuffer, [Out] uint* SubscriptionNameBufferUsed);
+nint EcOpenSubscription([Const] [In] PWSTR SubscriptionName, [In] uint AccessMask, [In] uint Flags);
+BOOL EcSetSubscriptionProperty([In] nint Subscription, [In] EC_SUBSCRIPTION_PROPERTY_ID PropertyId, [In] uint Flags, [In] [Out] EC_VARIANT* PropertyValue);
+BOOL EcGetSubscriptionProperty([In] nint Subscription, [In] EC_SUBSCRIPTION_PROPERTY_ID PropertyId, [In] uint Flags, [In] uint PropertyValueBufferSize, [In] [Out] EC_VARIANT* PropertyValueBuffer, [Out] uint* PropertyValueBufferUsed);
+BOOL EcSaveSubscription([In] nint Subscription, [In] uint Flags);
+BOOL EcDeleteSubscription([Const] [In] PWSTR SubscriptionName, [In] uint Flags);
+BOOL EcGetObjectArraySize([In] nint ObjectArray, [Out] uint* ObjectArraySize);
+BOOL EcSetObjectArrayProperty([In] nint ObjectArray, [In] EC_SUBSCRIPTION_PROPERTY_ID PropertyId, [In] uint ArrayIndex, [In] uint Flags, [In] [Out] EC_VARIANT* PropertyValue);
+BOOL EcGetObjectArrayProperty([In] nint ObjectArray, [In] EC_SUBSCRIPTION_PROPERTY_ID PropertyId, [In] uint ArrayIndex, [In] uint Flags, [In] uint PropertyValueBufferSize, [In] [Out] EC_VARIANT* PropertyValueBuffer, [Out] uint* PropertyValueBufferUsed);
+BOOL EcInsertObjectArrayElement([In] nint ObjectArray, [In] uint ArrayIndex);
+BOOL EcRemoveObjectArrayElement([In] nint ObjectArray, [In] uint ArrayIndex);
+BOOL EcGetSubscriptionRunTimeStatus([Const] [In] PWSTR SubscriptionName, [In] EC_SUBSCRIPTION_RUNTIME_STATUS_INFO_ID StatusInfoId, [Const] [In] PWSTR EventSourceName, [In] uint Flags, [In] uint StatusValueBufferSize, [In] [Out] EC_VARIANT* StatusValueBuffer, [Out] uint* StatusValueBufferUsed);
+BOOL EcRetrySubscription([Const] [In] PWSTR SubscriptionName, [Const] [In] PWSTR EventSourceName, [In] uint Flags);
+BOOL EcClose([In] nint Object);

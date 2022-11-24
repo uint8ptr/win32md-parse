@@ -1,0 +1,5 @@
+typedef nint FindFileHandle;
+typedef nint FindFileNameHandle;
+typedef nint FindStreamHandle;
+typedef nint FindVolumeHandle;
+typedef nint FindVolumeMointPointHandle;

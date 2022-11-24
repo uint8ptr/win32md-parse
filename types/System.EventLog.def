@@ -1,0 +1,2 @@
+typedef nint EventSourceHandle;
+typedef nint EVT_HANDLE;

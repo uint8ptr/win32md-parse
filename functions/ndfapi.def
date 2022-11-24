@@ -1,0 +1,16 @@
+HRESULT NdfCreateIncident([Const] [In] PWSTR helperClassName, [In] uint celt, [NativeArrayInfo(CountParamIndex = 1)] [In] HELPER_ATTRIBUTE* attributes, [Out] void** handle);
+HRESULT NdfCreateWinSockIncident([In] SOCKET sock, [Const] [In] [Optional] PWSTR host, [In] ushort port, [Const] [In] [Optional] PWSTR appId, [In] [Optional] SID* userId, [Out] void** handle);
+HRESULT NdfCreateWebIncident([Const] [In] PWSTR url, [Out] void** handle);
+HRESULT NdfCreateWebIncidentEx([Const] [In] PWSTR url, [In] BOOL useWinHTTP, [In] [Optional] PWSTR moduleName, [Out] void** handle);
+HRESULT NdfCreateSharingIncident([Const] [In] PWSTR UNCPath, [Out] void** handle);
+HRESULT NdfCreateDNSIncident([Const] [In] PWSTR hostname, [In] ushort queryType, [Out] void** handle);
+HRESULT NdfCreateConnectivityIncident([Out] void** handle);
+HRESULT NdfCreateNetConnectionIncident([Out] void** handle, [In] Guid id);
+HRESULT NdfCreatePnrpIncident([Const] [In] PWSTR cloudname, [Const] [In] [Optional] PWSTR peername, [In] BOOL diagnosePublish, [Const] [In] [Optional] PWSTR appId, [Out] void** handle);
+HRESULT NdfCreateGroupingIncident([Const] [In] [Optional] PWSTR CloudName, [Const] [In] [Optional] PWSTR GroupName, [Const] [In] [Optional] PWSTR Identity, [Const] [In] [Optional] PWSTR Invitation, [In] [Optional] SOCKET_ADDRESS_LIST* Addresses, [Const] [In] [Optional] PWSTR appId, [Out] void** handle);
+HRESULT NdfExecuteDiagnosis([In] void* handle, [In] [Optional] HWND hwnd);
+HRESULT NdfCloseIncident([In] [Out] void* handle);
+HRESULT NdfDiagnoseIncident([In] void* Handle, [Out] uint* RootCauseCount, [Out] RootCauseInfo** RootCauses, [In] uint dwWait, [In] uint dwFlags);
+HRESULT NdfRepairIncident([In] void* Handle, [In] RepairInfoEx* RepairEx, [In] uint dwWait);
+HRESULT NdfCancelIncident([In] void* Handle);
+HRESULT NdfGetTraceFile([In] void* Handle, [Out] PWSTR* TraceFileLocation);

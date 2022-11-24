@@ -1,0 +1,2 @@
+HRESULT ProtectFileToEnterpriseIdentity([Const] [In] PWSTR fileOrFolderPath, [Const] [In] PWSTR identity);
+HRESULT UnprotectFile([Const] [In] PWSTR fileOrFolderPath, [Const] [In] [Optional] FILE_UNPROTECT_OPTIONS* options);

@@ -1,0 +1,4 @@
+HRESULT DebugConnect([Const] [In] PSTR RemoteOptions, [Const] [In] Guid* InterfaceId, [Out] void** Interface);
+HRESULT DebugConnectWide([Const] [In] PWSTR RemoteOptions, [Const] [In] Guid* InterfaceId, [Out] void** Interface);
+HRESULT DebugCreate([Const] [In] Guid* InterfaceId, [ComOutPtr] [Out] void** Interface);
+HRESULT DebugCreateEx([Const] [In] Guid* InterfaceId, [In] uint DbgEngOptions, [ComOutPtr] [Out] void** Interface);

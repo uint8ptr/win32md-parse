@@ -1,0 +1,7 @@
+BOOL WslIsDistributionRegistered([Const] [In] PWSTR distributionName);
+HRESULT WslRegisterDistribution([Const] [In] PWSTR distributionName, [Const] [In] PWSTR tarGzFilename);
+HRESULT WslUnregisterDistribution([Const] [In] PWSTR distributionName);
+HRESULT WslConfigureDistribution([Const] [In] PWSTR distributionName, [In] uint defaultUID, [In] WSL_DISTRIBUTION_FLAGS wslDistributionFlags);
+HRESULT WslGetDistributionConfiguration([Const] [In] PWSTR distributionName, [Out] uint* distributionVersion, [Out] uint* defaultUID, [Out] WSL_DISTRIBUTION_FLAGS* wslDistributionFlags, [Out] PSTR** defaultEnvironmentVariables, [Out] uint* defaultEnvironmentVariableCount);
+HRESULT WslLaunchInteractive([Const] [In] PWSTR distributionName, [Const] [In] [Optional] PWSTR command, [In] BOOL useCurrentWorkingDirectory, [Out] uint* exitCode);
+HRESULT WslLaunch([Const] [In] PWSTR distributionName, [Const] [In] [Optional] PWSTR command, [In] BOOL useCurrentWorkingDirectory, [In] HANDLE stdIn, [In] HANDLE stdOut, [In] HANDLE stdErr, [Out] HANDLE* process);

@@ -1,0 +1,1 @@
+uint GetServiceDirectory([In] SERVICE_STATUS_HANDLE hServiceStatus, [In] SERVICE_DIRECTORY_TYPE eDirectoryType, [NotNullTerminated] [NativeArrayInfo(CountParamIndex = 3)] [Out] [Optional] PWSTR lpPathBuffer, [In] uint cchPathBufferLength, [Out] uint* lpcchRequiredBufferLength);

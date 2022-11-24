@@ -1,0 +1,1 @@
+uint RaiseCustomSystemEventTrigger([In] CUSTOM_SYSTEM_EVENT_TRIGGER_CONFIG* CustomSystemEventTriggerConfig);

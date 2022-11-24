@@ -1,0 +1,3 @@
+HRESULT QueryAuxiliaryCounterFrequency([Out] ulong* lpAuxiliaryCounterFrequency);
+HRESULT ConvertAuxiliaryCounterToPerformanceCounter([In] ulong ullAuxiliaryCounterValue, [Out] ulong* lpPerformanceCounterValue, [Out] [Optional] ulong* lpConversionError);
+HRESULT ConvertPerformanceCounterToAuxiliaryCounter([In] ulong ullPerformanceCounterValue, [Out] ulong* lpAuxiliaryCounterValue, [Out] [Optional] ulong* lpConversionError);

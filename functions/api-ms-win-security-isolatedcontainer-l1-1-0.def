@@ -1,0 +1,1 @@
+HRESULT IsProcessInIsolatedContainer([Out] BOOL* isProcessInIsolatedContainer);

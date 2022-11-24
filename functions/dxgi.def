@@ -1,0 +1,5 @@
+HRESULT CreateDXGIFactory([Const] [In] Guid* riid, [ComOutPtr] [Out] void** ppFactory);
+HRESULT CreateDXGIFactory1([Const] [In] Guid* riid, [ComOutPtr] [Out] void** ppFactory);
+HRESULT CreateDXGIFactory2([In] uint Flags, [Const] [In] Guid* riid, [ComOutPtr] [Out] void** ppFactory);
+HRESULT DXGIGetDebugInterface1([In] uint Flags, [Const] [In] Guid* riid, [ComOutPtr] [Out] void** pDebug);
+HRESULT DXGIDeclareAdapterRemovalSupport();

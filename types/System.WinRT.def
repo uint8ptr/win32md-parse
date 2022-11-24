@@ -1,0 +1,3 @@
+typedef nint HSTRING;
+typedef nint HSTRING_BUFFER;
+typedef nint ROPARAMIIDHANDLE;

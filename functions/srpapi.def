@@ -1,0 +1,11 @@
+HRESULT SrpCreateThreadNetworkContext([Const] [In] PWSTR enterpriseId, [Out] HTHREAD_NETWORK_CONTEXT* threadNetworkContext);
+HRESULT SrpCloseThreadNetworkContext([In] [Out] HTHREAD_NETWORK_CONTEXT* threadNetworkContext);
+HRESULT SrpSetTokenEnterpriseId([In] HANDLE tokenHandle, [Const] [In] [Optional] PWSTR enterpriseId);
+HRESULT SrpGetEnterpriseIds([In] HANDLE tokenHandle, [In] [Out] [Optional] uint* numberOfBytes, [MemorySize(BytesParamIndex = 1)] [Out] [Optional] PWSTR* enterpriseIds, [Out] uint* enterpriseIdCount);
+HRESULT SrpEnablePermissiveModeFileEncryption([Const] [In] [Optional] PWSTR enterpriseId);
+HRESULT SrpDisablePermissiveModeFileEncryption();
+HRESULT SrpGetEnterprisePolicy([In] HANDLE tokenHandle, [Out] ENTERPRISE_DATA_POLICIES* policyFlags);
+NTSTATUS SrpIsTokenService([In] HANDLE TokenHandle, [Out] byte* IsTokenService);
+HRESULT SrpDoesPolicyAllowAppExecution([Const] [In] PACKAGE_ID* packageId, [Out] BOOL* isAllowed);
+HRESULT SrpHostingInitialize([In] SRPHOSTING_VERSION Version, [In] SRPHOSTING_TYPE Type, [In] void* pvData, [In] uint cbData);
+void SrpHostingTerminate([In] SRPHOSTING_TYPE Type);

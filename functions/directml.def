@@ -1,0 +1,2 @@
+HRESULT DMLCreateDevice([In] ID3D12Device d3d12Device, [In] DML_CREATE_DEVICE_FLAGS flags, [Const] [In] Guid* riid, [ComOutPtr] [Out] [Optional] void** ppv);
+HRESULT DMLCreateDevice1([In] ID3D12Device d3d12Device, [In] DML_CREATE_DEVICE_FLAGS flags, [In] DML_FEATURE_LEVEL minimumFeatureLevel, [Const] [In] Guid* riid, [ComOutPtr] [Out] [Optional] void** ppv);

@@ -1,0 +1,2 @@
+int IdnToAscii([In] uint dwFlags, [Const] [NativeArrayInfo(CountParamIndex = 2)] [In] PWSTR lpUnicodeCharStr, [In] int cchUnicodeChar, [NativeArrayInfo(CountParamIndex = 4)] [Out] [Optional] PWSTR lpASCIICharStr, [In] int cchASCIIChar);
+int IdnToUnicode([In] uint dwFlags, [Const] [NativeArrayInfo(CountParamIndex = 2)] [In] PWSTR lpASCIICharStr, [In] int cchASCIIChar, [NativeArrayInfo(CountParamIndex = 4)] [Out] [Optional] PWSTR lpUnicodeCharStr, [In] int cchUnicodeChar);

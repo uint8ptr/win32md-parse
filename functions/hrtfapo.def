@@ -1,0 +1,1 @@
+HRESULT CreateHrtfApo([Const] [In] HrtfApoInit* init, [ComOutPtr] [Out] IXAPO* xApo);

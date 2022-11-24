@@ -1,0 +1,9 @@
+HRESULT RoInitialize([In] RO_INIT_TYPE initType);
+void RoUninitialize();
+HRESULT RoActivateInstance([In] HSTRING activatableClassId, [ComOutPtr] [Out] IInspectable* instance);
+HRESULT RoRegisterActivationFactories([NativeArrayInfo(CountParamIndex = 2)] [In] HSTRING* activatableClassIds, [NativeArrayInfo(CountParamIndex = 2)] [In] nint* activationFactoryCallbacks, [In] uint count, [Out] nint* cookie);
+void RoRevokeActivationFactories([In] nint cookie);
+HRESULT RoGetActivationFactory([In] HSTRING activatableClassId, [Const] [In] Guid* iid, [ComOutPtr] [Out] void** factory);
+HRESULT RoRegisterForApartmentShutdown([In] IApartmentShutdown callbackObject, [Out] ulong* apartmentIdentifier, [Out] APARTMENT_SHUTDOWN_REGISTRATION_COOKIE* regCookie);
+HRESULT RoUnregisterForApartmentShutdown([In] APARTMENT_SHUTDOWN_REGISTRATION_COOKIE regCookie);
+HRESULT RoGetApartmentIdentifier([Out] ulong* apartmentIdentifier);

@@ -1,0 +1,4 @@
+typedef void* LPPROC_THREAD_ATTRIBUTE_LIST;
+typedef nint NamespaceHandle;
+typedef nint PTP_POOL;
+typedef nint TimerQueueHandle;

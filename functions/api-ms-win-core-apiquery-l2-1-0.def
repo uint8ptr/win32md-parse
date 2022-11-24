@@ -1,0 +1,1 @@
+BOOL IsApiSetImplemented([Const] [In] PSTR Contract);

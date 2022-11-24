@@ -1,0 +1,1 @@
+HRESULT SLIsGenuineLocal([Const] [In] Guid* pAppId, [Out] SL_GENUINE_STATE* pGenuineState, [In] [Out] [Optional] SL_NONGENUINE_UI_OPTIONS* pUIOptions);

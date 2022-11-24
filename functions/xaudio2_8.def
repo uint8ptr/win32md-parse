@@ -1,0 +1,4 @@
+HRESULT CreateFX([Const] [In] Guid* clsid, [Out] IUnknown* pEffect, [Const] [MemorySize(BytesParamIndex = 3)] [In] [Optional] void* pInitDat, [In] uint InitDataByteSize);
+HRESULT XAudio2CreateWithVersionInfo([Out] IXAudio2* ppXAudio2, [In] uint Flags, [In] uint XAudio2Processor, [In] uint ntddiVersion);
+HRESULT CreateAudioVolumeMeter([Out] IUnknown* ppApo);
+HRESULT CreateAudioReverb([Out] IUnknown* ppApo);

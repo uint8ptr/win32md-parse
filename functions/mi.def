@@ -1,0 +1,1 @@
+MI_Result MI_Application_InitializeV1([In] uint flags, [Const] [In] [Optional] ushort* applicationID, [Out] [Optional] MI_Instance** extendedError, [Out] MI_Application* application);

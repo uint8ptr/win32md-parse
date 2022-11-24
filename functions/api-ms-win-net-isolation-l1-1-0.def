@@ -1,0 +1,8 @@
+HRESULT NetworkIsolationSetupAppContainerBinaries([In] PSID applicationContainerSid, [Const] [In] PWSTR packageFullName, [Const] [In] PWSTR packageFolder, [Const] [In] PWSTR displayName, [In] BOOL bBinariesFullyComputed, [NativeArrayInfo(CountParamIndex = 6)] [In] PWSTR* binaries, [In] uint binariesCount);
+uint NetworkIsolationRegisterForAppContainerChanges([In] uint flags, [In] PAC_CHANGES_CALLBACK_FN callback, [In] [Optional] void* context, [Out] HANDLE* registrationObject);
+uint NetworkIsolationUnregisterForAppContainerChanges([In] HANDLE registrationObject);
+uint NetworkIsolationFreeAppContainers([In] INET_FIREWALL_APP_CONTAINER* pPublicAppCs);
+uint NetworkIsolationEnumAppContainers([In] uint Flags, [Out] uint* pdwNumPublicAppCs, [Out] INET_FIREWALL_APP_CONTAINER** ppPublicAppCs);
+uint NetworkIsolationGetAppContainerConfig([Out] uint* pdwNumPublicAppCs, [Out] SID_AND_ATTRIBUTES** appContainerSids);
+uint NetworkIsolationSetAppContainerConfig([In] uint dwNumPublicAppCs, [NativeArrayInfo(CountParamIndex = 0)] [In] SID_AND_ATTRIBUTES* appContainerSids);
+uint NetworkIsolationDiagnoseConnectFailureAndGetInfo([Const] [In] PWSTR wszServerName, [Out] NETISO_ERROR_TYPE* netIsoError);

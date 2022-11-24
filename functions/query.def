@@ -1,0 +1,4 @@
+HRESULT LoadIFilter([Const] [In] PWSTR pwcsPath, [In] IUnknown pUnkOuter, [Out] void** ppIUnk);
+HRESULT LoadIFilterEx([Const] [In] PWSTR pwcsPath, [In] uint dwFlags, [Const] [In] Guid* riid, [Out] void** ppIUnk);
+HRESULT BindIFilterFromStorage([In] IStorage pStg, [In] IUnknown pUnkOuter, [Out] void** ppIUnk);
+HRESULT BindIFilterFromStream([In] IStream pStm, [In] IUnknown pUnkOuter, [Out] void** ppIUnk);

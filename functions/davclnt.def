@@ -1,0 +1,18 @@
+uint DavGetTheLockOwnerOfTheFile([Const] [In] PWSTR FileName, [MemorySize(BytesParamIndex = 2)] [Out] [Optional] PWSTR LockOwnerName, [In] [Out] uint* LockOwnerNameLengthInBytes);
+uint DavInvalidateCache([Const] [In] PWSTR URLName);
+uint DavCancelConnectionsToServer([In] PWSTR lpName, [In] BOOL fForce);
+uint DavRegisterAuthCallback([In] PFNDAVAUTHCALLBACK CallBack, [In] uint Version);
+void DavUnregisterAuthCallback([In] uint hCallback);
+uint NPAddConnection([In] NETRESOURCEW* lpNetResource, [In] [Optional] PWSTR lpPassword, [In] [Optional] PWSTR lpUserName);
+uint NPAddConnection3([In] [Optional] HWND hwndOwner, [In] NETRESOURCEW* lpNetResource, [In] [Optional] PWSTR lpPassword, [In] [Optional] PWSTR lpUserName, [In] NET_USE_CONNECT_FLAGS dwFlags);
+uint NPCancelConnection([In] PWSTR lpName, [In] BOOL fForce);
+uint NPGetConnection([In] PWSTR lpLocalName, [NativeArrayInfo(CountParamIndex = 2)] [Out] [Optional] PWSTR lpRemoteName, [In] [Out] uint* lpnBufferLen);
+uint NPGetUniversalName([Const] [In] PWSTR lpLocalPath, [In] UNC_INFO_LEVEL dwInfoLevel, [MemorySize(BytesParamIndex = 3)] [Out] void* lpBuffer, [In] [Out] uint* lpBufferSize);
+uint NPOpenEnum([In] uint dwScope, [In] uint dwType, [In] uint dwUsage, [In] [Optional] NETRESOURCEW* lpNetResource, [Out] HANDLE* lphEnum);
+uint NPEnumResource([In] HANDLE hEnum, [In] [Out] uint* lpcCount, [MemorySize(BytesParamIndex = 3)] [Out] void* lpBuffer, [In] [Out] uint* lpBufferSize);
+uint NPCloseEnum([In] HANDLE hEnum);
+uint NPGetCaps([In] uint ndex);
+uint NPGetUser([In] PWSTR lpName, [NativeArrayInfo(CountParamIndex = 2)] [Out] PWSTR lpUserName, [In] [Out] uint* lpnBufferLen);
+uint NPGetResourceParent([In] NETRESOURCEW* lpNetResource, [MemorySize(BytesParamIndex = 2)] [Out] void* lpBuffer, [In] [Out] uint* lpBufferSize);
+uint NPGetResourceInformation([In] NETRESOURCEW* lpNetResource, [MemorySize(BytesParamIndex = 2)] [Out] void* lpBuffer, [In] [Out] uint* lpBufferSize, [Out] PWSTR* lplpSystem);
+uint NPFormatNetworkName([In] PWSTR lpRemoteName, [NativeArrayInfo(CountParamIndex = 2)] [Out] PWSTR lpFormattedName, [In] [Out] uint* lpnLength, [In] NETWORK_NAME_FORMAT_FLAGS dwFlags, [In] uint dwAveCharPerLine);

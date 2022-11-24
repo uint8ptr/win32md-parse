@@ -1,0 +1,12 @@
+HRESULT HcsImportLayer([Const] [In] PWSTR layerPath, [Const] [In] PWSTR sourceFolderPath, [Const] [In] PWSTR layerData);
+HRESULT HcsExportLayer([Const] [In] PWSTR layerPath, [Const] [In] PWSTR exportFolderPath, [Const] [In] PWSTR layerData, [Const] [In] PWSTR options);
+HRESULT HcsExportLegacyWritableLayer([Const] [In] PWSTR writableLayerMountPath, [Const] [In] PWSTR writableLayerFolderPath, [Const] [In] PWSTR exportFolderPath, [Const] [In] PWSTR layerData);
+HRESULT HcsDestroyLayer([Const] [In] PWSTR layerPath);
+HRESULT HcsSetupBaseOSLayer([Const] [In] PWSTR layerPath, [In] HANDLE vhdHandle, [Const] [In] PWSTR options);
+HRESULT HcsInitializeWritableLayer([Const] [In] PWSTR writableLayerPath, [Const] [In] PWSTR layerData, [Const] [In] [Optional] PWSTR options);
+HRESULT HcsInitializeLegacyWritableLayer([Const] [In] PWSTR writableLayerMountPath, [Const] [In] PWSTR writableLayerFolderPath, [Const] [In] PWSTR layerData, [Const] [In] [Optional] PWSTR options);
+HRESULT HcsAttachLayerStorageFilter([Const] [In] PWSTR layerPath, [Const] [In] PWSTR layerData);
+HRESULT HcsDetachLayerStorageFilter([Const] [In] PWSTR layerPath);
+HRESULT HcsFormatWritableLayerVhd([In] HANDLE vhdHandle);
+HRESULT HcsGetLayerVhdMountPath([In] HANDLE vhdHandle, [Out] PWSTR* mountPath);
+HRESULT HcsSetupBaseOSVolume([Const] [In] PWSTR layerPath, [Const] [In] PWSTR volumePath, [Const] [In] PWSTR options);

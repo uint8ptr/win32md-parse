@@ -1,0 +1,14 @@
+HANDLE AvSetMmThreadCharacteristicsA([Const] [In] PSTR TaskName, [In] [Out] uint* TaskIndex);
+HANDLE AvSetMmThreadCharacteristicsW([Const] [In] PWSTR TaskName, [In] [Out] uint* TaskIndex);
+HANDLE AvSetMmMaxThreadCharacteristicsA([Const] [In] PSTR FirstTask, [Const] [In] PSTR SecondTask, [In] [Out] uint* TaskIndex);
+HANDLE AvSetMmMaxThreadCharacteristicsW([Const] [In] PWSTR FirstTask, [Const] [In] PWSTR SecondTask, [In] [Out] uint* TaskIndex);
+BOOL AvRevertMmThreadCharacteristics([In] HANDLE AvrtHandle);
+BOOL AvSetMmThreadPriority([In] HANDLE AvrtHandle, [In] AVRT_PRIORITY Priority);
+BOOL AvRtCreateThreadOrderingGroup([Out] HANDLE* Context, [In] LARGE_INTEGER* Period, [In] [Out] Guid* ThreadOrderingGuid, [In] [Optional] LARGE_INTEGER* Timeout);
+BOOL AvRtCreateThreadOrderingGroupExA([Out] HANDLE* Context, [In] LARGE_INTEGER* Period, [In] [Out] Guid* ThreadOrderingGuid, [In] [Optional] LARGE_INTEGER* Timeout, [Const] [In] PSTR TaskName);
+BOOL AvRtCreateThreadOrderingGroupExW([Out] HANDLE* Context, [In] LARGE_INTEGER* Period, [In] [Out] Guid* ThreadOrderingGuid, [In] [Optional] LARGE_INTEGER* Timeout, [Const] [In] PWSTR TaskName);
+BOOL AvRtJoinThreadOrderingGroup([Out] HANDLE* Context, [In] Guid* ThreadOrderingGuid, [In] BOOL Before);
+BOOL AvRtWaitOnThreadOrderingGroup([In] HANDLE Context);
+BOOL AvRtLeaveThreadOrderingGroup([In] HANDLE Context);
+BOOL AvRtDeleteThreadOrderingGroup([In] HANDLE Context);
+BOOL AvQuerySystemResponsiveness([In] HANDLE AvrtHandle, [Out] uint* SystemResponsivenessValue);

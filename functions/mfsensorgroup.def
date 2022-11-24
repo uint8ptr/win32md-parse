@@ -1,0 +1,9 @@
+HRESULT MFCreateSensorGroup([Const] [In] PWSTR SensorGroupSymbolicLink, [ComOutPtr] [Out] IMFSensorGroup* ppSensorGroup);
+HRESULT MFCreateSensorStream([In] uint StreamId, [In] [Optional] IMFAttributes pAttributes, [In] IMFCollection pMediaTypeCollection, [ComOutPtr] [Out] IMFSensorStream* ppStream);
+HRESULT MFCreateSensorProfile([Const] [In] Guid* ProfileType, [In] uint ProfileIndex, [Const] [In] [Optional] PWSTR Constraints, [ComOutPtr] [Out] IMFSensorProfile* ppProfile);
+HRESULT MFCreateSensorProfileCollection([ComOutPtr] [Out] IMFSensorProfileCollection* ppSensorProfile);
+HRESULT MFCreateSensorActivityMonitor([In] IMFSensorActivitiesReportCallback pCallback, [ComOutPtr] [Out] IMFSensorActivityMonitor* ppActivityMonitor);
+HRESULT MFCreateRelativePanelWatcher([Const] [In] PWSTR videoDeviceId, [Const] [In] PWSTR displayMonitorDeviceId, [ComOutPtr] [Out] IMFRelativePanelWatcher* ppRelativePanelWatcher);
+HRESULT MFCreateCameraOcclusionStateMonitor([Const] [In] PWSTR symbolicLink, [In] IMFCameraOcclusionStateReportCallback callback, [ComOutPtr] [Out] IMFCameraOcclusionStateMonitor* occlusionStateMonitor);
+HRESULT MFCreateVirtualCamera([In] MFVirtualCameraType type, [In] MFVirtualCameraLifetime lifetime, [In] MFVirtualCameraAccess access, [Const] [In] PWSTR friendlyName, [Const] [In] PWSTR sourceId, [Const] [NativeArrayInfo(CountParamIndex = 6)] [In] [Optional] Guid* categories, [In] uint categoryCount, [ComOutPtr] [Out] IMFVirtualCamera* virtualCamera);
+HRESULT MFIsVirtualCameraTypeSupported([In] MFVirtualCameraType type, [Out] BOOL* supported);

@@ -1,0 +1,3 @@
+HRESULT RoGetParameterizedTypeInstanceIID([In] uint nameElementCount, [NativeArrayInfo(CountParamIndex = 0)] [In] PWSTR* nameElements, [Const] [In] IRoMetaDataLocator metaDataLocator, [Out] Guid* iid, [Out] [Optional] ROPARAMIIDHANDLE* pExtra);
+void RoFreeParameterizedTypeExtra([In] ROPARAMIIDHANDLE extra);
+PSTR RoParameterizedTypeExtraGetTypeSignature([In] ROPARAMIIDHANDLE extra);

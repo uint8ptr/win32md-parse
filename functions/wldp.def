@@ -1,0 +1,6 @@
+HRESULT WldpGetLockdownPolicy([In] [Optional] WLDP_HOST_INFORMATION* hostInformation, [Out] uint* lockdownState, [In] uint lockdownFlags);
+HRESULT WldpIsClassInApprovedList([Const] [In] Guid* classID, [In] WLDP_HOST_INFORMATION* hostInformation, [Out] BOOL* isApproved, [In] uint optionalFlags);
+HRESULT WldpSetDynamicCodeTrust([In] HANDLE fileHandle);
+HRESULT WldpIsDynamicCodePolicyEnabled([Out] BOOL* isEnabled);
+HRESULT WldpQueryDynamicCodeTrust([In] [Optional] HANDLE fileHandle, [MemorySize(BytesParamIndex = 2)] [In] [Optional] void* baseImage, [In] uint imageSize);
+HRESULT WldpQueryDeviceSecurityInformation([NativeArrayInfo(CountParamIndex = 1)] [Out] [Optional] WLDP_DEVICE_SECURITY_INFORMATION* information, [In] uint informationLength, [Out] uint* returnLength);

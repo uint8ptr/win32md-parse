@@ -1,0 +1,3 @@
+void QueryInterruptTimePrecise([Out] ulong* lpInterruptTimePrecise);
+void QueryUnbiasedInterruptTimePrecise([Out] ulong* lpUnbiasedInterruptTimePrecise);
+void QueryInterruptTime([Out] ulong* lpInterruptTime);

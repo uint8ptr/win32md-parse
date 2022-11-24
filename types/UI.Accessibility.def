@@ -1,0 +1,4 @@
+typedef nint HUIATEXTRANGE;
+typedef nint HUIAEVENT;
+typedef nint HUIANODE;
+typedef nint HUIAPATTERNOBJECT;

@@ -1,0 +1,12 @@
+typedef nint HWAVEIN;
+typedef nint HWAVEOUT;
+typedef nint HACMDRIVER;
+typedef nint HACMDRIVERID;
+typedef nint HACMOBJ;
+typedef nint HACMSTREAM;
+typedef nint HMIDI;
+typedef nint HMIDIIN;
+typedef nint HMIDIOUT;
+typedef nint HMIDISTRM;
+typedef nint HMIXER;
+typedef nint HMIXEROBJ;

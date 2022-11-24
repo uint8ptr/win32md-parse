@@ -1,0 +1,5 @@
+FEATURE_ENABLED_STATE GetFeatureEnabledState([In] uint featureId, [In] FEATURE_CHANGE_TIME changeTime);
+void RecordFeatureUsage([In] uint featureId, [In] uint kind, [In] uint addend, [Const] [In] PSTR originName);
+void RecordFeatureError([In] uint featureId, [Const] [In] FEATURE_ERROR* error);
+void SubscribeFeatureStateChangeNotification([Out] FEATURE_STATE_CHANGE_SUBSCRIPTION* subscription, [In] PFEATURE_STATE_CHANGE_CALLBACK callback, [In] [Optional] void* context);
+void UnsubscribeFeatureStateChangeNotification([In] FEATURE_STATE_CHANGE_SUBSCRIPTION subscription);

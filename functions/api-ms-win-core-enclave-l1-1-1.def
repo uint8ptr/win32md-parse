@@ -1,0 +1,3 @@
+BOOL LoadEnclaveImageA([In] void* lpEnclaveAddress, [Const] [In] PSTR lpImageName);
+BOOL LoadEnclaveImageW([In] void* lpEnclaveAddress, [Const] [In] PWSTR lpImageName);
+BOOL DeleteEnclave([In] void* lpAddress);

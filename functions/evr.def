@@ -1,0 +1,7 @@
+BOOL MFIsFormatYUV([In] uint Format);
+HRESULT MFGetPlaneSize([In] uint format, [In] uint dwWidth, [In] uint dwHeight, [Out] uint* pdwPlaneSize);
+HRESULT MFCreateVideoPresenter([In] [Optional] IUnknown pOwner, [Const] [In] Guid* riidDevice, [Const] [In] Guid* riid, [Out] [Optional] void** ppVideoPresenter);
+HRESULT MFCreateVideoMixer([In] [Optional] IUnknown pOwner, [Const] [In] Guid* riidDevice, [Const] [In] Guid* riid, [Out] void** ppv);
+HRESULT MFCreateVideoMixerAndPresenter([In] [Optional] IUnknown pMixerOwner, [In] [Optional] IUnknown pPresenterOwner, [Const] [In] Guid* riidMixer, [Out] void** ppvVideoMixer, [Const] [In] Guid* riidPresenter, [Out] void** ppvVideoPresenter);
+HRESULT MFCreateVideoSampleFromSurface([In] IUnknown pUnkSurface, [Out] IMFSample* ppSample);
+HRESULT MFCreateVideoSampleAllocator([Const] [In] Guid* riid, [Out] void** ppSampleAllocator);

@@ -1,0 +1,11 @@
+HRESULT RoGetErrorReportingFlags([Out] uint* pflags);
+HRESULT RoSetErrorReportingFlags([In] uint flags);
+HRESULT RoResolveRestrictedErrorInfoReference([Const] [In] PWSTR reference, [Out] IRestrictedErrorInfo* ppRestrictedErrorInfo);
+HRESULT SetRestrictedErrorInfo([In] [Optional] IRestrictedErrorInfo pRestrictedErrorInfo);
+HRESULT GetRestrictedErrorInfo([Out] [Optional] IRestrictedErrorInfo* ppRestrictedErrorInfo);
+BOOL RoOriginateErrorW([In] HRESULT error, [In] uint cchMax, [Const] [NativeArrayInfo(CountConst = 512)] [In] [Optional] PWSTR message);
+BOOL RoOriginateError([In] HRESULT error, [In] [Optional] HSTRING message);
+BOOL RoTransformErrorW([In] HRESULT oldError, [In] HRESULT newError, [In] uint cchMax, [Const] [NativeArrayInfo(CountConst = 512)] [In] [Optional] PWSTR message);
+BOOL RoTransformError([In] HRESULT oldError, [In] HRESULT newError, [In] [Optional] HSTRING message);
+HRESULT RoCaptureErrorContext([In] HRESULT hr);
+void RoFailFastWithErrorContext([In] HRESULT hrError);

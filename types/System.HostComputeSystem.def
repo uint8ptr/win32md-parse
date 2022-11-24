@@ -1,0 +1,2 @@
+typedef nint HCS_PROCESS;
+typedef nint HCS_SYSTEM;

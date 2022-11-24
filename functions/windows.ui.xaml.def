@@ -1,0 +1,2 @@
+HRESULT InitializeXamlDiagnostic([Const] [In] PWSTR endPointName, [In] uint pid, [Const] [In] PWSTR wszDllXamlDiagnostics, [Const] [In] PWSTR wszTAPDllName, [In] Guid tapClsid);
+HRESULT InitializeXamlDiagnosticsEx([Const] [In] PWSTR endPointName, [In] uint pid, [Const] [In] PWSTR wszDllXamlDiagnostics, [Const] [In] PWSTR wszTAPDllName, [In] Guid tapClsid, [Const] [In] PWSTR wszInitializationData);

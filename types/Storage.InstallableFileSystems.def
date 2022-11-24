@@ -1,0 +1,5 @@
+typedef nint FilterInstanceFindHandle;
+typedef nint FilterVolumeFindHandle;
+typedef nint FilterVolumeInstanceFindHandle;
+typedef nint HFILTER;
+typedef nint HFILTER_INSTANCE;

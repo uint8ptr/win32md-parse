@@ -1,0 +1,2 @@
+HRESULT GetDistanceOfClosestLanguageInList([Const] [In] PWSTR pszLanguage, [Const] [In] PWSTR pszLanguagesList, [In] wchar wchListDelimiter, [Out] double* pClosestDistance);
+byte IsWellFormedTag([Const] [In] PWSTR pszTag);

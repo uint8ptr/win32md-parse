@@ -1,0 +1,16 @@
+HRESULT DrtOpen([Const] [In] DRT_SETTINGS* pSettings, [In] [Optional] HANDLE hEvent, [Const] [In] [Optional] void* pvContext, [Out] void** phDrt);
+void DrtClose([In] void* hDrt);
+HRESULT DrtGetEventDataSize([In] void* hDrt, [Out] uint* pulEventDataLen);
+HRESULT DrtGetEventData([In] void* hDrt, [In] uint ulEventDataLen, [MemorySize(BytesParamIndex = 1)] [Out] DRT_EVENT_DATA* pEventData);
+HRESULT DrtRegisterKey([In] void* hDrt, [In] DRT_REGISTRATION* pRegistration, [In] [Optional] void* pvKeyContext, [Out] void** phKeyRegistration);
+HRESULT DrtUpdateKey([In] void* hKeyRegistration, [In] DRT_DATA* pAppData);
+void DrtUnregisterKey([In] void* hKeyRegistration);
+HRESULT DrtStartSearch([In] void* hDrt, [In] DRT_DATA* pKey, [Const] [In] [Optional] DRT_SEARCH_INFO* pInfo, [In] uint timeout, [In] HANDLE hEvent, [Const] [In] [Optional] void* pvContext, [Out] void** hSearchContext);
+HRESULT DrtContinueSearch([In] void* hSearchContext);
+HRESULT DrtGetSearchResultSize([In] void* hSearchContext, [Out] uint* pulSearchResultSize);
+HRESULT DrtGetSearchResult([In] void* hSearchContext, [In] uint ulSearchResultSize, [MemorySize(BytesParamIndex = 1)] [Out] DRT_SEARCH_RESULT* pSearchResult);
+HRESULT DrtGetSearchPathSize([In] void* hSearchContext, [Out] uint* pulSearchPathSize);
+HRESULT DrtGetSearchPath([In] void* hSearchContext, [In] uint ulSearchPathSize, [MemorySize(BytesParamIndex = 1)] [Out] DRT_ADDRESS_LIST* pSearchPath);
+HRESULT DrtEndSearch([In] void* hSearchContext);
+HRESULT DrtGetInstanceName([In] void* hDrt, [In] uint ulcbInstanceNameSize, [MemorySize(BytesParamIndex = 1)] [Out] PWSTR pwzDrtInstanceName);
+HRESULT DrtGetInstanceNameSize([In] void* hDrt, [Out] uint* pulcbInstanceNameSize);

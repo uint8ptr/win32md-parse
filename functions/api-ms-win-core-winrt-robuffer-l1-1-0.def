@@ -1,0 +1,1 @@
+HRESULT RoGetBufferMarshaler([Out] IMarshal* bufferMarshaler);

@@ -1,0 +1,4 @@
+uint OfflineFilesEnable([In] BOOL bEnable, [Out] BOOL* pbRebootRequired);
+uint OfflineFilesStart();
+uint OfflineFilesQueryStatus([Out] [Optional] BOOL* pbActive, [Out] [Optional] BOOL* pbEnabled);
+uint OfflineFilesQueryStatusEx([Out] [Optional] BOOL* pbActive, [Out] [Optional] BOOL* pbEnabled, [Out] [Optional] BOOL* pbAvailable);

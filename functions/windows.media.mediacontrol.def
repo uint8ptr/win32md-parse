@@ -1,0 +1,8 @@
+HRESULT CreateRenderAudioStateMonitor([Out] IAudioStateMonitor* audioStateMonitor);
+HRESULT CreateRenderAudioStateMonitorForCategory([In] AUDIO_STREAM_CATEGORY category, [Out] IAudioStateMonitor* audioStateMonitor);
+HRESULT CreateRenderAudioStateMonitorForCategoryAndDeviceRole([In] AUDIO_STREAM_CATEGORY category, [In] ERole role, [Out] IAudioStateMonitor* audioStateMonitor);
+HRESULT CreateRenderAudioStateMonitorForCategoryAndDeviceId([In] AUDIO_STREAM_CATEGORY category, [Const] [In] PWSTR deviceId, [Out] IAudioStateMonitor* audioStateMonitor);
+HRESULT CreateCaptureAudioStateMonitor([Out] IAudioStateMonitor* audioStateMonitor);
+HRESULT CreateCaptureAudioStateMonitorForCategory([In] AUDIO_STREAM_CATEGORY category, [Out] IAudioStateMonitor* audioStateMonitor);
+HRESULT CreateCaptureAudioStateMonitorForCategoryAndDeviceRole([In] AUDIO_STREAM_CATEGORY category, [In] ERole role, [Out] IAudioStateMonitor* audioStateMonitor);
+HRESULT CreateCaptureAudioStateMonitorForCategoryAndDeviceId([In] AUDIO_STREAM_CATEGORY category, [Const] [In] PWSTR deviceId, [Out] IAudioStateMonitor* audioStateMonitor);

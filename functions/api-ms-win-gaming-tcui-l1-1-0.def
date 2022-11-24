@@ -1,0 +1,7 @@
+HRESULT ShowGameInviteUI([In] HSTRING serviceConfigurationId, [In] HSTRING sessionTemplateName, [In] HSTRING sessionId, [In] HSTRING invitationDisplayText, [In] GameUICompletionRoutine completionRoutine, [In] [Optional] void* context);
+HRESULT ShowPlayerPickerUI([In] HSTRING promptDisplayText, [Const] [NativeArrayInfo(CountParamIndex = 2)] [In] HSTRING* xuids, [In] nuint xuidsCount, [Const] [NativeArrayInfo(CountParamIndex = 4)] [In] [Optional] HSTRING* preSelectedXuids, [In] nuint preSelectedXuidsCount, [In] nuint minSelectionCount, [In] nuint maxSelectionCount, [In] PlayerPickerUICompletionRoutine completionRoutine, [In] [Optional] void* context);
+HRESULT ShowProfileCardUI([In] HSTRING targetUserXuid, [In] GameUICompletionRoutine completionRoutine, [In] [Optional] void* context);
+HRESULT ShowChangeFriendRelationshipUI([In] HSTRING targetUserXuid, [In] GameUICompletionRoutine completionRoutine, [In] [Optional] void* context);
+HRESULT ShowTitleAchievementsUI([In] uint titleId, [In] GameUICompletionRoutine completionRoutine, [In] [Optional] void* context);
+HRESULT ProcessPendingGameUI([In] BOOL waitForCompletion);
+BOOL TryCancelPendingGameUI();

@@ -1,0 +1,12 @@
+HRESULT QueryIoRingCapabilities([Out] IORING_CAPABILITIES* capabilities);
+BOOL IsIoRingOpSupported([In] HIORING__* ioRing, [In] IORING_OP_CODE op);
+HRESULT CreateIoRing([In] IORING_VERSION ioringVersion, [In] IORING_CREATE_FLAGS flags, [In] uint submissionQueueSize, [In] uint completionQueueSize, [Out] HIORING__** h);
+HRESULT GetIoRingInfo([In] HIORING__* ioRing, [Out] IORING_INFO* info);
+HRESULT SubmitIoRing([In] HIORING__* ioRing, [In] uint waitOperations, [In] uint milliseconds, [Out] [Optional] uint* submittedEntries);
+HRESULT CloseIoRing([In] HIORING__* ioRing);
+HRESULT PopIoRingCompletion([In] HIORING__* ioRing, [Out] IORING_CQE* cqe);
+HRESULT SetIoRingCompletionEvent([In] HIORING__* ioRing, [In] HANDLE hEvent);
+HRESULT BuildIoRingCancelRequest([In] HIORING__* ioRing, [In] IORING_HANDLE_REF file, [In] nuint opToCancel, [In] nuint userData);
+HRESULT BuildIoRingReadFile([In] HIORING__* ioRing, [In] IORING_HANDLE_REF fileRef, [In] IORING_BUFFER_REF dataRef, [In] uint numberOfBytesToRead, [In] ulong fileOffset, [In] nuint userData, [In] IORING_SQE_FLAGS flags);
+HRESULT BuildIoRingRegisterFileHandles([In] HIORING__* ioRing, [In] uint count, [Const] [NativeArrayInfo(CountParamIndex = 1)] [In] HANDLE* handles, [In] nuint userData);
+HRESULT BuildIoRingRegisterBuffers([In] HIORING__* ioRing, [In] uint count, [Const] [NativeArrayInfo(CountParamIndex = 1)] [In] IORING_BUFFER_INFO* buffers, [In] nuint userData);

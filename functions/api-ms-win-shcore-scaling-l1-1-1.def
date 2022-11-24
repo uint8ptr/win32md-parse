@@ -1,0 +1,6 @@
+HRESULT SetProcessDpiAwareness([In] PROCESS_DPI_AWARENESS value);
+HRESULT GetProcessDpiAwareness([In] [Optional] HANDLE hprocess, [Out] PROCESS_DPI_AWARENESS* value);
+HRESULT GetDpiForMonitor([In] HMONITOR hmonitor, [In] MONITOR_DPI_TYPE dpiType, [Out] uint* dpiX, [Out] uint* dpiY);
+HRESULT GetScaleFactorForMonitor([In] HMONITOR hMon, [Out] DEVICE_SCALE_FACTOR* pScale);
+HRESULT RegisterScaleChangeEvent([In] HANDLE hEvent, [Out] nuint* pdwCookie);
+HRESULT UnregisterScaleChangeEvent([In] nuint dwCookie);

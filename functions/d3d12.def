@@ -1,0 +1,8 @@
+HRESULT D3D12SerializeRootSignature([Const] [In] D3D12_ROOT_SIGNATURE_DESC* pRootSignature, [In] D3D_ROOT_SIGNATURE_VERSION Version, [Out] ID3DBlob* ppBlob, [Out] [Optional] ID3DBlob* ppErrorBlob);
+HRESULT D3D12CreateRootSignatureDeserializer([Const] [MemorySize(BytesParamIndex = 1)] [In] void* pSrcData, [In] nuint SrcDataSizeInBytes, [Const] [In] Guid* pRootSignatureDeserializerInterface, [Out] void** ppRootSignatureDeserializer);
+HRESULT D3D12SerializeVersionedRootSignature([Const] [In] D3D12_VERSIONED_ROOT_SIGNATURE_DESC* pRootSignature, [Out] ID3DBlob* ppBlob, [Out] [Optional] ID3DBlob* ppErrorBlob);
+HRESULT D3D12CreateVersionedRootSignatureDeserializer([Const] [MemorySize(BytesParamIndex = 1)] [In] void* pSrcData, [In] nuint SrcDataSizeInBytes, [Const] [In] Guid* pRootSignatureDeserializerInterface, [Out] void** ppRootSignatureDeserializer);
+HRESULT D3D12CreateDevice([In] [Optional] IUnknown pAdapter, [In] D3D_FEATURE_LEVEL MinimumFeatureLevel, [Const] [In] Guid* riid, [ComOutPtr] [Out] [Optional] void** ppDevice);
+HRESULT D3D12GetDebugInterface([Const] [In] Guid* riid, [ComOutPtr] [Out] [Optional] void** ppvDebug);
+HRESULT D3D12EnableExperimentalFeatures([In] uint NumFeatures, [Const] [NativeArrayInfo(CountParamIndex = 0)] [In] Guid* pIIDs, [NativeArrayInfo(CountParamIndex = 0)] [In] [Optional] void* pConfigurationStructs, [NativeArrayInfo(CountParamIndex = 0)] [In] [Optional] uint* pConfigurationStructSizes);
+HRESULT D3D12GetInterface([Const] [In] Guid* rclsid, [Const] [In] Guid* riid, [ComOutPtr] [Out] [Optional] void** ppvDebug);

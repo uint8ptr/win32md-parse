@@ -1,0 +1,11 @@
+HRESULT PTQuerySchemaVersionSupport([Const] [In] PWSTR pszPrinterName, [Out] uint* pMaxVersion);
+HRESULT PTOpenProvider([Const] [In] PWSTR pszPrinterName, [In] uint dwVersion, [Out] HPTPROVIDER* phProvider);
+HRESULT PTOpenProviderEx([Const] [In] PWSTR pszPrinterName, [In] uint dwMaxVersion, [In] uint dwPrefVersion, [Out] HPTPROVIDER* phProvider, [Out] uint* pUsedVersion);
+HRESULT PTCloseProvider([In] HPTPROVIDER hProvider);
+HRESULT PTReleaseMemory([In] void* pBuffer);
+HRESULT PTGetPrintCapabilities([In] HPTPROVIDER hProvider, [In] [Optional] IStream pPrintTicket, [In] IStream pCapabilities, [Out] [Optional] BSTR* pbstrErrorMessage);
+HRESULT PTGetPrintDeviceCapabilities([In] HPTPROVIDER hProvider, [In] [Optional] IStream pPrintTicket, [In] IStream pDeviceCapabilities, [Out] [Optional] BSTR* pbstrErrorMessage);
+HRESULT PTGetPrintDeviceResources([In] HPTPROVIDER hProvider, [Const] [In] PWSTR pszLocaleName, [In] [Optional] IStream pPrintTicket, [In] IStream pDeviceResources, [Out] [Optional] BSTR* pbstrErrorMessage);
+HRESULT PTMergeAndValidatePrintTicket([In] HPTPROVIDER hProvider, [In] IStream pBaseTicket, [In] [Optional] IStream pDeltaTicket, [In] EPrintTicketScope scope, [In] IStream pResultTicket, [Out] [Optional] BSTR* pbstrErrorMessage);
+HRESULT PTConvertPrintTicketToDevMode([In] HPTPROVIDER hProvider, [In] IStream pPrintTicket, [In] EDefaultDevmodeType baseDevmodeType, [In] EPrintTicketScope scope, [Out] uint* pcbDevmode, [Out] DEVMODEA** ppDevmode, [Out] [Optional] BSTR* pbstrErrorMessage);
+HRESULT PTConvertDevModeToPrintTicket([In] HPTPROVIDER hProvider, [In] uint cbDevmode, [In] DEVMODEA* pDevmode, [In] EPrintTicketScope scope, [In] IStream pPrintTicket);

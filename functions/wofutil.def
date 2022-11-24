@@ -1,0 +1,11 @@
+BOOL WofShouldCompressBinaries([Const] [In] PWSTR Volume, [Out] uint* Algorithm);
+HRESULT WofGetDriverVersion([In] HANDLE FileOrVolumeHandle, [In] uint Provider, [Out] uint* WofVersion);
+HRESULT WofSetFileDataLocation([In] HANDLE FileHandle, [In] uint Provider, [In] void* ExternalFileInfo, [In] uint Length);
+HRESULT WofIsExternalFile([Const] [In] PWSTR FilePath, [Out] [Optional] BOOL* IsExternalFile, [Out] [Optional] uint* Provider, [Out] [Optional] void* ExternalFileInfo, [In] [Out] [Optional] uint* BufferLength);
+HRESULT WofEnumEntries([Const] [In] PWSTR VolumeName, [In] uint Provider, [In] WofEnumEntryProc EnumProc, [In] [Optional] void* UserData);
+HRESULT WofWimAddEntry([Const] [In] PWSTR VolumeName, [Const] [In] PWSTR WimPath, [In] uint WimType, [In] uint WimIndex, [Out] LARGE_INTEGER* DataSourceId);
+HRESULT WofWimEnumFiles([Const] [In] PWSTR VolumeName, [In] LARGE_INTEGER DataSourceId, [In] WofEnumFilesProc EnumProc, [In] [Optional] void* UserData);
+HRESULT WofWimSuspendEntry([Const] [In] PWSTR VolumeName, [In] LARGE_INTEGER DataSourceId);
+HRESULT WofWimRemoveEntry([Const] [In] PWSTR VolumeName, [In] LARGE_INTEGER DataSourceId);
+HRESULT WofWimUpdateEntry([Const] [In] PWSTR VolumeName, [In] LARGE_INTEGER DataSourceId, [Const] [In] PWSTR NewWimPath);
+HRESULT WofFileEnumFiles([Const] [In] PWSTR VolumeName, [In] uint Algorithm, [In] WofEnumFilesProc EnumProc, [In] [Optional] void* UserData);

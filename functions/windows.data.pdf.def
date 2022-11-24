@@ -1,0 +1,1 @@
+HRESULT PdfCreateRenderer([In] IDXGIDevice pDevice, [Out] IPdfRendererNative* ppRenderer);

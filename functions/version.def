@@ -1,0 +1,14 @@
+VER_FIND_FILE_STATUS VerFindFileA([In] VER_FIND_FILE_FLAGS uFlags, [Const] [In] PSTR szFileName, [Const] [In] [Optional] PSTR szWinDir, [Const] [In] PSTR szAppDir, [NativeArrayInfo(CountParamIndex = 5)] [Out] PSTR szCurDir, [In] [Out] uint* puCurDirLen, [NativeArrayInfo(CountParamIndex = 7)] [Out] PSTR szDestDir, [In] [Out] uint* puDestDirLen);
+VER_FIND_FILE_STATUS VerFindFileW([In] VER_FIND_FILE_FLAGS uFlags, [Const] [In] PWSTR szFileName, [Const] [In] [Optional] PWSTR szWinDir, [Const] [In] PWSTR szAppDir, [NativeArrayInfo(CountParamIndex = 5)] [Out] PWSTR szCurDir, [In] [Out] uint* puCurDirLen, [NativeArrayInfo(CountParamIndex = 7)] [Out] PWSTR szDestDir, [In] [Out] uint* puDestDirLen);
+VER_INSTALL_FILE_STATUS VerInstallFileA([In] VER_INSTALL_FILE_FLAGS uFlags, [Const] [In] PSTR szSrcFileName, [Const] [In] PSTR szDestFileName, [Const] [In] PSTR szSrcDir, [Const] [In] PSTR szDestDir, [Const] [In] PSTR szCurDir, [NativeArrayInfo(CountParamIndex = 7)] [Out] PSTR szTmpFile, [In] [Out] uint* puTmpFileLen);
+VER_INSTALL_FILE_STATUS VerInstallFileW([In] VER_INSTALL_FILE_FLAGS uFlags, [Const] [In] PWSTR szSrcFileName, [Const] [In] PWSTR szDestFileName, [Const] [In] PWSTR szSrcDir, [Const] [In] PWSTR szDestDir, [Const] [In] PWSTR szCurDir, [NativeArrayInfo(CountParamIndex = 7)] [Out] PWSTR szTmpFile, [In] [Out] uint* puTmpFileLen);
+uint GetFileVersionInfoSizeA([Const] [In] PSTR lptstrFilename, [Out] [Optional] uint* lpdwHandle);
+uint GetFileVersionInfoSizeW([Const] [In] PWSTR lptstrFilename, [Out] [Optional] uint* lpdwHandle);
+BOOL GetFileVersionInfoA([Const] [In] PSTR lptstrFilename, [Reserved] [In] uint dwHandle, [In] uint dwLen, [MemorySize(BytesParamIndex = 2)] [Out] void* lpData);
+BOOL GetFileVersionInfoW([Const] [In] PWSTR lptstrFilename, [Reserved] [In] uint dwHandle, [In] uint dwLen, [MemorySize(BytesParamIndex = 2)] [Out] void* lpData);
+uint GetFileVersionInfoSizeExA([In] GET_FILE_VERSION_INFO_FLAGS dwFlags, [Const] [In] PSTR lpwstrFilename, [Out] uint* lpdwHandle);
+uint GetFileVersionInfoSizeExW([In] GET_FILE_VERSION_INFO_FLAGS dwFlags, [Const] [In] PWSTR lpwstrFilename, [Out] uint* lpdwHandle);
+BOOL GetFileVersionInfoExA([In] GET_FILE_VERSION_INFO_FLAGS dwFlags, [Const] [In] PSTR lpwstrFilename, [Reserved] [In] uint dwHandle, [In] uint dwLen, [MemorySize(BytesParamIndex = 3)] [Out] void* lpData);
+BOOL GetFileVersionInfoExW([In] GET_FILE_VERSION_INFO_FLAGS dwFlags, [Const] [In] PWSTR lpwstrFilename, [Reserved] [In] uint dwHandle, [In] uint dwLen, [MemorySize(BytesParamIndex = 3)] [Out] void* lpData);
+BOOL VerQueryValueA([Const] [In] void* pBlock, [Const] [In] PSTR lpSubBlock, [Out] void** lplpBuffer, [Out] uint* puLen);
+BOOL VerQueryValueW([Const] [In] void* pBlock, [Const] [In] PWSTR lpSubBlock, [Out] void** lplpBuffer, [Out] uint* puLen);

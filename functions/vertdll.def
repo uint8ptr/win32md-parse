@@ -1,0 +1,7 @@
+BOOL CallEnclave([In] nint lpRoutine, [In] void* lpParameter, [In] BOOL fWaitForThread, [Out] void** lpReturnValue);
+BOOL TerminateEnclave([In] void* lpAddress, [In] BOOL fWait);
+HRESULT EnclaveGetAttestationReport([Const] [In] [Optional] byte* EnclaveData, [MemorySize(BytesParamIndex = 2)] [Out] [Optional] void* Report, [In] uint BufferSize, [Out] uint* OutputSize);
+HRESULT EnclaveVerifyAttestationReport([In] uint EnclaveType, [Const] [MemorySize(BytesParamIndex = 2)] [In] void* Report, [In] uint ReportSize);
+HRESULT EnclaveSealData([Const] [MemorySize(BytesParamIndex = 1)] [In] void* DataToEncrypt, [In] uint DataToEncryptSize, [In] ENCLAVE_SEALING_IDENTITY_POLICY IdentityPolicy, [In] uint RuntimePolicy, [MemorySize(BytesParamIndex = 5)] [Out] [Optional] void* ProtectedBlob, [In] uint BufferSize, [Out] uint* ProtectedBlobSize);
+HRESULT EnclaveUnsealData([Const] [MemorySize(BytesParamIndex = 1)] [In] void* ProtectedBlob, [In] uint ProtectedBlobSize, [MemorySize(BytesParamIndex = 3)] [Out] [Optional] void* DecryptedData, [In] uint BufferSize, [Out] uint* DecryptedDataSize, [Out] [Optional] ENCLAVE_IDENTITY* SealingIdentity, [Out] [Optional] uint* UnsealingFlags);
+HRESULT EnclaveGetEnclaveInformation([In] uint InformationSize, [MemorySize(BytesParamIndex = 0)] [Out] ENCLAVE_INFORMATION* EnclaveInformation);

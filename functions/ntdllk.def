@@ -1,0 +1,1 @@
+uint RtlGetSystemGlobalData([In] RTL_SYSTEM_GLOBAL_DATA_ID DataId, [In] [Out] void* Buffer, [In] uint Size);

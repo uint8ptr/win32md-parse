@@ -1,0 +1,8 @@
+BOOL SslEmptyCacheA([In] PSTR pszTargetName, [In] uint dwFlags);
+BOOL SslEmptyCacheW([In] PWSTR pszTargetName, [In] uint dwFlags);
+void SslGenerateRandomBits([In] [Out] byte* pRandomData, [In] int cRandomData);
+BOOL SslCrackCertificate([In] [Out] byte* pbCertificate, [In] uint cbCertificate, [In] uint dwFlags, [In] [Out] X509Certificate** ppCertificate);
+void SslFreeCertificate([In] [Out] X509Certificate* pCertificate);
+uint SslGetMaximumKeySize([In] uint Reserved);
+HRESULT SslGetServerIdentity([MemorySize(BytesParamIndex = 1)] [In] byte* ClientHello, [In] uint ClientHelloSize, [Out] byte** ServerIdentity, [Out] uint* ServerIdentitySize, [In] uint Flags);
+HRESULT SslGetExtensions([Const] [NativeArrayInfo(CountParamIndex = 1)] [In] byte* clientHello, [In] uint clientHelloByteSize, [NativeArrayInfo(CountParamIndex = 3)] [In] [Out] SCH_EXTENSION_DATA* genericExtensions, [In] byte genericExtensionsCount, [Out] uint* bytesToRead, [In] SchGetExtensionsOptions flags);

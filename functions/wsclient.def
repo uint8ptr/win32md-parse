@@ -1,0 +1,3 @@
+HRESULT CheckDeveloperLicense([Out] FILETIME* pExpiration);
+HRESULT AcquireDeveloperLicense([In] [Optional] HWND hwndParent, [Out] FILETIME* pExpiration);
+HRESULT RemoveDeveloperLicense([In] [Optional] HWND hwndParent);

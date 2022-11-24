@@ -1,0 +1,9 @@
+void* SnmpMgrOpen([In] [Optional] PSTR lpAgentAddress, [In] [Optional] PSTR lpAgentCommunity, [In] int nTimeOut, [In] int nRetries);
+BOOL SnmpMgrCtl([In] [Out] void* session, [In] uint dwCtlCode, [In] [Out] void* lpvInBuffer, [In] uint cbInBuffer, [In] [Out] void* lpvOUTBuffer, [In] uint cbOUTBuffer, [In] [Out] uint* lpcbBytesReturned);
+BOOL SnmpMgrClose([In] [Out] void* session);
+int SnmpMgrRequest([In] [Out] void* session, [In] byte requestType, [In] [Out] SnmpVarBindList* variableBindings, [In] [Out] SNMP_ERROR_STATUS* errorStatus, [In] [Out] int* errorIndex);
+BOOL SnmpMgrStrToOid([In] [Optional] PSTR string, [In] [Out] AsnObjectIdentifier* oid);
+BOOL SnmpMgrOidToStr([In] [Out] AsnObjectIdentifier* oid, [Out] [Optional] PSTR* string);
+BOOL SnmpMgrTrapListen([In] [Out] HANDLE* phTrapAvailable);
+BOOL SnmpMgrGetTrap([In] [Out] AsnObjectIdentifier* enterprise, [In] [Out] AsnOctetString* IPAddress, [In] [Out] SNMP_GENERICTRAP* genericTrap, [In] [Out] int* specificTrap, [In] [Out] uint* timeStamp, [In] [Out] SnmpVarBindList* variableBindings);
+BOOL SnmpMgrGetTrapEx([In] [Out] AsnObjectIdentifier* enterprise, [In] [Out] AsnOctetString* agentAddress, [In] [Out] AsnOctetString* sourceAddress, [In] [Out] SNMP_GENERICTRAP* genericTrap, [In] [Out] int* specificTrap, [In] [Out] AsnOctetString* community, [In] [Out] uint* timeStamp, [In] [Out] SnmpVarBindList* variableBindings);

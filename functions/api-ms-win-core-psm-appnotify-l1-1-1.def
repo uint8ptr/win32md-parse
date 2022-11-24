@@ -1,0 +1,2 @@
+uint RegisterAppConstrainedChangeNotification([In] PAPPCONSTRAIN_CHANGE_ROUTINE Routine, [In] [Optional] void* Context, [Out] _APPCONSTRAIN_REGISTRATION** Registration);
+void UnregisterAppConstrainedChangeNotification([In] [Out] _APPCONSTRAIN_REGISTRATION* Registration);

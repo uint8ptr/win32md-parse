@@ -1,0 +1,1 @@
+HRESULT CreateDeviceAccessInstance([Const] [In] PWSTR deviceInterfacePath, [In] uint desiredAccess, [ComOutPtr] [Out] ICreateDeviceAccessAsync* createAsync);

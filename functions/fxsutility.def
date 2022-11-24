@@ -1,0 +1,2 @@
+BOOL CanSendToFaxRecipient();
+uint SendToFaxRecipient([In] SendToMode sndMode, [Const] [In] PWSTR lpFileName);

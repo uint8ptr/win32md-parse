@@ -1,0 +1,1 @@
+BOOL ApphelpCheckShellObject([Const] [In] Guid* ObjectCLSID, [In] BOOL bShimIfNecessary, [Out] ulong* pullFlags);

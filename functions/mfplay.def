@@ -1,0 +1,1 @@
+HRESULT MFPCreateMediaPlayer([Const] [In] [Optional] PWSTR pwszURL, [In] BOOL fStartPlayback, [In] MFP_CREATION_OPTIONS creationOptions, [In] [Optional] IMFPMediaPlayerCallback pCallback, [In] [Optional] HWND hWnd, [Out] [Optional] IMFPMediaPlayer* ppMediaPlayer);

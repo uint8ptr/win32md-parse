@@ -1,0 +1,10 @@
+WIN32_ERROR GetPackageFullNameFromToken([In] HANDLE token, [In] [Out] uint* packageFullNameLength, [NativeArrayInfo(CountParamIndex = 1)] [Out] [Optional] PWSTR packageFullName);
+WIN32_ERROR GetPackageFamilyNameFromToken([In] HANDLE token, [In] [Out] uint* packageFamilyNameLength, [NativeArrayInfo(CountParamIndex = 1)] [Out] [Optional] PWSTR packageFamilyName);
+WIN32_ERROR GetApplicationUserModelIdFromToken([In] HANDLE token, [In] [Out] uint* applicationUserModelIdLength, [NativeArrayInfo(CountParamIndex = 1)] [Out] [Optional] PWSTR applicationUserModelId);
+WIN32_ERROR VerifyPackageFullName([Const] [In] PWSTR packageFullName);
+WIN32_ERROR VerifyPackageFamilyName([Const] [In] PWSTR packageFamilyName);
+WIN32_ERROR VerifyPackageId([Const] [In] PACKAGE_ID* packageId);
+WIN32_ERROR VerifyApplicationUserModelId([Const] [In] PWSTR applicationUserModelId);
+WIN32_ERROR VerifyPackageRelativeApplicationId([Const] [In] PWSTR packageRelativeApplicationId);
+WIN32_ERROR GetStagedPackageOrigin([Const] [In] PWSTR packageFullName, [Out] PackageOrigin* origin);
+WIN32_ERROR OpenPackageInfoByFullNameForUser([In] [Optional] PSID userSid, [Const] [In] PWSTR packageFullName, [Const] [Reserved] [In] uint reserved, [Out] _PACKAGE_INFO_REFERENCE** packageInfoReference);

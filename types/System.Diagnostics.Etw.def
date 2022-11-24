@@ -1,0 +1,3 @@
+typedef ulong PROCESSTRACE_HANDLE;
+typedef ulong RELOGSTREAM_HANDLE;
+typedef nint TDH_HANDLE;

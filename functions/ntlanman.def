@@ -1,0 +1,10 @@
+uint RegisterAppInstance([In] HANDLE ProcessHandle, [In] Guid* AppInstanceId, [In] BOOL ChildrenInheritAppInstance);
+uint RegisterAppInstanceVersion([In] Guid* AppInstanceId, [In] ulong InstanceVersionHigh, [In] ulong InstanceVersionLow);
+uint QueryAppInstanceVersion([In] Guid* AppInstanceId, [Out] ulong* InstanceVersionHigh, [Out] ulong* InstanceVersionLow, [Out] NTSTATUS* VersionStatus);
+uint ResetAllAppInstanceVersions();
+uint SetAppInstanceCsvFlags([In] HANDLE ProcessHandle, [In] uint Mask, [In] uint Flags);
+uint NPAddConnection4([In] [Optional] HWND hwndOwner, [In] NETRESOURCEW* lpNetResource, [MemorySize(BytesParamIndex = 3)] [In] [Optional] void* lpAuthBuffer, [In] uint cbAuthBuffer, [In] uint dwFlags, [MemorySize(BytesParamIndex = 6)] [In] [Optional] byte* lpUseOptions, [In] uint cbUseOptions);
+uint NPCancelConnection2([In] PWSTR lpName, [In] BOOL fForce, [In] uint dwFlags);
+uint NPGetConnection3([Const] [In] PWSTR lpLocalName, [In] uint dwLevel, [MemorySize(BytesParamIndex = 3)] [Out] void* lpBuffer, [In] [Out] uint* lpBufferSize);
+uint NPGetConnectionPerformance([Const] [In] PWSTR lpRemoteName, [Out] NETCONNECTINFOSTRUCT* lpNetConnectInfo);
+uint NPGetPersistentUseOptionsForConnection([In] PWSTR lpRemotePath, [MemorySize(BytesParamIndex = 2)] [In] [Optional] byte* lpReadUseOptions, [In] uint cbReadUseOptions, [MemorySize(BytesParamIndex = 4)] [Out] byte* lpWriteUseOptions, [In] [Out] uint* lpSizeWriteUseOptions);

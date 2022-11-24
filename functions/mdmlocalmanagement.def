@@ -1,0 +1,3 @@
+HRESULT RegisterDeviceWithLocalManagement([Out] [Optional] BOOL* alreadyRegistered);
+HRESULT ApplyLocalManagementSyncML([Const] [In] PWSTR syncMLRequest, [Out] [Optional] PWSTR* syncMLResult);
+HRESULT UnregisterDeviceWithLocalManagement();

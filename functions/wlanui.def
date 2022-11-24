@@ -1,0 +1,1 @@
+uint WlanUIEditProfile([In] uint dwClientVersion, [Const] [In] PWSTR wstrProfileName, [In] Guid* pInterfaceGuid, [In] HWND hWnd, [In] WL_DISPLAY_PAGES wlStartPage, [Reserved] [In] [Out] void* pReserved, [Out] [Optional] uint* pWlanReasonCode);

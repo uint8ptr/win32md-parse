@@ -1,0 +1,4 @@
+int CommonPropertySheetUIA([In] HWND hWndOwner, [In] PFNPROPSHEETUI pfnPropSheetUI, [In] LPARAM lParam, [Out] [Optional] uint* pResult);
+int CommonPropertySheetUIW([In] HWND hWndOwner, [In] PFNPROPSHEETUI pfnPropSheetUI, [In] LPARAM lParam, [Out] [Optional] uint* pResult);
+nuint GetCPSUIUserData([In] HWND hDlg);
+BOOL SetCPSUIUserData([In] HWND hDlg, [In] nuint CPSUIUserData);

@@ -1,0 +1,10 @@
+HRESULT DirectSoundCreate([Const] [In] [Optional] Guid* pcGuidDevice, [Out] IDirectSound* ppDS, [Optional] IUnknown pUnkOuter);
+HRESULT DirectSoundEnumerateA([In] LPDSENUMCALLBACKA pDSEnumCallback, [In] [Optional] void* pContext);
+HRESULT DirectSoundEnumerateW([In] LPDSENUMCALLBACKW pDSEnumCallback, [In] [Optional] void* pContext);
+HRESULT DirectSoundCaptureCreate([Const] [In] [Optional] Guid* pcGuidDevice, [Out] IDirectSoundCapture* ppDSC, [In] IUnknown pUnkOuter);
+HRESULT DirectSoundCaptureEnumerateA([In] LPDSENUMCALLBACKA pDSEnumCallback, [In] [Optional] void* pContext);
+HRESULT DirectSoundCaptureEnumerateW([In] LPDSENUMCALLBACKW pDSEnumCallback, [In] [Optional] void* pContext);
+HRESULT DirectSoundCreate8([Const] [In] [Optional] Guid* pcGuidDevice, [Out] IDirectSound8* ppDS8, [In] IUnknown pUnkOuter);
+HRESULT DirectSoundCaptureCreate8([Const] [In] [Optional] Guid* pcGuidDevice, [Out] IDirectSoundCapture* ppDSC8, [In] IUnknown pUnkOuter);
+HRESULT DirectSoundFullDuplexCreate([Const] [In] [Optional] Guid* pcGuidCaptureDevice, [Const] [In] [Optional] Guid* pcGuidRenderDevice, [In] DSCBUFFERDESC* pcDSCBufferDesc, [In] DSBUFFERDESC* pcDSBufferDesc, [In] HWND hWnd, [In] uint dwLevel, [Out] IDirectSoundFullDuplex* ppDSFD, [Out] IDirectSoundCaptureBuffer8* ppDSCBuffer8, [Out] IDirectSoundBuffer8* ppDSBuffer8, [In] IUnknown pUnkOuter);
+HRESULT GetDeviceID([Const] [In] [Optional] Guid* pGuidSrc, [Out] Guid* pGuidDest);

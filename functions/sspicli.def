@@ -1,0 +1,6 @@
+HRESULT QueryContextAttributesExW([In] SecHandle* phContext, [In] SECPKG_ATTR ulAttribute, [MemorySize(BytesParamIndex = 3)] [Out] void* pBuffer, [In] uint cbBuffer);
+HRESULT QueryContextAttributesExA([In] SecHandle* phContext, [In] SECPKG_ATTR ulAttribute, [MemorySize(BytesParamIndex = 3)] [Out] void* pBuffer, [In] uint cbBuffer);
+HRESULT QueryCredentialsAttributesExW([In] SecHandle* phCredential, [In] uint ulAttribute, [MemorySize(BytesParamIndex = 3)] [In] [Out] void* pBuffer, [In] uint cbBuffer);
+HRESULT QueryCredentialsAttributesExA([In] SecHandle* phCredential, [In] uint ulAttribute, [MemorySize(BytesParamIndex = 3)] [In] [Out] void* pBuffer, [In] uint cbBuffer);
+HRESULT SspiEncryptAuthIdentityEx([In] uint Options, [In] [Out] void* AuthData);
+HRESULT SspiDecryptAuthIdentityEx([In] uint Options, [In] [Out] void* EncryptedAuthData);

@@ -1,0 +1,3 @@
+HRESULT CreateRandomAccessStreamOnFile([Const] [In] PWSTR filePath, [In] uint accessMode, [Const] [In] Guid* riid, [ComOutPtr] [Out] void** ppv);
+HRESULT CreateRandomAccessStreamOverStream([In] IStream stream, [In] BSOS_OPTIONS options, [Const] [In] Guid* riid, [ComOutPtr] [Out] void** ppv);
+HRESULT CreateStreamOverRandomAccessStream([In] IUnknown randomAccessStream, [Const] [In] Guid* riid, [ComOutPtr] [Out] void** ppv);

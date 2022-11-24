@@ -1,0 +1,7 @@
+uint XInputGetState([In] uint dwUserIndex, [Out] XINPUT_STATE* pState);
+uint XInputSetState([In] uint dwUserIndex, [In] XINPUT_VIBRATION* pVibration);
+uint XInputGetCapabilities([In] uint dwUserIndex, [In] XINPUT_FLAG dwFlags, [Out] XINPUT_CAPABILITIES* pCapabilities);
+void XInputEnable([In] BOOL enable);
+uint XInputGetAudioDeviceIds([In] uint dwUserIndex, [NativeArrayInfo(CountParamIndex = 2)] [Out] [Optional] PWSTR pRenderDeviceId, [In] [Out] [Optional] uint* pRenderCount, [NativeArrayInfo(CountParamIndex = 4)] [Out] [Optional] PWSTR pCaptureDeviceId, [In] [Out] [Optional] uint* pCaptureCount);
+uint XInputGetBatteryInformation([In] uint dwUserIndex, [In] BATTERY_DEVTYPE devType, [Out] XINPUT_BATTERY_INFORMATION* pBatteryInformation);
+uint XInputGetKeystroke([In] uint dwUserIndex, [Reserved] [In] uint dwReserved, [Out] XINPUT_KEYSTROKE* pKeystroke);

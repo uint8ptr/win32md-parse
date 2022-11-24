@@ -1,0 +1,10 @@
+uint WebAuthNGetApiVersionNumber();
+HRESULT WebAuthNIsUserVerifyingPlatformAuthenticatorAvailable([Out] BOOL* pbIsUserVerifyingPlatformAuthenticatorAvailable);
+HRESULT WebAuthNAuthenticatorMakeCredential([In] HWND hWnd, [In] WEBAUTHN_RP_ENTITY_INFORMATION* pRpInformation, [In] WEBAUTHN_USER_ENTITY_INFORMATION* pUserInformation, [In] WEBAUTHN_COSE_CREDENTIAL_PARAMETERS* pPubKeyCredParams, [In] WEBAUTHN_CLIENT_DATA* pWebAuthNClientData, [In] [Optional] WEBAUTHN_AUTHENTICATOR_MAKE_CREDENTIAL_OPTIONS* pWebAuthNMakeCredentialOptions, [Out] [Optional] WEBAUTHN_CREDENTIAL_ATTESTATION** ppWebAuthNCredentialAttestation);
+HRESULT WebAuthNAuthenticatorGetAssertion([In] HWND hWnd, [Const] [In] PWSTR pwszRpId, [In] WEBAUTHN_CLIENT_DATA* pWebAuthNClientData, [In] [Optional] WEBAUTHN_AUTHENTICATOR_GET_ASSERTION_OPTIONS* pWebAuthNGetAssertionOptions, [Out] [Optional] WEBAUTHN_ASSERTION** ppWebAuthNAssertion);
+void WebAuthNFreeCredentialAttestation([In] [Optional] WEBAUTHN_CREDENTIAL_ATTESTATION* pWebAuthNCredentialAttestation);
+void WebAuthNFreeAssertion([In] WEBAUTHN_ASSERTION* pWebAuthNAssertion);
+HRESULT WebAuthNGetCancellationId([Out] Guid* pCancellationId);
+HRESULT WebAuthNCancelCurrentOperation([Const] [In] Guid* pCancellationId);
+PWSTR WebAuthNGetErrorName([In] HRESULT hr);
+HRESULT WebAuthNGetW3CExceptionDOMError([In] HRESULT hr);

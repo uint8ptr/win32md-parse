@@ -1,0 +1,5 @@
+typedef nint HCURSOR;
+typedef nint HDWP;
+typedef nint HHOOK;
+typedef nint HICON;
+typedef nint HMENU;

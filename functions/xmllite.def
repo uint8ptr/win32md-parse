@@ -1,0 +1,6 @@
+HRESULT CreateXmlReader([Const] [In] Guid* riid, [Out] void** ppvObject, [In] [Optional] IMalloc pMalloc);
+HRESULT CreateXmlReaderInputWithEncodingCodePage([In] IUnknown pInputStream, [In] [Optional] IMalloc pMalloc, [In] uint nEncodingCodePage, [In] BOOL fEncodingHint, [Const] [In] [Optional] PWSTR pwszBaseUri, [Out] IUnknown* ppInput);
+HRESULT CreateXmlReaderInputWithEncodingName([In] IUnknown pInputStream, [In] [Optional] IMalloc pMalloc, [Const] [In] PWSTR pwszEncodingName, [In] BOOL fEncodingHint, [Const] [In] [Optional] PWSTR pwszBaseUri, [Out] IUnknown* ppInput);
+HRESULT CreateXmlWriter([Const] [In] Guid* riid, [Out] void** ppvObject, [In] [Optional] IMalloc pMalloc);
+HRESULT CreateXmlWriterOutputWithEncodingCodePage([In] IUnknown pOutputStream, [In] [Optional] IMalloc pMalloc, [In] uint nEncodingCodePage, [Out] IUnknown* ppOutput);
+HRESULT CreateXmlWriterOutputWithEncodingName([In] IUnknown pOutputStream, [In] [Optional] IMalloc pMalloc, [Const] [In] PWSTR pwszEncodingName, [Out] IUnknown* ppOutput);

@@ -1,0 +1,15 @@
+HRESULT GetDeviceRegistrationInfo([In] REGISTRATION_INFORMATION_CLASS DeviceInformationClass, [Out] void** ppDeviceRegistrationInfo);
+HRESULT IsDeviceRegisteredWithManagement([Out] BOOL* pfIsDeviceRegisteredWithManagement, [In] uint cchUPN, [NativeArrayInfo(CountParamIndex = 1)] [Out] [Optional] PWSTR pszUPN);
+HRESULT IsManagementRegistrationAllowed([Out] BOOL* pfIsManagementRegistrationAllowed);
+HRESULT IsMdmUxWithoutAadAllowed([Out] BOOL* isEnrollmentAllowed);
+HRESULT SetManagedExternally([In] BOOL IsManagedExternally);
+HRESULT DiscoverManagementService([Const] [In] PWSTR pszUPN, [Out] MANAGEMENT_SERVICE_INFO** ppMgmtInfo);
+HRESULT RegisterDeviceWithManagementUsingAADCredentials([In] HANDLE UserToken);
+HRESULT RegisterDeviceWithManagementUsingAADDeviceCredentials();
+HRESULT RegisterDeviceWithManagementUsingAADDeviceCredentials2([Const] [In] [Optional] PWSTR MDMApplicationID);
+HRESULT RegisterDeviceWithManagement([Const] [In] PWSTR pszUPN, [Const] [In] PWSTR ppszMDMServiceUri, [Const] [In] PWSTR ppzsAccessToken);
+HRESULT UnregisterDeviceWithManagement([Const] [In] [Optional] PWSTR enrollmentID);
+HRESULT GetDeviceManagementConfigInfo([Const] [In] PWSTR providerID, [In] [Out] uint* configStringBufferLength, [NativeArrayInfo(CountParamIndex = 1)] [Out] [Optional] PWSTR configString);
+HRESULT SetDeviceManagementConfigInfo([Const] [In] PWSTR providerID, [Const] [In] PWSTR configString);
+HRESULT GetManagementAppHyperlink([In] uint cchHyperlink, [NativeArrayInfo(CountParamIndex = 0)] [Out] PWSTR pszHyperlink);
+HRESULT DiscoverManagementServiceEx([Const] [In] PWSTR pszUPN, [Const] [In] PWSTR pszDiscoveryServiceCandidate, [Out] MANAGEMENT_SERVICE_INFO** ppMgmtInfo);

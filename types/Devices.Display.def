@@ -1,0 +1,7 @@
+typedef nint DHPDEV;
+typedef nint HBM;
+typedef nint HDEV;
+typedef nint HDRVOBJ;
+typedef nint HFASTMUTEX;
+typedef nint HSEMAPHORE;
+typedef nint HSURF;

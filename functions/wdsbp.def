@@ -1,0 +1,7 @@
+uint WdsBpParseInitialize([MemorySize(BytesParamIndex = 1)] [In] void* pPacket, [In] uint uPacketLen, [Out] [Optional] byte* pbPacketType, [Out] HANDLE* phHandle);
+uint WdsBpParseInitializev6([MemorySize(BytesParamIndex = 1)] [In] void* pPacket, [In] uint uPacketLen, [Out] [Optional] byte* pbPacketType, [Out] HANDLE* phHandle);
+uint WdsBpInitialize([In] byte bPacketType, [Out] HANDLE* phHandle);
+uint WdsBpCloseHandle([In] HANDLE hHandle);
+uint WdsBpQueryOption([In] HANDLE hHandle, [In] uint uOption, [In] uint uValueLen, [MemorySize(BytesParamIndex = 2)] [Out] void* pValue, [Out] [Optional] uint* puBytes);
+uint WdsBpAddOption([In] HANDLE hHandle, [In] uint uOption, [In] uint uValueLen, [MemorySize(BytesParamIndex = 2)] [In] void* pValue);
+uint WdsBpGetOptionBuffer([In] HANDLE hHandle, [In] uint uBufferLen, [MemorySize(BytesParamIndex = 1)] [Out] void* pBuffer, [Out] uint* puBytes);

@@ -1,0 +1,1 @@
+int sndOpenSound([Const] [In] PWSTR EventName, [Const] [In] PWSTR AppName, [In] int Flags, [Out] HANDLE* FileHandle);

@@ -1,0 +1,4 @@
+typedef nuint JET_HANDLE;
+typedef nuint JET_INSTANCE;
+typedef nuint JET_SESID;
+typedef nuint JET_TABLEID;

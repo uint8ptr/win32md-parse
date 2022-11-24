@@ -1,0 +1,3 @@
+typedef nint HCONVLIST;
+typedef nint HDDEDATA;
+typedef nint HSZ;

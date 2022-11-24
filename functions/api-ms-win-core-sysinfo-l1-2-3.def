@@ -1,0 +1,2 @@
+BOOL GetOsManufacturingMode([Out] BOOL* pbEnabled);
+HRESULT GetIntegratedDisplaySize([Out] double* sizeInInches);

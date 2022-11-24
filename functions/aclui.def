@@ -1,0 +1,3 @@
+HPROPSHEETPAGE CreateSecurityPage([In] ISecurityInformation psi);
+BOOL EditSecurity([In] HWND hwndOwner, [In] ISecurityInformation psi);
+HRESULT EditSecurityAdvanced([In] HWND hwndOwner, [In] ISecurityInformation psi, [In] SI_PAGE_TYPE uSIPage);

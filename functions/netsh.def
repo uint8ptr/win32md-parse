@@ -1,0 +1,8 @@
+uint MatchEnumTag([In] HANDLE hModule, [Const] [In] PWSTR pwcArg, [In] uint dwNumArg, [Const] [In] TOKEN_VALUE* pEnumTable, [In] [Out] uint* pdwValue);
+BOOL MatchToken([Const] [In] PWSTR pwszUserToken, [Const] [In] PWSTR pwszCmdToken);
+uint PreprocessCommand([In] [Optional] HANDLE hModule, [NativeArrayInfo(CountParamIndex = 3)] [In] [Out] PWSTR* ppwcArguments, [In] uint dwCurrentIndex, [In] uint dwArgCount, [NativeArrayInfo(CountParamIndex = 5)] [In] [Out] [Optional] TAG_TYPE* pttTags, [In] uint dwTagCount, [In] uint dwMinArgs, [In] uint dwMaxArgs, [Out] [Optional] uint* pdwTagType);
+uint PrintError([In] HANDLE hModule, [In] uint dwErrId, ...);
+uint PrintMessageFromModule([In] HANDLE hModule, [In] uint dwMsgId, ...);
+uint PrintMessage([Const] [In] PWSTR pwszFormat, ...);
+uint RegisterContext([Const] [In] NS_CONTEXT_ATTRIBUTES* pChildContext);
+uint RegisterHelper([Const] [In] Guid* pguidParentContext, [Const] [In] NS_HELPER_ATTRIBUTES* pfnRegisterSubContext);

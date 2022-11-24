@@ -1,0 +1,17 @@
+HRESULT GetToken([In] uint cPolicyChain, [NativeArrayInfo(CountParamIndex = 0)] [In] POLICY_ELEMENT* pPolicyChain, [Out] GENERIC_XML_TOKEN** securityToken, [Out] INFORMATIONCARD_CRYPTO_HANDLE** phProofTokenCrypto);
+HRESULT ManageCardSpace();
+HRESULT ImportInformationCard([Const] [In] PWSTR fileName);
+HRESULT Encrypt([In] INFORMATIONCARD_CRYPTO_HANDLE* hCrypto, [In] BOOL fOAEP, [In] uint cbInData, [MemorySize(BytesParamIndex = 2)] [In] byte* pInData, [Out] uint* pcbOutData, [MemorySize(BytesParamIndex = 4)] [Out] byte** ppOutData);
+HRESULT Decrypt([In] INFORMATIONCARD_CRYPTO_HANDLE* hCrypto, [In] BOOL fOAEP, [In] uint cbInData, [MemorySize(BytesParamIndex = 2)] [In] byte* pInData, [Out] uint* pcbOutData, [MemorySize(BytesParamIndex = 4)] [Out] byte** ppOutData);
+HRESULT SignHash([In] INFORMATIONCARD_CRYPTO_HANDLE* hCrypto, [In] uint cbHash, [MemorySize(BytesParamIndex = 1)] [In] byte* pHash, [Const] [In] PWSTR hashAlgOid, [Out] uint* pcbSig, [MemorySize(BytesParamIndex = 4)] [Out] byte** ppSig);
+HRESULT VerifyHash([In] INFORMATIONCARD_CRYPTO_HANDLE* hCrypto, [In] uint cbHash, [MemorySize(BytesParamIndex = 1)] [In] byte* pHash, [Const] [In] PWSTR hashAlgOid, [In] uint cbSig, [MemorySize(BytesParamIndex = 4)] [In] byte* pSig, [Out] BOOL* pfVerified);
+HRESULT GetCryptoTransform([In] INFORMATIONCARD_CRYPTO_HANDLE* hSymmetricCrypto, [In] uint mode, [In] PaddingMode padding, [In] uint feedbackSize, [In] Direction direction, [In] uint cbIV, [MemorySize(BytesParamIndex = 5)] [In] byte* pIV, [Out] INFORMATIONCARD_CRYPTO_HANDLE** pphTransform);
+HRESULT GetKeyedHash([In] INFORMATIONCARD_CRYPTO_HANDLE* hSymmetricCrypto, [Out] INFORMATIONCARD_CRYPTO_HANDLE** pphHash);
+HRESULT TransformBlock([In] INFORMATIONCARD_CRYPTO_HANDLE* hCrypto, [In] uint cbInData, [MemorySize(BytesParamIndex = 1)] [In] byte* pInData, [Out] uint* pcbOutData, [MemorySize(BytesParamIndex = 3)] [Out] byte** ppOutData);
+HRESULT TransformFinalBlock([In] INFORMATIONCARD_CRYPTO_HANDLE* hCrypto, [In] uint cbInData, [MemorySize(BytesParamIndex = 1)] [In] byte* pInData, [Out] uint* pcbOutData, [MemorySize(BytesParamIndex = 3)] [Out] byte** ppOutData);
+HRESULT HashCore([In] INFORMATIONCARD_CRYPTO_HANDLE* hCrypto, [In] uint cbInData, [MemorySize(BytesParamIndex = 1)] [In] byte* pInData);
+HRESULT HashFinal([In] INFORMATIONCARD_CRYPTO_HANDLE* hCrypto, [In] uint cbInData, [MemorySize(BytesParamIndex = 1)] [In] byte* pInData, [Out] uint* pcbOutData, [MemorySize(BytesParamIndex = 3)] [Out] byte** ppOutData);
+BOOL FreeToken([In] GENERIC_XML_TOKEN* pAllocMemory);
+HRESULT CloseCryptoHandle([In] INFORMATIONCARD_CRYPTO_HANDLE* hCrypto);
+HRESULT GenerateDerivedKey([In] INFORMATIONCARD_CRYPTO_HANDLE* hCrypto, [In] uint cbLabel, [MemorySize(BytesParamIndex = 1)] [In] byte* pLabel, [In] uint cbNonce, [MemorySize(BytesParamIndex = 3)] [In] byte* pNonce, [In] uint derivedKeyLength, [In] uint offset, [Const] [In] PWSTR algId, [Out] uint* pcbKey, [MemorySize(BytesParamIndex = 8)] [Out] byte** ppKey);
+HRESULT GetBrowserToken([In] uint dwParamType, [In] void* pParam, [Out] [Optional] uint* pcbToken, [MemorySize(BytesParamIndex = 2)] [Out] [Optional] byte** ppToken);

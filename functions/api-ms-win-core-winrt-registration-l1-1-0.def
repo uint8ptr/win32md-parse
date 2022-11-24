@@ -1,0 +1,1 @@
+HRESULT RoGetServerActivatableClasses([In] HSTRING serverName, [Out] HSTRING** activatableClassIds, [Out] uint* count);

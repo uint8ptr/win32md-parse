@@ -1,0 +1,4 @@
+HRESULT SLActivateProduct([In] void* hSLC, [Const] [In] Guid* pProductSkuId, [In] [Optional] uint cbAppSpecificData, [Const] [In] [Optional] void* pvAppSpecificData, [Const] [In] [Optional] SL_ACTIVATION_INFO_HEADER* pActivationInfo, [Const] [In] [Optional] PWSTR pwszProxyServer, [In] [Optional] ushort wProxyPort);
+HRESULT SLGetServerStatus([Const] [In] PWSTR pwszServerURL, [Const] [In] PWSTR pwszAcquisitionType, [Const] [In] [Optional] PWSTR pwszProxyServer, [In] [Optional] ushort wProxyPort, [Out] HRESULT* phrStatus);
+HRESULT SLAcquireGenuineTicket([Out] void** ppTicketBlob, [Out] uint* pcbTicketBlob, [Const] [In] PWSTR pwszTemplateId, [Const] [In] PWSTR pwszServerUrl, [Const] [In] [Optional] PWSTR pwszClientToken);
+HRESULT SLGetReferralInformation([In] void* hSLC, [In] SLREFERRALTYPE eReferralType, [Const] [In] Guid* pSkuOrAppId, [Const] [In] PWSTR pwszValueName, [Out] PWSTR* ppwszValue);

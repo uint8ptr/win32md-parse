@@ -1,0 +1,13 @@
+HRESULT D2D1CreateFactory([In] D2D1_FACTORY_TYPE factoryType, [Const] [In] Guid* riid, [Const] [In] [Optional] D2D1_FACTORY_OPTIONS* pFactoryOptions, [ComOutPtr] [Out] void** ppIFactory);
+void D2D1MakeRotateMatrix([In] float angle, [In] D2D_POINT_2F center, [Out] D2D_MATRIX_3X2_F* matrix);
+void D2D1MakeSkewMatrix([In] float angleX, [In] float angleY, [In] D2D_POINT_2F center, [Out] D2D_MATRIX_3X2_F* matrix);
+BOOL D2D1IsMatrixInvertible([Const] [In] D2D_MATRIX_3X2_F* matrix);
+BOOL D2D1InvertMatrix([In] [Out] D2D_MATRIX_3X2_F* matrix);
+HRESULT D2D1CreateDevice([In] IDXGIDevice dxgiDevice, [Const] [In] [Optional] D2D1_CREATION_PROPERTIES* creationProperties, [Out] ID2D1Device* d2dDevice);
+HRESULT D2D1CreateDeviceContext([In] IDXGISurface dxgiSurface, [Const] [In] [Optional] D2D1_CREATION_PROPERTIES* creationProperties, [Out] ID2D1DeviceContext* d2dDeviceContext);
+D2D1_COLOR_F D2D1ConvertColorSpace([In] D2D1_COLOR_SPACE sourceColorSpace, [In] D2D1_COLOR_SPACE destinationColorSpace, [Const] [In] D2D1_COLOR_F* color);
+void D2D1SinCos([In] float angle, [Out] float* s, [Out] float* c);
+float D2D1Tan([In] float angle);
+float D2D1Vec3Length([In] float x, [In] float y, [In] float z);
+float D2D1ComputeMaximumScaleFactor([Const] [In] D2D_MATRIX_3X2_F* matrix);
+void D2D1GetGradientMeshInteriorPointsFromCoonsPatch([Const] [In] D2D_POINT_2F* pPoint0, [Const] [In] D2D_POINT_2F* pPoint1, [Const] [In] D2D_POINT_2F* pPoint2, [Const] [In] D2D_POINT_2F* pPoint3, [Const] [In] D2D_POINT_2F* pPoint4, [Const] [In] D2D_POINT_2F* pPoint5, [Const] [In] D2D_POINT_2F* pPoint6, [Const] [In] D2D_POINT_2F* pPoint7, [Const] [In] D2D_POINT_2F* pPoint8, [Const] [In] D2D_POINT_2F* pPoint9, [Const] [In] D2D_POINT_2F* pPoint10, [Const] [In] D2D_POINT_2F* pPoint11, [Out] D2D_POINT_2F* pTensorPoint11, [Out] D2D_POINT_2F* pTensorPoint12, [Out] D2D_POINT_2F* pTensorPoint21, [Out] D2D_POINT_2F* pTensorPoint22);

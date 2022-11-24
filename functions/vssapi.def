@@ -1,0 +1,1 @@
+HRESULT CreateVssExpressWriterInternal([Out] IVssExpressWriter* ppWriter);

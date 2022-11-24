@@ -1,0 +1,3 @@
+BOOL IsDestinationReachableA([Const] [In] PSTR lpszDestination, [In] [Out] QOCINFO* lpQOCInfo);
+BOOL IsDestinationReachableW([Const] [In] PWSTR lpszDestination, [In] [Out] QOCINFO* lpQOCInfo);
+BOOL IsNetworkAlive([In] [Out] uint* lpdwFlags);

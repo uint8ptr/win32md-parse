@@ -1,0 +1,12 @@
+uint InstallPerfDllW([Const] [In] [Optional] PWSTR szComputerName, [Const] [In] PWSTR lpIniFile, [In] nuint dwFlags);
+uint InstallPerfDllA([Const] [In] [Optional] PSTR szComputerName, [Const] [In] PSTR lpIniFile, [In] nuint dwFlags);
+uint LoadPerfCounterTextStringsA([In] PSTR lpCommandLine, [In] BOOL bQuietModeArg);
+uint LoadPerfCounterTextStringsW([In] PWSTR lpCommandLine, [In] BOOL bQuietModeArg);
+uint UnloadPerfCounterTextStringsW([In] PWSTR lpCommandLine, [In] BOOL bQuietModeArg);
+uint UnloadPerfCounterTextStringsA([In] PSTR lpCommandLine, [In] BOOL bQuietModeArg);
+uint UpdatePerfNameFilesA([Const] [In] PSTR szNewCtrFilePath, [Const] [In] [Optional] PSTR szNewHlpFilePath, [In] PSTR szLanguageID, [In] nuint dwFlags);
+uint UpdatePerfNameFilesW([Const] [In] PWSTR szNewCtrFilePath, [Const] [In] [Optional] PWSTR szNewHlpFilePath, [In] PWSTR szLanguageID, [In] nuint dwFlags);
+uint SetServiceAsTrustedA([Const] [In] [Optional] PSTR szReserved, [Const] [In] PSTR szServiceName);
+uint SetServiceAsTrustedW([Const] [In] [Optional] PWSTR szReserved, [Const] [In] PWSTR szServiceName);
+uint BackupPerfRegistryToFileW([Const] [In] PWSTR szFileName, [Const] [In] [Optional] PWSTR szCommentString);
+uint RestorePerfRegistryFromFileW([Const] [In] [Optional] PWSTR szFileName, [Const] [In] [Optional] PWSTR szLangId);

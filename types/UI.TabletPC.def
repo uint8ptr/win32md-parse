@@ -1,0 +1,4 @@
+typedef nint HRECOCONTEXT;
+typedef nint HRECOGNIZER;
+typedef nint HRECOLATTICE;
+typedef nint HRECOWORDLIST;

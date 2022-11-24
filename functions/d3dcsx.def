@@ -1,0 +1,9 @@
+HRESULT D3DX11CreateScan([In] ID3D11DeviceContext pDeviceContext, [In] uint MaxElementScanSize, [In] uint MaxScanCount, [Out] ID3DX11Scan* ppScan);
+HRESULT D3DX11CreateSegmentedScan([In] ID3D11DeviceContext pDeviceContext, [In] uint MaxElementScanSize, [Out] ID3DX11SegmentedScan* ppScan);
+HRESULT D3DX11CreateFFT([In] ID3D11DeviceContext pDeviceContext, [Const] [In] D3DX11_FFT_DESC* pDesc, [In] uint Flags, [Out] D3DX11_FFT_BUFFER_INFO* pBufferInfo, [Out] ID3DX11FFT* ppFFT);
+HRESULT D3DX11CreateFFT1DReal([In] ID3D11DeviceContext pDeviceContext, [In] uint X, [In] uint Flags, [Out] D3DX11_FFT_BUFFER_INFO* pBufferInfo, [Out] ID3DX11FFT* ppFFT);
+HRESULT D3DX11CreateFFT1DComplex([In] ID3D11DeviceContext pDeviceContext, [In] uint X, [In] uint Flags, [Out] D3DX11_FFT_BUFFER_INFO* pBufferInfo, [Out] ID3DX11FFT* ppFFT);
+HRESULT D3DX11CreateFFT2DReal([In] ID3D11DeviceContext pDeviceContext, [In] uint X, [In] uint Y, [In] uint Flags, [Out] D3DX11_FFT_BUFFER_INFO* pBufferInfo, [Out] ID3DX11FFT* ppFFT);
+HRESULT D3DX11CreateFFT2DComplex([In] ID3D11DeviceContext pDeviceContext, [In] uint X, [In] uint Y, [In] uint Flags, [Out] D3DX11_FFT_BUFFER_INFO* pBufferInfo, [Out] ID3DX11FFT* ppFFT);
+HRESULT D3DX11CreateFFT3DReal([In] ID3D11DeviceContext pDeviceContext, [In] uint X, [In] uint Y, [In] uint Z, [In] uint Flags, [Out] D3DX11_FFT_BUFFER_INFO* pBufferInfo, [Out] ID3DX11FFT* ppFFT);
+HRESULT D3DX11CreateFFT3DComplex([In] ID3D11DeviceContext pDeviceContext, [In] uint X, [In] uint Y, [In] uint Z, [In] uint Flags, [Out] D3DX11_FFT_BUFFER_INFO* pBufferInfo, [Out] ID3DX11FFT* ppFFT);

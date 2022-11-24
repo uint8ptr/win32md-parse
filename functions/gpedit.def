@@ -1,0 +1,6 @@
+HRESULT CreateGPOLink([In] PWSTR lpGPO, [In] PWSTR lpContainer, [In] BOOL fHighPriority);
+HRESULT DeleteGPOLink([In] PWSTR lpGPO, [In] PWSTR lpContainer);
+HRESULT DeleteAllGPOLinks([In] PWSTR lpContainer);
+HRESULT BrowseForGPO([In] [Out] GPOBROWSEINFO* lpBrowseInfo);
+HRESULT ImportRSoPData([In] PWSTR lpNameSpace, [In] PWSTR lpFileName);
+HRESULT ExportRSoPData([In] PWSTR lpNameSpace, [In] PWSTR lpFileName);

@@ -1,0 +1,2 @@
+HRESULT GetNetScheduleAccountInformation([Const] [In] PWSTR pwszServerName, [In] uint ccAccount, [NativeArrayInfo(CountParamIndex = 1)] [Out] PWSTR wszAccount);
+HRESULT SetNetScheduleAccountInformation([Const] [In] PWSTR pwszServerName, [Const] [In] PWSTR pwszAccount, [Const] [In] PWSTR pwszPassword);

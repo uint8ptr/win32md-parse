@@ -1,0 +1,5 @@
+int SCardUIDlgSelectCardA([In] [Out] OPENCARDNAME_EXA* param0);
+int SCardUIDlgSelectCardW([In] [Out] OPENCARDNAME_EXW* param0);
+int GetOpenCardNameA([In] [Out] OPENCARDNAMEA* param0);
+int GetOpenCardNameW([In] [Out] OPENCARDNAMEW* param0);
+int SCardDlgExtendedError();

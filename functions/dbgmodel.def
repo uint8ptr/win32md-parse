@@ -1,0 +1,1 @@
+HRESULT CreateDataModelManager([In] IDebugHost debugHost, [ComOutPtr] [Out] IDataModelManager* manager);

@@ -1,0 +1,2 @@
+HRESULT DxcCreateInstance([Const] [In] Guid* rclsid, [Const] [In] Guid* riid, [ComOutPtr] [Out] void** ppv);
+HRESULT DxcCreateInstance2([In] IMalloc pMalloc, [Const] [In] Guid* rclsid, [Const] [In] Guid* riid, [ComOutPtr] [Out] void** ppv);

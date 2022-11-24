@@ -1,0 +1,9 @@
+BOOL TxfLogCreateFileReadContext([Const] [In] PWSTR LogPath, [In] CLS_LSN BeginningLsn, [In] CLS_LSN EndingLsn, [In] TXF_ID* TxfFileId, [Out] void** TxfLogContext);
+BOOL TxfLogCreateRangeReadContext([Const] [In] PWSTR LogPath, [In] CLS_LSN BeginningLsn, [In] CLS_LSN EndingLsn, [In] LARGE_INTEGER* BeginningVirtualClock, [In] LARGE_INTEGER* EndingVirtualClock, [In] uint RecordTypeMask, [Out] void** TxfLogContext);
+BOOL TxfLogDestroyReadContext([In] void* TxfLogContext);
+BOOL TxfLogReadRecords([In] void* TxfLogContext, [In] uint BufferLength, [MemorySize(BytesParamIndex = 1)] [Out] void* Buffer, [Out] uint* BytesUsed, [Out] uint* RecordCount);
+BOOL TxfReadMetadataInfo([In] HANDLE FileHandle, [Out] TXF_ID* TxfFileId, [Out] CLS_LSN* LastLsn, [Out] uint* TransactionState, [Out] Guid* LockingTransaction);
+BOOL TxfLogRecordGetFileName([MemorySize(BytesParamIndex = 1)] [In] void* RecordBuffer, [In] uint RecordBufferLengthInBytes, [MemorySize(BytesParamIndex = 3)] [Out] PWSTR NameBuffer, [In] [Out] uint* NameBufferLengthInBytes, [Out] [Optional] TXF_ID* TxfId);
+BOOL TxfLogRecordGetGenericType([In] void* RecordBuffer, [In] uint RecordBufferLengthInBytes, [Out] uint* GenericType, [Out] [Optional] LARGE_INTEGER* VirtualClock);
+void TxfSetThreadMiniVersionForCreate([In] ushort MiniVersion);
+void TxfGetThreadMiniVersionForCreate([Out] ushort* MiniVersion);

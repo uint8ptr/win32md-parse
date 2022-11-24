@@ -1,0 +1,2 @@
+HRESULT DrtCreateIpv6UdpTransport([In] DRT_SCOPE scope, [In] uint dwScopeId, [In] uint dwLocalityThreshold, [In] [Out] ushort* pwPort, [Out] void** phTransport);
+HRESULT DrtDeleteIpv6UdpTransport([In] void* hTransport);

@@ -1,0 +1,16 @@
+BOOL GetDeltaInfoB([In] DELTA_INPUT Delta, [Out] DELTA_HEADER_INFO* lpHeaderInfo);
+BOOL GetDeltaInfoA([Const] [In] PSTR lpDeltaName, [Out] DELTA_HEADER_INFO* lpHeaderInfo);
+BOOL GetDeltaInfoW([Const] [In] PWSTR lpDeltaName, [Out] DELTA_HEADER_INFO* lpHeaderInfo);
+BOOL ApplyDeltaGetReverseB([In] long ApplyFlags, [In] DELTA_INPUT Source, [In] DELTA_INPUT Delta, [Const] [In] [Optional] FILETIME* lpReverseFileTime, [Out] DELTA_OUTPUT* lpTarget, [Out] DELTA_OUTPUT* lpTargetReverse);
+BOOL ApplyDeltaB([In] long ApplyFlags, [In] DELTA_INPUT Source, [In] DELTA_INPUT Delta, [Out] DELTA_OUTPUT* lpTarget);
+BOOL ApplyDeltaProvidedB([In] long ApplyFlags, [In] DELTA_INPUT Source, [In] DELTA_INPUT Delta, [MemorySize(BytesParamIndex = 4)] [In] [Out] void* lpTarget, [In] nuint uTargetSize);
+BOOL ApplyDeltaA([In] long ApplyFlags, [Const] [In] PSTR lpSourceName, [Const] [In] PSTR lpDeltaName, [Const] [In] PSTR lpTargetName);
+BOOL ApplyDeltaW([In] long ApplyFlags, [Const] [In] PWSTR lpSourceName, [Const] [In] PWSTR lpDeltaName, [Const] [In] PWSTR lpTargetName);
+BOOL CreateDeltaB([In] long FileTypeSet, [In] long SetFlags, [In] long ResetFlags, [In] DELTA_INPUT Source, [In] DELTA_INPUT Target, [In] DELTA_INPUT SourceOptions, [In] DELTA_INPUT TargetOptions, [In] DELTA_INPUT GlobalOptions, [Const] [In] [Optional] FILETIME* lpTargetFileTime, [In] uint HashAlgId, [Out] DELTA_OUTPUT* lpDelta);
+BOOL CreateDeltaA([In] long FileTypeSet, [In] long SetFlags, [In] long ResetFlags, [Const] [In] PSTR lpSourceName, [Const] [In] PSTR lpTargetName, [Const] [In] [Optional] PSTR lpSourceOptionsName, [Const] [In] [Optional] PSTR lpTargetOptionsName, [In] DELTA_INPUT GlobalOptions, [Const] [In] [Optional] FILETIME* lpTargetFileTime, [In] uint HashAlgId, [Const] [In] PSTR lpDeltaName);
+BOOL CreateDeltaW([In] long FileTypeSet, [In] long SetFlags, [In] long ResetFlags, [Const] [In] PWSTR lpSourceName, [Const] [In] PWSTR lpTargetName, [Const] [In] [Optional] PWSTR lpSourceOptionsName, [Const] [In] [Optional] PWSTR lpTargetOptionsName, [In] DELTA_INPUT GlobalOptions, [Const] [In] [Optional] FILETIME* lpTargetFileTime, [In] uint HashAlgId, [Const] [In] PWSTR lpDeltaName);
+BOOL GetDeltaSignatureB([In] long FileTypeSet, [In] uint HashAlgId, [In] DELTA_INPUT Source, [Out] DELTA_HASH* lpHash);
+BOOL GetDeltaSignatureA([In] long FileTypeSet, [In] uint HashAlgId, [Const] [In] PSTR lpSourceName, [Out] DELTA_HASH* lpHash);
+BOOL GetDeltaSignatureW([In] long FileTypeSet, [In] uint HashAlgId, [Const] [In] PWSTR lpSourceName, [Out] DELTA_HASH* lpHash);
+BOOL DeltaNormalizeProvidedB([In] long FileTypeSet, [In] long NormalizeFlags, [In] DELTA_INPUT NormalizeOptions, [MemorySize(BytesParamIndex = 4)] [In] [Out] void* lpSource, [In] nuint uSourceSize);
+BOOL DeltaFree([In] void* lpMemory);

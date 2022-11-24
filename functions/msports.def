@@ -1,0 +1,7 @@
+int ComDBOpen([Out] nint* PHComDB);
+int ComDBClose([In] HCOMDB HComDB);
+int ComDBGetCurrentPortUsage([In] HCOMDB HComDB, [MemorySize(BytesParamIndex = 2)] [Out] [Optional] byte* Buffer, [In] uint BufferSize, [In] uint ReportType, [Out] [Optional] uint* MaxPortsReported);
+int ComDBClaimNextFreePort([In] HCOMDB HComDB, [Out] uint* ComNumber);
+int ComDBClaimPort([In] HCOMDB HComDB, [In] uint ComNumber, [In] BOOL ForceClaim, [Out] [Optional] BOOL* Forced);
+int ComDBReleasePort([In] HCOMDB HComDB, [In] uint ComNumber);
+int ComDBResizeDatabase([In] HCOMDB HComDB, [In] uint NewSize);

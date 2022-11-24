@@ -1,0 +1,1 @@
+HRESULT WindowsInspectString2([In] ulong targetHString, [In] ushort machine, [In] PINSPECT_HSTRING_CALLBACK2 callback, [In] [Optional] void* context, [Out] uint* length, [Out] ulong* targetStringAddress);

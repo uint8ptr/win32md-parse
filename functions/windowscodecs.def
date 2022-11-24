@@ -1,0 +1,9 @@
+HRESULT WICConvertBitmapSource([In] Guid* dstFormat, [In] IWICBitmapSource pISrc, [Out] IWICBitmapSource* ppIDst);
+HRESULT WICCreateBitmapFromSection([In] uint width, [In] uint height, [In] Guid* pixelFormat, [In] HANDLE hSection, [In] uint stride, [In] uint offset, [Out] IWICBitmap* ppIBitmap);
+HRESULT WICCreateBitmapFromSectionEx([In] uint width, [In] uint height, [In] Guid* pixelFormat, [In] HANDLE hSection, [In] uint stride, [In] uint offset, [In] WICSectionAccessLevel desiredAccessLevel, [Out] IWICBitmap* ppIBitmap);
+HRESULT WICMapGuidToShortName([Const] [In] Guid* guid, [In] uint cchName, [NativeArrayInfo(CountParamIndex = 1)] [In] [Out] [Optional] PWSTR wzName, [Out] uint* pcchActual);
+HRESULT WICMapShortNameToGuid([Const] [In] PWSTR wzName, [Out] Guid* pguid);
+HRESULT WICMapSchemaToName([Const] [In] Guid* guidMetadataFormat, [In] PWSTR pwzSchema, [In] uint cchName, [NativeArrayInfo(CountParamIndex = 2)] [In] [Out] [Optional] PWSTR wzName, [Out] uint* pcchActual);
+HRESULT WICMatchMetadataContent([Const] [In] Guid* guidContainerFormat, [Const] [In] [Optional] Guid* pguidVendor, [In] IStream pIStream, [Out] Guid* pguidMetadataFormat);
+HRESULT WICSerializeMetadataContent([Const] [In] Guid* guidContainerFormat, [In] IWICMetadataWriter pIWriter, [In] uint dwPersistOptions, [In] IStream pIStream);
+HRESULT WICGetMetadataContentSize([Const] [In] Guid* guidContainerFormat, [In] IWICMetadataWriter pIWriter, [Out] ULARGE_INTEGER* pcbSize);

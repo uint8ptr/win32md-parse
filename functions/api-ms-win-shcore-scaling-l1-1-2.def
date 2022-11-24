@@ -1,0 +1,1 @@
+uint GetDpiForShellUIComponent([In] SHELL_UI_COMPONENT param0);

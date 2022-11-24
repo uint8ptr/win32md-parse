@@ -1,0 +1,11 @@
+BOOL UpdateDriverForPlugAndPlayDevicesA([In] [Optional] HWND hwndParent, [Const] [In] PSTR HardwareId, [Const] [In] PSTR FullInfPath, [In] uint InstallFlags, [Out] [Optional] BOOL* bRebootRequired);
+BOOL UpdateDriverForPlugAndPlayDevicesW([In] [Optional] HWND hwndParent, [Const] [In] PWSTR HardwareId, [Const] [In] PWSTR FullInfPath, [In] uint InstallFlags, [Out] [Optional] BOOL* bRebootRequired);
+BOOL DiInstallDevice([In] [Optional] HWND hwndParent, [In] HDEVINFO DeviceInfoSet, [In] SP_DEVINFO_DATA* DeviceInfoData, [In] [Optional] SP_DRVINFO_DATA_V2_A* DriverInfoData, [In] uint Flags, [Out] [Optional] BOOL* NeedReboot);
+BOOL DiInstallDriverW([In] [Optional] HWND hwndParent, [Const] [In] PWSTR InfPath, [In] uint Flags, [Out] [Optional] BOOL* NeedReboot);
+BOOL DiInstallDriverA([In] [Optional] HWND hwndParent, [Const] [In] PSTR InfPath, [In] uint Flags, [Out] [Optional] BOOL* NeedReboot);
+BOOL DiUninstallDevice([In] HWND hwndParent, [In] HDEVINFO DeviceInfoSet, [In] SP_DEVINFO_DATA* DeviceInfoData, [In] uint Flags, [Out] [Optional] BOOL* NeedReboot);
+BOOL DiUninstallDriverW([In] [Optional] HWND hwndParent, [Const] [In] PWSTR InfPath, [In] uint Flags, [Out] [Optional] BOOL* NeedReboot);
+BOOL DiUninstallDriverA([In] [Optional] HWND hwndParent, [Const] [In] PSTR InfPath, [In] uint Flags, [Out] [Optional] BOOL* NeedReboot);
+BOOL DiShowUpdateDevice([In] [Optional] HWND hwndParent, [In] HDEVINFO DeviceInfoSet, [In] SP_DEVINFO_DATA* DeviceInfoData, [In] uint Flags, [Out] [Optional] BOOL* NeedReboot);
+BOOL DiRollbackDriver([In] HDEVINFO DeviceInfoSet, [In] SP_DEVINFO_DATA* DeviceInfoData, [In] [Optional] HWND hwndParent, [In] uint Flags, [Out] [Optional] BOOL* NeedReboot);
+BOOL DiShowUpdateDriver([In] [Optional] HWND hwndParent, [Const] [In] [Optional] PWSTR FilePath, [In] uint Flags, [Out] [Optional] BOOL* NeedReboot);

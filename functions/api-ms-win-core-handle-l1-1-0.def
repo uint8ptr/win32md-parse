@@ -1,0 +1,1 @@
+BOOL CompareObjectHandles([In] HANDLE hFirstObjectHandle, [In] HANDLE hSecondObjectHandle);

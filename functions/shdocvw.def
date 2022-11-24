@@ -1,0 +1,3 @@
+uint SoftwareUpdateMessageBox([In] [Optional] HWND hWnd, [Const] [In] PWSTR pszDistUnit, [In] uint dwFlags, [Out] [Optional] SOFTDISTINFO* psdi);
+BOOL ImportPrivacySettings([Const] [In] PWSTR pszFilename, [In] [Out] BOOL* pfParsePrivacyPreferences, [In] [Out] BOOL* pfParsePerSiteRules);
+HRESULT DoPrivacyDlg([In] [Optional] HWND hwndOwner, [Const] [In] PWSTR pszUrl, [In] IEnumPrivacyRecords pPrivacyEnum, [In] BOOL fReportAllSites);

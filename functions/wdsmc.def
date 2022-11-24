@@ -1,0 +1,6 @@
+HRESULT WdsTransportServerRegisterCallback([In] HANDLE hProvider, [In] TRANSPORTPROVIDER_CALLBACK_ID CallbackId, [In] void* pfnCallback);
+HRESULT WdsTransportServerCompleteRead([In] HANDLE hProvider, [In] uint ulBytesRead, [In] void* pvUserData, [In] HRESULT hReadResult);
+HRESULT WdsTransportServerTrace([In] HANDLE hProvider, [In] uint Severity, [Const] [In] PWSTR pwszFormat, ...);
+HRESULT WdsTransportServerTraceV([In] HANDLE hProvider, [In] uint Severity, [Const] [In] PWSTR pwszFormat, [In] sbyte* Params);
+void* WdsTransportServerAllocateBuffer([In] HANDLE hProvider, [In] uint ulBufferSize);
+HRESULT WdsTransportServerFreeBuffer([In] HANDLE hProvider, [In] void* pvBuffer);

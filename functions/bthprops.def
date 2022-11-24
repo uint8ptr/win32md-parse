@@ -1,0 +1,6 @@
+BOOL BluetoothSelectDevices([In] [Out] BLUETOOTH_SELECT_DEVICE_PARAMS* pbtsdp);
+BOOL BluetoothSelectDevicesFree([In] [Out] BLUETOOTH_SELECT_DEVICE_PARAMS* pbtsdp);
+BOOL BluetoothDisplayDeviceProperties([In] [Optional] HWND hwndParent, [In] [Out] BLUETOOTH_DEVICE_INFO* pbtdi);
+uint BluetoothAuthenticateDevice([In] [Optional] HWND hwndParent, [In] [Optional] HANDLE hRadio, [In] [Out] BLUETOOTH_DEVICE_INFO* pbtbi, [NativeArrayInfo(CountParamIndex = 4)] [In] [Optional] PWSTR pszPasskey, [In] uint ulPasskeyLength);
+uint BluetoothAuthenticateDeviceEx([In] [Optional] HWND hwndParentIn, [In] [Optional] HANDLE hRadioIn, [In] [Out] BLUETOOTH_DEVICE_INFO* pbtdiInout, [In] [Optional] BLUETOOTH_OOB_DATA_INFO* pbtOobData, [In] AUTHENTICATION_REQUIREMENTS authenticationRequirement);
+uint BluetoothAuthenticateMultipleDevices([In] [Optional] HWND hwndParent, [In] [Optional] HANDLE hRadio, [In] uint cDevices, [NativeArrayInfo(CountParamIndex = 2)] [In] [Out] BLUETOOTH_DEVICE_INFO* rgbtdi);

@@ -1,0 +1,6 @@
+typedef nint HDSA;
+typedef nint HPROPSHEETPAGE;
+typedef nint HSYNTHETICPOINTERDEVICE;
+typedef nint HTHEME;
+typedef nint HTREEITEM;
+typedef nint HIMAGELIST;

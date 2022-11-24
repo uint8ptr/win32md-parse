@@ -1,0 +1,14 @@
+int TTEmbedFont([In] HDC hDC, [In] TTEMBED_FLAGS ulFlags, [In] EMBED_FONT_CHARSET ulCharSet, [Out] EMBEDDED_FONT_PRIV_STATUS* pulPrivStatus, [Out] uint* pulStatus, [In] WRITEEMBEDPROC lpfnWriteToStream, [In] void* lpvWriteStream, [NativeArrayInfo(CountParamIndex = 8)] [In] ushort* pusCharCodeSet, [In] ushort usCharCodeCount, [In] ushort usLanguage, [In] [Optional] TTEMBEDINFO* pTTEmbedInfo);
+int TTEmbedFontFromFileA([In] HDC hDC, [Const] [In] PSTR szFontFileName, [In] ushort usTTCIndex, [In] TTEMBED_FLAGS ulFlags, [In] EMBED_FONT_CHARSET ulCharSet, [Out] EMBEDDED_FONT_PRIV_STATUS* pulPrivStatus, [Out] uint* pulStatus, [In] WRITEEMBEDPROC lpfnWriteToStream, [In] void* lpvWriteStream, [NativeArrayInfo(CountParamIndex = 10)] [In] ushort* pusCharCodeSet, [In] ushort usCharCodeCount, [In] ushort usLanguage, [In] [Optional] TTEMBEDINFO* pTTEmbedInfo);
+int TTLoadEmbeddedFont([Out] HANDLE* phFontReference, [In] uint ulFlags, [Out] EMBEDDED_FONT_PRIV_STATUS* pulPrivStatus, [In] FONT_LICENSE_PRIVS ulPrivs, [Out] TTLOAD_EMBEDDED_FONT_STATUS* pulStatus, [In] READEMBEDPROC lpfnReadFromStream, [In] void* lpvReadStream, [In] [Optional] PWSTR szWinFamilyName, [In] [Optional] PSTR szMacFamilyName, [In] [Optional] TTLOADINFO* pTTLoadInfo);
+int TTGetEmbeddedFontInfo([In] TTEMBED_FLAGS ulFlags, [Out] uint* pulPrivStatus, [In] FONT_LICENSE_PRIVS ulPrivs, [Out] uint* pulStatus, [In] READEMBEDPROC lpfnReadFromStream, [In] void* lpvReadStream, [In] [Optional] TTLOADINFO* pTTLoadInfo);
+int TTDeleteEmbeddedFont([In] HANDLE hFontReference, [In] uint ulFlags, [Out] uint* pulStatus);
+int TTGetEmbeddingType([In] HDC hDC, [Out] EMBEDDED_FONT_PRIV_STATUS* pulEmbedType);
+int TTCharToUnicode([In] HDC hDC, [NativeArrayInfo(CountParamIndex = 2)] [In] byte* pucCharCodes, [In] uint ulCharCodeSize, [NativeArrayInfo(CountParamIndex = 4)] [Out] ushort* pusShortCodes, [In] uint ulShortCodeSize, [In] uint ulFlags);
+int TTRunValidationTests([In] HDC hDC, [In] TTVALIDATIONTESTSPARAMS* pTestParam);
+int TTIsEmbeddingEnabled([In] HDC hDC, [Out] BOOL* pbEnabled);
+int TTIsEmbeddingEnabledForFacename([Const] [In] PSTR lpszFacename, [Out] BOOL* pbEnabled);
+int TTEnableEmbeddingForFacename([Const] [In] PSTR lpszFacename, [In] BOOL bEnable);
+int TTEmbedFontEx([In] HDC hDC, [In] TTEMBED_FLAGS ulFlags, [In] EMBED_FONT_CHARSET ulCharSet, [Out] EMBEDDED_FONT_PRIV_STATUS* pulPrivStatus, [Out] uint* pulStatus, [In] WRITEEMBEDPROC lpfnWriteToStream, [In] void* lpvWriteStream, [NativeArrayInfo(CountParamIndex = 8)] [In] uint* pulCharCodeSet, [In] ushort usCharCodeCount, [In] ushort usLanguage, [In] [Optional] TTEMBEDINFO* pTTEmbedInfo);
+int TTRunValidationTestsEx([In] HDC hDC, [In] TTVALIDATIONTESTSPARAMSEX* pTestParam);
+int TTGetNewFontName([In] HANDLE* phFontReference, [NativeArrayInfo(CountParamIndex = 2)] [Out] PWSTR wzWinFamilyName, [In] int cchMaxWinName, [NativeArrayInfo(CountParamIndex = 4)] [Out] PSTR szMacFamilyName, [In] int cchMaxMacName);

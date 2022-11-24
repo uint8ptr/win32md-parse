@@ -1,0 +1,28 @@
+type : "typedef" type_def type_name ";"
+type_def : TYPE_DECLARATION
+type_name : IDENTIFIER
+
+function : return_type name "(" args? ")" ";"
+
+return_type : TYPE_DECLARATION
+name : IDENTIFIER
+
+args : (arg ",")* (arg | varargs)
+arg : attrs? arg_type arg_name
+arg_type : TYPE_DECLARATION
+arg_name : IDENTIFIER
+varargs : "..."
+
+attrs : attr*
+attr : "[" IDENTIFIER ("(" attr_params? ")")* "]"
+
+attr_params : (attr_param ",")* attr_param
+attr_param : LITERAL
+           | IDENTIFIER "=" LITERAL
+
+IDENTIFIER : /[_a-zA-Z][_a-zA-Z0-9]*/
+TYPE_DECLARATION : IDENTIFIER /[\*]*/
+LITERAL : /["._a-zA-Z0-9]+/
+
+%import common.WS
+%ignore WS

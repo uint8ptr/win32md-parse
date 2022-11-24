@@ -1,0 +1,7 @@
+HRESULT CoCreateActivity([In] IUnknown pIUnknown, [Const] [In] Guid* riid, [In] [Out] void** ppObj);
+HRESULT CoEnterServiceDomain([In] IUnknown pConfigObject);
+void CoLeaveServiceDomain([In] IUnknown pUnkStatus);
+HRESULT GetManagedExtensions([In] [Out] uint* dwExts);
+void* SafeRef([Const] [In] Guid* rid, [In] IUnknown pUnk);
+HRESULT RecycleSurrogate([In] int lReasonCode);
+HRESULT MTSCreateActivity([Const] [In] Guid* riid, [In] [Out] void** ppobj);

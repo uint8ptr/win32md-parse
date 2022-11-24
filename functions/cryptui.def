@@ -1,0 +1,10 @@
+BOOL CryptUIDlgViewContext([In] uint dwContextType, [Const] [In] void* pvContext, [In] [Optional] HWND hwnd, [Const] [In] [Optional] PWSTR pwszTitle, [In] uint dwFlags, [In] void* pvReserved);
+CERT_CONTEXT* CryptUIDlgSelectCertificateFromStore([In] HCERTSTORE hCertStore, [In] [Optional] HWND hwnd, [Const] [In] [Optional] PWSTR pwszTitle, [Const] [In] [Optional] PWSTR pwszDisplayString, [In] uint dwDontUseColumn, [In] uint dwFlags, [In] void* pvReserved);
+HRESULT CertSelectionGetSerializedBlob([In] CERT_SELECTUI_INPUT* pcsi, [Out] [Optional] void** ppOutBuffer, [Out] uint* pulOutBufferSize);
+BOOL CryptUIDlgCertMgr([In] CRYPTUI_CERT_MGR_STRUCT* pCryptUICertMgr);
+BOOL CryptUIWizDigitalSign([In] uint dwFlags, [In] [Optional] HWND hwndParent, [Const] [In] [Optional] PWSTR pwszWizardTitle, [In] CRYPTUI_WIZ_DIGITAL_SIGN_INFO* pDigitalSignInfo, [Out] [Optional] CRYPTUI_WIZ_DIGITAL_SIGN_CONTEXT** ppSignContext);
+BOOL CryptUIWizFreeDigitalSignContext([In] CRYPTUI_WIZ_DIGITAL_SIGN_CONTEXT* pSignContext);
+BOOL CryptUIDlgViewCertificateW([In] CRYPTUI_VIEWCERTIFICATE_STRUCTW* pCertViewInfo, [Out] BOOL* pfPropertiesChanged);
+BOOL CryptUIDlgViewCertificateA([In] CRYPTUI_VIEWCERTIFICATE_STRUCTA* pCertViewInfo, [Out] BOOL* pfPropertiesChanged);
+BOOL CryptUIWizExport([In] CRYPTUI_WIZ_FLAGS dwFlags, [In] [Optional] HWND hwndParent, [Const] [In] [Optional] PWSTR pwszWizardTitle, [In] CRYPTUI_WIZ_EXPORT_INFO* pExportInfo, [In] [Optional] void* pvoid);
+BOOL CryptUIWizImport([In] CRYPTUI_WIZ_FLAGS dwFlags, [In] [Optional] HWND hwndParent, [Const] [In] [Optional] PWSTR pwszWizardTitle, [In] [Optional] CRYPTUI_WIZ_IMPORT_SRC_INFO* pImportSrc, [In] [Optional] HCERTSTORE hDestCertStore);

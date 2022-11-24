@@ -1,0 +1,2 @@
+HANDLE WnvOpen();
+uint WnvRequestNotification([In] HANDLE WnvHandle, [In] [Out] WNV_NOTIFICATION_PARAM* NotificationParam, [In] [Out] OVERLAPPED* Overlapped, [In] [Out] uint* BytesTransferred);

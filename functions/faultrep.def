@@ -1,0 +1,4 @@
+EFaultRepRetVal ReportFault([In] EXCEPTION_POINTERS* pep, [In] uint dwOpt);
+BOOL AddERExcludedApplicationA([Const] [In] PSTR szApplication);
+BOOL AddERExcludedApplicationW([Const] [In] PWSTR wszApplication);
+HRESULT WerReportHang([In] HWND hwndHungApp, [Const] [In] [Optional] PWSTR pwzHungApplicationName);

@@ -1,0 +1,12 @@
+HRESULT CreatePresentationFactory([In] IUnknown d3dDevice, [Const] [In] Guid* riid, [Out] void** presentationFactory);
+HRESULT DCompositionCreateDevice([In] [Optional] IDXGIDevice dxgiDevice, [Const] [In] Guid* iid, [ComOutPtr] [Out] void** dcompositionDevice);
+HRESULT DCompositionCreateDevice2([In] [Optional] IUnknown renderingDevice, [Const] [In] Guid* iid, [ComOutPtr] [Out] void** dcompositionDevice);
+HRESULT DCompositionCreateDevice3([In] [Optional] IUnknown renderingDevice, [Const] [In] Guid* iid, [ComOutPtr] [Out] void** dcompositionDevice);
+HRESULT DCompositionCreateSurfaceHandle([In] uint desiredAccess, [In] [Optional] SECURITY_ATTRIBUTES* securityAttributes, [Out] HANDLE* surfaceHandle);
+HRESULT DCompositionAttachMouseWheelToHwnd([In] IDCompositionVisual visual, [In] HWND hwnd, [In] BOOL enable);
+HRESULT DCompositionAttachMouseDragToHwnd([In] IDCompositionVisual visual, [In] HWND hwnd, [In] BOOL enable);
+HRESULT DCompositionGetFrameId([In] COMPOSITION_FRAME_ID_TYPE frameIdType, [Out] ulong* frameId);
+HRESULT DCompositionGetStatistics([In] ulong frameId, [Out] COMPOSITION_FRAME_STATS* frameStats, [In] uint targetIdCount, [Out] [Optional] COMPOSITION_TARGET_ID* targetIds, [Out] [Optional] uint* actualTargetIdCount);
+HRESULT DCompositionGetTargetStatistics([In] ulong frameId, [Const] [In] COMPOSITION_TARGET_ID* targetId, [Out] COMPOSITION_TARGET_STATS* targetStats);
+HRESULT DCompositionBoostCompositorClock([In] BOOL enable);
+uint DCompositionWaitForCompositorClock([In] uint count, [Const] [NativeArrayInfo(CountParamIndex = 0)] [In] [Optional] HANDLE* handles, [In] uint timeoutInMs);

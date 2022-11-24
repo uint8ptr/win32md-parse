@@ -1,0 +1,6 @@
+void Dhcpv6CApiInitialize([In] [Out] uint* Version);
+void Dhcpv6CApiCleanup();
+uint Dhcpv6RequestParams([In] BOOL forceNewInform, [In] [Out] void* reserved, [In] PWSTR adapterName, [In] [Out] DHCPV6CAPI_CLASSID* classId, [In] DHCPV6CAPI_PARAMS_ARRAY recdParams, [In] [Out] byte* buffer, [In] [Out] uint* pSize);
+uint Dhcpv6RequestPrefix([In] PWSTR adapterName, [In] [Out] DHCPV6CAPI_CLASSID* pclassId, [In] [Out] DHCPV6PrefixLeaseInformation* prefixleaseInfo, [Out] uint* pdwTimeToWait);
+uint Dhcpv6RenewPrefix([In] PWSTR adapterName, [In] [Out] DHCPV6CAPI_CLASSID* pclassId, [In] [Out] DHCPV6PrefixLeaseInformation* prefixleaseInfo, [Out] uint* pdwTimeToWait, [In] uint bValidatePrefix);
+uint Dhcpv6ReleasePrefix([In] PWSTR adapterName, [In] [Out] DHCPV6CAPI_CLASSID* classId, [In] [Out] DHCPV6PrefixLeaseInformation* leaseInfo);

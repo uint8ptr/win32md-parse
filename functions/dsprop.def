@@ -1,0 +1,7 @@
+HRESULT ADsPropCreateNotifyObj([In] IDataObject pAppThdDataObj, [In] PWSTR pwzADsObjName, [In] [Out] HWND* phNotifyObj);
+BOOL ADsPropGetInitInfo([In] HWND hNotifyObj, [In] [Out] ADSPROPINITPARAMS* pInitParams);
+BOOL ADsPropSetHwndWithTitle([In] HWND hNotifyObj, [In] HWND hPage, [In] sbyte* ptzTitle);
+BOOL ADsPropSetHwnd([In] HWND hNotifyObj, [In] HWND hPage);
+BOOL ADsPropCheckIfWritable([Const] [In] PWSTR pwzAttr, [Const] [In] ADS_ATTR_INFO* pWritableAttrs);
+BOOL ADsPropSendErrorMessage([In] HWND hNotifyObj, [In] [Out] ADSPROPERROR* pError);
+BOOL ADsPropShowErrorDialog([In] HWND hNotifyObj, [In] HWND hPage);

@@ -1,0 +1,5 @@
+uint WcmQueryProperty([Const] [In] [Optional] Guid* pInterface, [Const] [In] [Optional] PWSTR strProfileName, [In] WCM_PROPERTY Property, [Reserved] [In] [Out] void* pReserved, [Out] uint* pdwDataSize, [Out] [Optional] byte** ppData);
+uint WcmSetProperty([Const] [In] [Optional] Guid* pInterface, [Const] [In] [Optional] PWSTR strProfileName, [In] WCM_PROPERTY Property, [Reserved] [In] [Out] void* pReserved, [In] uint dwDataSize, [Const] [NativeArrayInfo(CountParamIndex = 4)] [In] [Optional] byte* pbData);
+uint WcmGetProfileList([Reserved] [In] [Out] void* pReserved, [Out] WCM_PROFILE_INFO_LIST** ppProfileList);
+uint WcmSetProfileList([In] WCM_PROFILE_INFO_LIST* pProfileList, [In] uint dwPosition, [In] BOOL fIgnoreUnknownProfiles, [Reserved] [In] [Out] void* pReserved);
+void WcmFreeMemory([Out] void* pMemory);

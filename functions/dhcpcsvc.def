@@ -1,0 +1,15 @@
+uint DhcpCApiInitialize([In] [Out] uint* Version);
+void DhcpCApiCleanup();
+uint DhcpRequestParams([In] uint Flags, [In] [Out] void* Reserved, [In] PWSTR AdapterName, [In] [Out] DHCPCAPI_CLASSID* ClassId, [In] DHCPCAPI_PARAMS_ARRAY SendParams, [In] DHCPCAPI_PARAMS_ARRAY RecdParams, [MemorySize(BytesParamIndex = 7)] [Out] byte* Buffer, [In] [Out] uint* pSize, [In] PWSTR RequestIdStr);
+uint DhcpUndoRequestParams([Reserved] [In] uint Flags, [Reserved] [In] [Out] void* Reserved, [In] PWSTR AdapterName, [In] PWSTR RequestIdStr);
+uint DhcpRegisterParamChange([In] uint Flags, [Reserved] [In] [Out] void* Reserved, [In] PWSTR AdapterName, [In] [Out] DHCPCAPI_CLASSID* ClassId, [In] DHCPCAPI_PARAMS_ARRAY Params, [In] [Out] void* Handle);
+uint DhcpDeRegisterParamChange([In] uint Flags, [In] [Out] void* Reserved, [In] [Out] void* Event);
+uint DhcpRemoveDNSRegistrations();
+uint DhcpGetOriginalSubnetMask([Const] [In] PWSTR sAdapterName, [In] [Out] uint* dwSubnetMask);
+uint McastApiStartup([In] [Out] uint* Version);
+void McastApiCleanup();
+uint McastGenUID([In] [Out] MCAST_CLIENT_UID* pRequestID);
+uint McastEnumerateScopes([In] ushort AddrFamily, [In] BOOL ReQuery, [In] [Out] MCAST_SCOPE_ENTRY* pScopeList, [In] [Out] uint* pScopeLen, [In] [Out] uint* pScopeCount);
+uint McastRequestAddress([In] ushort AddrFamily, [In] [Out] MCAST_CLIENT_UID* pRequestID, [In] [Out] MCAST_SCOPE_CTX* pScopeCtx, [In] [Out] MCAST_LEASE_REQUEST* pAddrRequest, [In] [Out] MCAST_LEASE_RESPONSE* pAddrResponse);
+uint McastRenewAddress([In] ushort AddrFamily, [In] [Out] MCAST_CLIENT_UID* pRequestID, [In] [Out] MCAST_LEASE_REQUEST* pRenewRequest, [In] [Out] MCAST_LEASE_RESPONSE* pRenewResponse);
+uint McastReleaseAddress([In] ushort AddrFamily, [In] [Out] MCAST_CLIENT_UID* pRequestID, [In] [Out] MCAST_LEASE_REQUEST* pReleaseRequest);

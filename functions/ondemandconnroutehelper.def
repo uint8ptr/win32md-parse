@@ -1,0 +1,5 @@
+HRESULT OnDemandGetRoutingHint([Const] [In] PWSTR destinationHostName, [Out] uint* interfaceIndex);
+HRESULT OnDemandRegisterNotification([In] ONDEMAND_NOTIFICATION_CALLBACK callback, [In] [Optional] void* callbackContext, [Out] HANDLE* registrationHandle);
+HRESULT OnDemandUnRegisterNotification([In] HANDLE registrationHandle);
+HRESULT GetInterfaceContextTableForHostName([Const] [In] [Optional] PWSTR HostName, [Const] [In] [Optional] PWSTR ProxyName, [In] uint Flags, [MemorySize(BytesParamIndex = 4)] [In] [Optional] byte* ConnectionProfileFilterRawData, [In] uint ConnectionProfileFilterRawDataSize, [Out] NET_INTERFACE_CONTEXT_TABLE** InterfaceContextTable);
+void FreeInterfaceContextTable([In] NET_INTERFACE_CONTEXT_TABLE* InterfaceContextTable);

@@ -1,0 +1,3 @@
+BOOL AlphaBlend([In] HDC hdcDest, [In] int xoriginDest, [In] int yoriginDest, [In] int wDest, [In] int hDest, [In] HDC hdcSrc, [In] int xoriginSrc, [In] int yoriginSrc, [In] int wSrc, [In] int hSrc, [In] BLENDFUNCTION ftn);
+BOOL TransparentBlt([In] HDC hdcDest, [In] int xoriginDest, [In] int yoriginDest, [In] int wDest, [In] int hDest, [In] HDC hdcSrc, [In] int xoriginSrc, [In] int yoriginSrc, [In] int wSrc, [In] int hSrc, [In] uint crTransparent);
+BOOL GradientFill([In] HDC hdc, [NativeArrayInfo(CountParamIndex = 2)] [In] TRIVERTEX* pVertex, [In] uint nVertex, [In] void* pMesh, [In] uint nMesh, [In] GRADIENT_FILL ulMode);

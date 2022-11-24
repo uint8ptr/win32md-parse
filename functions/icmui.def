@@ -1,0 +1,2 @@
+BOOL SetupColorMatchingW([In] [Out] COLORMATCHSETUPW* pcms);
+BOOL SetupColorMatchingA([In] [Out] COLORMATCHSETUPA* pcms);

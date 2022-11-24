@@ -1,0 +1,13 @@
+typedef nint HBRUSH;
+typedef nint HDC;
+typedef nint HdcMetdataEnhFileHandle;
+typedef nint HdcMetdataFileHandle;
+typedef nint HENHMETAFILE;
+typedef nint HFONT;
+typedef nint HGDIOBJ;
+typedef nint HMETAFILE;
+typedef nint HMONITOR;
+typedef nint HPALETTE;
+typedef nint HPEN;
+typedef nint HRGN;
+typedef nint CreatedHDC;

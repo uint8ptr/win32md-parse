@@ -1,0 +1,1 @@
+uint GetFeatureVariant([In] uint featureId, [In] FEATURE_CHANGE_TIME changeTime, [Out] uint* payloadId, [Out] BOOL* hasNotification);

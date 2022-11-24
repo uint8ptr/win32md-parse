@@ -1,0 +1,4 @@
+BOOL GetExtensionVersion([Out] HSE_VERSION_INFO* pVer);
+uint HttpExtensionProc([In] EXTENSION_CONTROL_BLOCK* pECB);
+uint HttpFilterProc([In] [Out] HTTP_FILTER_CONTEXT* pfc, [In] uint NotificationType, [In] [Out] void* pvNotification);
+BOOL GetFilterVersion([In] [Out] HTTP_FILTER_VERSION* pVer);

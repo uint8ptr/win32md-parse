@@ -1,0 +1,15 @@
+typedef nint HCERTCHAINENGINE;
+typedef void* HCERTSTORE;
+typedef nuint NCRYPT_PROV_HANDLE;
+typedef nuint NCRYPT_HANDLE;
+typedef nuint NCRYPT_HASH_HANDLE;
+typedef nuint NCRYPT_KEY_HANDLE;
+typedef nint BCRYPT_SECRET_HANDLE;
+typedef nint BCRYPT_HANDLE;
+typedef nint BCRYPT_HASH_HANDLE;
+typedef nint BCRYPT_KEY_HANDLE;
+typedef void* HCERTSTOREPROV;
+typedef nint HCRYPTASYNC;
+typedef nuint HCRYPTPROV_LEGACY;
+typedef nuint HCRYPTPROV_OR_NCRYPT_KEY_HANDLE;
+typedef nuint NCRYPT_SECRET_HANDLE;

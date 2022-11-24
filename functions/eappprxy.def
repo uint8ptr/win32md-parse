@@ -1,0 +1,18 @@
+uint EapHostPeerInitialize();
+void EapHostPeerUninitialize();
+uint EapHostPeerBeginSession([In] uint dwFlags, [In] EAP_METHOD_TYPE eapType, [Const] [In] EAP_ATTRIBUTES* pAttributeArray, [In] HANDLE hTokenImpersonateUser, [In] uint dwSizeofConnectionData, [Const] [In] byte* pConnectionData, [In] uint dwSizeofUserData, [Const] [In] byte* pUserData, [In] uint dwMaxSendPacketSize, [Const] [In] Guid* pConnectionId, [In] NotificationHandler func, [In] [Out] void* pContextData, [In] [Out] uint* pSessionId, [In] [Out] EAP_ERROR** ppEapError);
+uint EapHostPeerProcessReceivedPacket([In] uint sessionHandle, [In] uint cbReceivePacket, [Const] [In] byte* pReceivePacket, [In] [Out] EapHostPeerResponseAction* pEapOutput, [In] [Out] EAP_ERROR** ppEapError);
+uint EapHostPeerGetSendPacket([In] uint sessionHandle, [In] [Out] uint* pcbSendPacket, [In] [Out] byte** ppSendPacket, [In] [Out] EAP_ERROR** ppEapError);
+uint EapHostPeerGetResult([In] uint sessionHandle, [In] EapHostPeerMethodResultReason reason, [In] [Out] EapHostPeerMethodResult* ppResult, [In] [Out] EAP_ERROR** ppEapError);
+uint EapHostPeerGetUIContext([In] uint sessionHandle, [In] [Out] uint* pdwSizeOfUIContextData, [In] [Out] byte** ppUIContextData, [In] [Out] EAP_ERROR** ppEapError);
+uint EapHostPeerSetUIContext([In] uint sessionHandle, [In] uint dwSizeOfUIContextData, [Const] [In] byte* pUIContextData, [In] [Out] EapHostPeerResponseAction* pEapOutput, [In] [Out] EAP_ERROR** ppEapError);
+uint EapHostPeerGetResponseAttributes([In] uint sessionHandle, [In] [Out] EAP_ATTRIBUTES* pAttribs, [In] [Out] EAP_ERROR** ppEapError);
+uint EapHostPeerSetResponseAttributes([In] uint sessionHandle, [Const] [In] EAP_ATTRIBUTES* pAttribs, [In] [Out] EapHostPeerResponseAction* pEapOutput, [In] [Out] EAP_ERROR** ppEapError);
+uint EapHostPeerGetAuthStatus([In] uint sessionHandle, [In] EapHostPeerAuthParams authParam, [In] [Out] uint* pcbAuthData, [In] [Out] byte** ppAuthData, [In] [Out] EAP_ERROR** ppEapError);
+uint EapHostPeerEndSession([In] uint sessionHandle, [In] [Out] EAP_ERROR** ppEapError);
+uint EapHostPeerGetDataToUnplumbCredentials([In] [Out] Guid* pConnectionIdThatLastSavedCreds, [In] [Out] nint* phCredentialImpersonationToken, [In] uint sessionHandle, [In] [Out] EAP_ERROR** ppEapError, [In] [Out] BOOL* fSaveToCredMan);
+uint EapHostPeerClearConnection([In] [Out] Guid* pConnectionId, [In] [Out] EAP_ERROR** ppEapError);
+void EapHostPeerFreeEapError([In] [Out] EAP_ERROR* pEapError);
+uint EapHostPeerGetIdentity([In] uint dwVersion, [In] uint dwFlags, [In] EAP_METHOD_TYPE eapMethodType, [In] uint dwSizeofConnectionData, [Const] [NativeArrayInfo(CountParamIndex = 3)] [In] byte* pConnectionData, [In] uint dwSizeofUserData, [Const] [NativeArrayInfo(CountParamIndex = 5)] [In] [Optional] byte* pUserData, [In] HANDLE hTokenImpersonateUser, [In] [Out] BOOL* pfInvokeUI, [In] [Out] uint* pdwSizeOfUserDataOut, [Out] byte** ppUserDataOut, [Out] PWSTR* ppwszIdentity, [In] [Out] EAP_ERROR** ppEapError, [In] [Out] byte** ppvReserved);
+uint EapHostPeerGetEncryptedPassword([In] uint dwSizeofPassword, [MemorySize(BytesParamIndex = 0)] [In] PWSTR szPassword, [Out] PWSTR* ppszEncPassword);
+void EapHostPeerFreeRuntimeMemory([In] [Out] byte* pData);

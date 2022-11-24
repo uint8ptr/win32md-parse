@@ -1,0 +1,2 @@
+HWND HtmlHelpA([In] [Optional] HWND hwndCaller, [Const] [In] PSTR pszFile, [In] HTML_HELP_COMMAND uCommand, [In] nuint dwData);
+HWND HtmlHelpW([In] [Optional] HWND hwndCaller, [Const] [In] PWSTR pszFile, [In] HTML_HELP_COMMAND uCommand, [In] nuint dwData);

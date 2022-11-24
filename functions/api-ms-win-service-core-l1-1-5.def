@@ -1,0 +1,2 @@
+uint GetSharedServiceRegistryStateKey([In] SC_HANDLE ServiceHandle, [In] SERVICE_SHARED_REGISTRY_STATE_TYPE StateType, [In] uint AccessMask, [Out] HKEY* ServiceStateKey);
+uint GetSharedServiceDirectory([In] SC_HANDLE ServiceHandle, [In] SERVICE_SHARED_DIRECTORY_TYPE DirectoryType, [NotNullTerminated] [NativeArrayInfo(CountParamIndex = 3)] [Out] [Optional] PWSTR PathBuffer, [In] uint PathBufferLength, [Out] uint* RequiredBufferLength);

@@ -1,0 +1,1 @@
+HRESULT GetDispenserManager([Out] IDispenserManager* param0);

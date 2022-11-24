@@ -1,0 +1,1 @@
+BOOL QueryVirtualMemoryInformation([In] HANDLE Process, [Const] [In] void* VirtualAddress, [In] WIN32_MEMORY_INFORMATION_CLASS MemoryInformationClass, [MemorySize(BytesParamIndex = 4)] [Out] void* MemoryInformation, [In] nuint MemoryInformationSize, [Out] [Optional] nuint* ReturnSize);

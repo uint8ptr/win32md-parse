@@ -1,0 +1,8 @@
+uint KsCreateAllocator([In] HANDLE ConnectionHandle, [In] KSALLOCATOR_FRAMING* AllocatorFraming, [Out] HANDLE* AllocatorHandle);
+uint KsCreateClock([In] HANDLE ConnectionHandle, [In] KSCLOCK_CREATE* ClockCreate, [Out] HANDLE* ClockHandle);
+uint KsCreatePin([In] HANDLE FilterHandle, [In] KSPIN_CONNECT* Connect, [In] uint DesiredAccess, [Out] HANDLE* ConnectionHandle);
+uint KsCreateTopologyNode([In] HANDLE ParentHandle, [In] KSNODE_CREATE* NodeCreate, [In] uint DesiredAccess, [Out] HANDLE* NodeHandle);
+HRESULT KsCreateAllocator2([In] HANDLE ConnectionHandle, [In] KSALLOCATOR_FRAMING* AllocatorFraming, [Out] HANDLE* AllocatorHandle);
+HRESULT KsCreateClock2([In] HANDLE ConnectionHandle, [In] KSCLOCK_CREATE* ClockCreate, [Out] HANDLE* ClockHandle);
+HRESULT KsCreatePin2([In] HANDLE FilterHandle, [In] KSPIN_CONNECT* Connect, [In] uint DesiredAccess, [Out] HANDLE* ConnectionHandle);
+HRESULT KsCreateTopologyNode2([In] HANDLE ParentHandle, [In] KSNODE_CREATE* NodeCreate, [In] uint DesiredAccess, [Out] HANDLE* NodeHandle);

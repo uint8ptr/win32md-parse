@@ -1,0 +1,2 @@
+HRESULT RegisterLicenseKeyWithExpiration([Const] [In] PWSTR licenseKey, [In] uint validityInDays, [Out] LicenseProtectionStatus* status);
+HRESULT ValidateLicenseKeyProtection([Const] [In] PWSTR licenseKey, [Out] FILETIME* notValidBefore, [Out] FILETIME* notValidAfter, [Out] LicenseProtectionStatus* status);

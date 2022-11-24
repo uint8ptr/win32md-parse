@@ -1,0 +1,1 @@
+HRESULT ActivateAudioInterfaceAsync([Const] [In] PWSTR deviceInterfacePath, [Const] [In] Guid* riid, [In] [Optional] PROPVARIANT* activationParams, [In] IActivateAudioInterfaceCompletionHandler completionHandler, [ComOutPtr] [Out] IActivateAudioInterfaceAsyncOperation* activationOperation);

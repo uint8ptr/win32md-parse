@@ -1,0 +1,3 @@
+typedef nint HIC;
+typedef nint HMMIO;
+typedef nint HVIDEO;

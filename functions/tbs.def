@@ -1,0 +1,13 @@
+uint Tbsi_Context_Create([In] TBS_CONTEXT_PARAMS* pContextParams, [Out] void** phContext);
+uint Tbsip_Context_Close([In] void* hContext);
+uint Tbsip_Submit_Command([In] void* hContext, [In] TBS_COMMAND_LOCALITY Locality, [In] TBS_COMMAND_PRIORITY Priority, [MemorySize(BytesParamIndex = 4)] [In] byte* pabCommand, [In] uint cbCommand, [MemorySize(BytesParamIndex = 6)] [Out] byte* pabResult, [In] [Out] uint* pcbResult);
+uint Tbsip_Cancel_Commands([In] void* hContext);
+uint Tbsi_Physical_Presence_Command([In] void* hContext, [MemorySize(BytesParamIndex = 2)] [In] byte* pabInput, [In] uint cbInput, [MemorySize(BytesParamIndex = 4)] [Out] byte* pabOutput, [Out] uint* pcbOutput);
+uint Tbsi_Get_TCG_Log([In] void* hContext, [MemorySize(BytesParamIndex = 2)] [Out] [Optional] byte* pOutputBuf, [In] [Out] uint* pOutputBufLen);
+uint Tbsi_GetDeviceInfo([In] uint Size, [MemorySize(BytesParamIndex = 0)] [Out] void* Info);
+uint Tbsi_Get_OwnerAuth([In] void* hContext, [In] uint ownerauthType, [MemorySize(BytesParamIndex = 3)] [Out] [Optional] byte* pOutputBuf, [In] [Out] uint* pOutputBufLen);
+uint Tbsi_Revoke_Attestation();
+HRESULT GetDeviceID([MemorySize(BytesParamIndex = 1)] [Out] [Optional] byte* pbWindowsAIK, [In] uint cbWindowsAIK, [Out] uint* pcbResult, [Out] [Optional] BOOL* pfProtectedByTPM);
+HRESULT GetDeviceIDString([NativeArrayInfo(CountParamIndex = 1)] [Out] [Optional] PWSTR pszWindowsAIK, [In] uint cchWindowsAIK, [Out] uint* pcchResult, [Out] [Optional] BOOL* pfProtectedByTPM);
+uint Tbsi_Create_Windows_Key([In] uint keyHandle);
+uint Tbsi_Get_TCG_Log_Ex([In] uint logType, [MemorySize(BytesParamIndex = 2)] [Out] [Optional] byte* pbOutput, [In] [Out] uint* pcbOutput);

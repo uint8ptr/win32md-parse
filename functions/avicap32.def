@@ -1,0 +1,4 @@
+HWND capCreateCaptureWindowA([Const] [In] PSTR lpszWindowName, [In] uint dwStyle, [In] int x, [In] int y, [In] int nWidth, [In] int nHeight, [In] [Optional] HWND hwndParent, [In] int nID);
+BOOL capGetDriverDescriptionA([In] uint wDriverIndex, [NativeArrayInfo(CountParamIndex = 2)] [Out] PSTR lpszName, [In] int cbName, [NativeArrayInfo(CountParamIndex = 4)] [Out] PSTR lpszVer, [In] int cbVer);
+HWND capCreateCaptureWindowW([Const] [In] PWSTR lpszWindowName, [In] uint dwStyle, [In] int x, [In] int y, [In] int nWidth, [In] int nHeight, [In] [Optional] HWND hwndParent, [In] int nID);
+BOOL capGetDriverDescriptionW([In] uint wDriverIndex, [NativeArrayInfo(CountParamIndex = 2)] [Out] PWSTR lpszName, [In] int cbName, [NativeArrayInfo(CountParamIndex = 4)] [Out] PWSTR lpszVer, [In] int cbVer);

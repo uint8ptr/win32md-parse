@@ -1,0 +1,2 @@
+uint RegisterAppStateChangeNotification([In] PAPPSTATE_CHANGE_ROUTINE Routine, [In] [Optional] void* Context, [Out] _APPSTATE_REGISTRATION** Registration);
+void UnregisterAppStateChangeNotification([In] [Out] _APPSTATE_REGISTRATION* Registration);

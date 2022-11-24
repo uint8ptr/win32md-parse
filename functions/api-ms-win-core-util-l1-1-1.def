@@ -1,0 +1,2 @@
+HRESULT EncodeRemotePointer([In] HANDLE ProcessHandle, [In] [Optional] void* Ptr, [Out] void** EncodedPtr);
+HRESULT DecodeRemotePointer([In] HANDLE ProcessHandle, [In] [Optional] void* Ptr, [Out] void** DecodedPtr);

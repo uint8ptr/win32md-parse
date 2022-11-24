@@ -1,0 +1,7 @@
+HRESULT AmsiInitialize([Const] [In] PWSTR appName, [Out] HAMSICONTEXT* amsiContext);
+void AmsiUninitialize([In] HAMSICONTEXT amsiContext);
+HRESULT AmsiOpenSession([In] HAMSICONTEXT amsiContext, [Out] HAMSISESSION* amsiSession);
+void AmsiCloseSession([In] HAMSICONTEXT amsiContext, [In] HAMSISESSION amsiSession);
+HRESULT AmsiScanBuffer([In] HAMSICONTEXT amsiContext, [MemorySize(BytesParamIndex = 2)] [In] void* buffer, [In] uint length, [Const] [In] [Optional] PWSTR contentName, [In] [Optional] HAMSISESSION amsiSession, [Out] AMSI_RESULT* result);
+HRESULT AmsiNotifyOperation([In] HAMSICONTEXT amsiContext, [MemorySize(BytesParamIndex = 2)] [In] void* buffer, [In] uint length, [Const] [In] [Optional] PWSTR contentName, [Out] AMSI_RESULT* result);
+HRESULT AmsiScanString([In] HAMSICONTEXT amsiContext, [Const] [In] PWSTR string, [Const] [In] [Optional] PWSTR contentName, [In] [Optional] HAMSISESSION amsiSession, [Out] AMSI_RESULT* result);

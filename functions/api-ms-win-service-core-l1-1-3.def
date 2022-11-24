@@ -1,0 +1,1 @@
+uint GetServiceRegistryStateKey([In] SERVICE_STATUS_HANDLE ServiceStatusHandle, [In] SERVICE_REGISTRY_STATE_TYPE StateType, [In] uint AccessMask, [Out] HKEY* ServiceStateKey);

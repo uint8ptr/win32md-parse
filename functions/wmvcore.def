@@ -1,0 +1,11 @@
+HRESULT WMIsContentProtected([Const] [In] PWSTR pwszFileName, [In] [Out] BOOL* pfIsProtected);
+HRESULT WMCreateWriter([In] IUnknown pUnkCert, [Out] IWMWriter* ppWriter);
+HRESULT WMCreateReader([In] IUnknown pUnkCert, [In] uint dwRights, [Out] IWMReader* ppReader);
+HRESULT WMCreateSyncReader([In] IUnknown pUnkCert, [In] uint dwRights, [Out] IWMSyncReader* ppSyncReader);
+HRESULT WMCreateEditor([Out] IWMMetadataEditor* ppEditor);
+HRESULT WMCreateIndexer([Out] IWMIndexer* ppIndexer);
+HRESULT WMCreateBackupRestorer([In] IUnknown pCallback, [Out] IWMLicenseBackup* ppBackup);
+HRESULT WMCreateProfileManager([Out] IWMProfileManager* ppProfileManager);
+HRESULT WMCreateWriterFileSink([Out] IWMWriterFileSink* ppSink);
+HRESULT WMCreateWriterNetworkSink([Out] IWMWriterNetworkSink* ppSink);
+HRESULT WMCreateWriterPushSink([Out] IWMWriterPushSink* ppSink);

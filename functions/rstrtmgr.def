@@ -1,0 +1,11 @@
+uint RmStartSession([Out] uint* pSessionHandle, [Reserved] [In] uint dwSessionFlags, [Out] PWSTR strSessionKey);
+uint RmJoinSession([Out] uint* pSessionHandle, [Const] [In] PWSTR strSessionKey);
+uint RmEndSession([In] uint dwSessionHandle);
+uint RmRegisterResources([In] uint dwSessionHandle, [In] uint nFiles, [NativeArrayInfo(CountParamIndex = 1)] [In] [Optional] PWSTR* rgsFileNames, [In] uint nApplications, [NativeArrayInfo(CountParamIndex = 3)] [In] [Optional] RM_UNIQUE_PROCESS* rgApplications, [In] uint nServices, [NativeArrayInfo(CountParamIndex = 5)] [In] [Optional] PWSTR* rgsServiceNames);
+uint RmGetList([In] uint dwSessionHandle, [Out] uint* pnProcInfoNeeded, [In] [Out] uint* pnProcInfo, [NativeArrayInfo(CountParamIndex = 2)] [In] [Out] [Optional] RM_PROCESS_INFO* rgAffectedApps, [Out] uint* lpdwRebootReasons);
+uint RmShutdown([In] uint dwSessionHandle, [In] uint lActionFlags, [In] [Optional] RM_WRITE_STATUS_CALLBACK fnStatus);
+uint RmRestart([In] uint dwSessionHandle, [Reserved] [In] uint dwRestartFlags, [In] [Optional] RM_WRITE_STATUS_CALLBACK fnStatus);
+uint RmCancelCurrentTask([In] uint dwSessionHandle);
+uint RmAddFilter([In] uint dwSessionHandle, [Const] [In] [Optional] PWSTR strModuleName, [In] [Optional] RM_UNIQUE_PROCESS* pProcess, [Const] [In] [Optional] PWSTR strServiceShortName, [In] RM_FILTER_ACTION FilterAction);
+uint RmRemoveFilter([In] uint dwSessionHandle, [Const] [In] [Optional] PWSTR strModuleName, [In] [Optional] RM_UNIQUE_PROCESS* pProcess, [Const] [In] [Optional] PWSTR strServiceShortName);
+uint RmGetFilterList([In] uint dwSessionHandle, [MemorySize(BytesParamIndex = 2)] [Out] [Optional] byte* pbFilterBuf, [In] uint cbFilterBuf, [Out] uint* cbFilterBufNeeded);

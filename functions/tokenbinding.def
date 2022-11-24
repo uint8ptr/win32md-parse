@@ -1,0 +1,10 @@
+HRESULT TokenBindingGenerateBinding([In] TOKENBINDING_KEY_PARAMETERS_TYPE keyType, [Const] [In] PWSTR targetURL, [In] TOKENBINDING_TYPE bindingType, [Const] [MemorySize(BytesParamIndex = 4)] [In] void* tlsEKM, [In] uint tlsEKMSize, [In] TOKENBINDING_EXTENSION_FORMAT extensionFormat, [Const] [In] void* extensionData, [Out] void** tokenBinding, [Out] uint* tokenBindingSize, [Out] [Optional] TOKENBINDING_RESULT_DATA** resultData);
+HRESULT TokenBindingGenerateMessage([Const] [NativeArrayInfo(CountParamIndex = 2)] [In] void** tokenBindings, [Const] [NativeArrayInfo(CountParamIndex = 2)] [In] uint* tokenBindingsSize, [In] uint tokenBindingsCount, [Out] void** tokenBindingMessage, [Out] uint* tokenBindingMessageSize);
+HRESULT TokenBindingVerifyMessage([Const] [MemorySize(BytesParamIndex = 1)] [In] void* tokenBindingMessage, [In] uint tokenBindingMessageSize, [In] TOKENBINDING_KEY_PARAMETERS_TYPE keyType, [Const] [MemorySize(BytesParamIndex = 4)] [In] void* tlsEKM, [In] uint tlsEKMSize, [Out] TOKENBINDING_RESULT_LIST** resultList);
+HRESULT TokenBindingGetKeyTypesClient([Out] TOKENBINDING_KEY_TYPES** keyTypes);
+HRESULT TokenBindingGetKeyTypesServer([Out] TOKENBINDING_KEY_TYPES** keyTypes);
+HRESULT TokenBindingDeleteBinding([Const] [In] PWSTR targetURL);
+HRESULT TokenBindingDeleteAllBindings();
+HRESULT TokenBindingGenerateID([In] TOKENBINDING_KEY_PARAMETERS_TYPE keyType, [Const] [MemorySize(BytesParamIndex = 2)] [In] void* publicKey, [In] uint publicKeySize, [Out] TOKENBINDING_RESULT_DATA** resultData);
+HRESULT TokenBindingGenerateIDForUri([In] TOKENBINDING_KEY_PARAMETERS_TYPE keyType, [Const] [In] PWSTR targetUri, [Out] TOKENBINDING_RESULT_DATA** resultData);
+HRESULT TokenBindingGetHighestSupportedVersion([Out] byte* majorVersion, [Out] byte* minorVersion);

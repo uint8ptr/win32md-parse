@@ -1,0 +1,1 @@
+uint VerifierEnumerateResource([In] HANDLE Process, [In] VERIFIER_ENUM_RESOURCE_FLAGS Flags, [In] eAvrfResourceTypes ResourceType, [In] AVRF_RESOURCE_ENUMERATE_CALLBACK ResourceCallback, [In] [Out] void* EnumerationContext);

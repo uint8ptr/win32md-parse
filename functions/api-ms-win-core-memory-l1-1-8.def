@@ -1,0 +1,3 @@
+BOOL AllocateUserPhysicalPages2([In] HANDLE ObjectHandle, [In] [Out] nuint* NumberOfPages, [NativeArrayInfo(CountParamIndex = 1)] [Out] nuint* PageArray, [NativeArrayInfo(CountParamIndex = 4)] [In] [Out] [Optional] MEM_EXTENDED_PARAMETER* ExtendedParameters, [In] uint ExtendedParameterCount);
+HANDLE OpenDedicatedMemoryPartition([In] HANDLE Partition, [In] ulong DedicatedMemoryTypeId, [In] uint DesiredAccess, [In] BOOL InheritHandle);
+BOOL QueryPartitionInformation([In] HANDLE Partition, [In] WIN32_MEMORY_PARTITION_INFORMATION_CLASS PartitionInformationClass, [MemorySize(BytesParamIndex = 3)] [In] [Out] void* PartitionInformation, [In] uint PartitionInformationLength);

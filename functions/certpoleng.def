@@ -1,0 +1,8 @@
+NTSTATUS PstGetTrustAnchors([In] UNICODE_STRING* pTargetName, [In] uint cCriteria, [NativeArrayInfo(CountParamIndex = 1)] [In] [Optional] CERT_SELECT_CRITERIA* rgpCriteria, [Out] SecPkgContext_IssuerListInfoEx** ppTrustedIssuers);
+NTSTATUS PstGetTrustAnchorsEx([In] UNICODE_STRING* pTargetName, [In] uint cCriteria, [NativeArrayInfo(CountParamIndex = 1)] [In] [Optional] CERT_SELECT_CRITERIA* rgpCriteria, [Const] [In] [Optional] CERT_CONTEXT* pCertContext, [Out] SecPkgContext_IssuerListInfoEx** ppTrustedIssuers);
+NTSTATUS PstGetCertificateChain([Const] [In] CERT_CONTEXT* pCert, [In] SecPkgContext_IssuerListInfoEx* pTrustedIssuers, [Out] CERT_CHAIN_CONTEXT** ppCertChainContext);
+NTSTATUS PstGetCertificates([In] UNICODE_STRING* pTargetName, [In] uint cCriteria, [NativeArrayInfo(CountParamIndex = 1)] [In] [Optional] CERT_SELECT_CRITERIA* rgpCriteria, [In] BOOL bIsClient, [Out] uint* pdwCertChainContextCount, [Out] CERT_CHAIN_CONTEXT*** ppCertChainContexts);
+NTSTATUS PstAcquirePrivateKey([Const] [In] CERT_CONTEXT* pCert);
+NTSTATUS PstValidate([In] [Optional] UNICODE_STRING* pTargetName, [In] BOOL bIsClient, [In] [Optional] CERT_USAGE_MATCH* pRequestedIssuancePolicy, [In] [Optional] HCERTSTORE* phAdditionalCertStore, [Const] [In] CERT_CONTEXT* pCert, [Out] [Optional] Guid* pProvGUID);
+NTSTATUS PstMapCertificate([Const] [In] CERT_CONTEXT* pCert, [Out] LSA_TOKEN_INFORMATION_TYPE* pTokenInformationType, [Out] void** ppTokenInformation);
+NTSTATUS PstGetUserNameForCertificate([Const] [In] CERT_CONTEXT* pCertContext, [Out] UNICODE_STRING* UserName);

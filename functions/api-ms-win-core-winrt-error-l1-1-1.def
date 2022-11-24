@@ -1,0 +1,8 @@
+BOOL RoOriginateLanguageException([In] HRESULT error, [In] [Optional] HSTRING message, [In] [Optional] IUnknown languageException);
+void RoClearError();
+HRESULT RoReportUnhandledError([In] IRestrictedErrorInfo pRestrictedErrorInfo);
+HRESULT RoInspectThreadErrorInfo([In] nuint targetTebAddress, [In] ushort machine, [In] PINSPECT_MEMORY_CALLBACK readMemoryCallback, [In] [Optional] void* context, [Out] nuint* targetErrorInfoAddress);
+HRESULT RoInspectCapturedStackBackTrace([In] nuint targetErrorInfoAddress, [In] ushort machine, [In] PINSPECT_MEMORY_CALLBACK readMemoryCallback, [In] [Optional] void* context, [Out] uint* frameCount, [Out] nuint* targetBackTraceAddress);
+HRESULT RoGetMatchingRestrictedErrorInfo([In] HRESULT hrIn, [ComOutPtr] [Out] IRestrictedErrorInfo* ppRestrictedErrorInfo);
+HRESULT RoReportFailedDelegate([In] IUnknown punkDelegate, [In] IRestrictedErrorInfo pRestrictedErrorInfo);
+BOOL IsErrorPropagationEnabled();

@@ -1,0 +1,3 @@
+BOOL DoMsCtfMonitor([In] uint dwFlags, [In] HANDLE hEventForServiceStop);
+HRESULT InitLocalMsCtfMonitor([In] uint dwFlags);
+HRESULT UninitLocalMsCtfMonitor();

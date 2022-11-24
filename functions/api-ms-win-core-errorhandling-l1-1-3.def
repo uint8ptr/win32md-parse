@@ -1,0 +1,1 @@
+void TerminateProcessOnMemoryExhaustion([In] nuint FailedAllocationSize);

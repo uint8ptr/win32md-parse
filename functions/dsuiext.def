@@ -1,0 +1,4 @@
+int DsBrowseForContainerW([In] [Out] DSBROWSEINFOW* pInfo);
+int DsBrowseForContainerA([In] [Out] DSBROWSEINFOA* pInfo);
+HICON DsGetIcon([In] uint dwFlags, [Const] [In] PWSTR pszObjectClass, [In] int cxImage, [In] int cyImage);
+HRESULT DsGetFriendlyClassName([Const] [In] PWSTR pszObjectClass, [NativeArrayInfo(CountParamIndex = 2)] [Out] PWSTR pszBuffer, [In] uint cchBuffer);

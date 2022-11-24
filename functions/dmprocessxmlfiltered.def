@@ -1,0 +1,1 @@
+HRESULT DMProcessConfigXMLFiltered([Const] [In] PWSTR pszXmlIn, [NativeArrayInfo(CountParamIndex = 2)] [In] PWSTR* rgszAllowedCspNodes, [In] uint dwNumAllowedCspNodes, [Out] BSTR* pbstrXmlOut);

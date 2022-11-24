@@ -1,0 +1,3 @@
+HRESULT HasExpandedResources([Out] BOOL* hasExpandedResources);
+HRESULT GetExpandedResourceExclusiveCpuCount([Out] uint* exclusiveCpuCount);
+HRESULT ReleaseExclusiveCpuSets();

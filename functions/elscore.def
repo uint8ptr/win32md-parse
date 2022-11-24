@@ -1,0 +1,5 @@
+HRESULT MappingGetServices([In] [Optional] MAPPING_ENUM_OPTIONS* pOptions, [Out] MAPPING_SERVICE_INFO** prgServices, [Out] uint* pdwServicesCount);
+HRESULT MappingFreeServices([In] MAPPING_SERVICE_INFO* pServiceInfo);
+HRESULT MappingRecognizeText([In] MAPPING_SERVICE_INFO* pServiceInfo, [Const] [NativeArrayInfo(CountParamIndex = 2)] [In] PWSTR pszText, [In] uint dwLength, [In] uint dwIndex, [In] [Optional] MAPPING_OPTIONS* pOptions, [In] [Out] MAPPING_PROPERTY_BAG* pbag);
+HRESULT MappingDoAction([In] [Out] MAPPING_PROPERTY_BAG* pBag, [In] uint dwRangeIndex, [Const] [In] PWSTR pszActionId);
+HRESULT MappingFreePropertyBag([In] MAPPING_PROPERTY_BAG* pBag);

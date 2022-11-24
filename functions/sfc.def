@@ -1,0 +1,6 @@
+BOOL SfcGetNextProtectedFile([In] HANDLE RpcHandle, [In] [Out] PROTECTED_FILE_DATA* ProtFileData);
+BOOL SfcIsFileProtected([In] HANDLE RpcHandle, [Const] [In] PWSTR ProtFileName);
+BOOL SfcIsKeyProtected([In] HKEY KeyHandle, [Const] [In] PWSTR SubKeyName, [In] uint KeySam);
+BOOL SfpVerifyFile([Const] [In] PSTR pszFileName, [NativeArrayInfo(CountParamIndex = 2)] [In] PSTR pszError, [In] uint dwErrSize);
+BOOL SRSetRestorePointA([In] RESTOREPOINTINFOA* pRestorePtSpec, [Out] STATEMGRSTATUS* pSMgrStatus);
+BOOL SRSetRestorePointW([In] RESTOREPOINTINFOW* pRestorePtSpec, [Out] STATEMGRSTATUS* pSMgrStatus);

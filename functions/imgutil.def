@@ -1,0 +1,9 @@
+HRESULT CreateMIMEMap([Out] IMapMIMEToCLSID* ppMap);
+HRESULT DecodeImage([In] IStream pStream, [In] IMapMIMEToCLSID pMap, [In] IUnknown pEventSink);
+HRESULT SniffStream([In] IStream pInStream, [In] [Out] uint* pnFormat, [Out] IStream* ppOutStream);
+HRESULT GetMaxMIMEIDBytes([In] [Out] uint* pnMaxBytes);
+HRESULT IdentifyMIMEType([Const] [In] byte* pbBytes, [In] uint nBytes, [In] [Out] uint* pnFormat);
+HRESULT ComputeInvCMAP([Const] [In] RGBQUAD* pRGBColors, [In] uint nColors, [In] [Out] byte* pInvTable, [In] uint cbTable);
+HRESULT DitherTo8([In] [Out] byte* pDestBits, [In] int nDestPitch, [In] [Out] byte* pSrcBits, [In] int nSrcPitch, [Const] [In] Guid* bfidSrc, [In] [Out] RGBQUAD* prgbDestColors, [In] [Out] RGBQUAD* prgbSrcColors, [In] [Out] byte* pbDestInvMap, [In] int x, [In] int y, [In] int cx, [In] int cy, [In] int lDestTrans, [In] int lSrcTrans);
+HRESULT CreateDDrawSurfaceOnDIB([In] HBITMAP hbmDib, [Out] IDirectDrawSurface* ppSurface);
+HRESULT DecodeImageEx([In] IStream pStream, [In] IMapMIMEToCLSID pMap, [In] IUnknown pEventSink, [Const] [In] PWSTR pszMIMETypeParam);

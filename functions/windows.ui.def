@@ -1,0 +1,2 @@
+HRESULT CreateControlInput([Const] [In] Guid* riid, [ComOutPtr] [Out] void** ppv);
+HRESULT CreateControlInputEx([In] IUnknown pCoreWindow, [Const] [In] Guid* riid, [ComOutPtr] [Out] void** ppv);

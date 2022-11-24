@@ -1,0 +1,9 @@
+HRESULT DrtCreatePnrpBootstrapResolver([In] BOOL fPublish, [Const] [In] PWSTR pwzPeerName, [Const] [In] [Optional] PWSTR pwzCloudName, [Const] [In] [Optional] PWSTR pwzPublishingIdentity, [Out] DRT_BOOTSTRAP_PROVIDER** ppResolver);
+void DrtDeletePnrpBootstrapResolver([In] DRT_BOOTSTRAP_PROVIDER* pResolver);
+HRESULT DrtCreateDnsBootstrapResolver([In] ushort port, [Const] [In] PWSTR pwszAddress, [Out] DRT_BOOTSTRAP_PROVIDER** ppModule);
+void DrtDeleteDnsBootstrapResolver([In] DRT_BOOTSTRAP_PROVIDER* pResolver);
+HRESULT DrtCreateDerivedKeySecurityProvider([Const] [In] CERT_CONTEXT* pRootCert, [Const] [In] [Optional] CERT_CONTEXT* pLocalCert, [Out] DRT_SECURITY_PROVIDER** ppSecurityProvider);
+HRESULT DrtCreateDerivedKey([Const] [In] CERT_CONTEXT* pLocalCert, [Out] DRT_DATA* pKey);
+void DrtDeleteDerivedKeySecurityProvider([In] DRT_SECURITY_PROVIDER* pSecurityProvider);
+HRESULT DrtCreateNullSecurityProvider([Out] DRT_SECURITY_PROVIDER** ppSecurityProvider);
+void DrtDeleteNullSecurityProvider([In] DRT_SECURITY_PROVIDER* pSecurityProvider);

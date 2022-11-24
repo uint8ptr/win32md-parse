@@ -1,0 +1,8 @@
+HRESULT ShowGameInfoUI([In] uint titleId, [In] GameUICompletionRoutine completionRoutine, [In] [Optional] void* context);
+HRESULT ShowGameInfoUIForUser([In] IInspectable user, [In] uint titleId, [In] GameUICompletionRoutine completionRoutine, [In] [Optional] void* context);
+HRESULT ShowFindFriendsUI([In] GameUICompletionRoutine completionRoutine, [In] [Optional] void* context);
+HRESULT ShowFindFriendsUIForUser([In] IInspectable user, [In] GameUICompletionRoutine completionRoutine, [In] [Optional] void* context);
+HRESULT ShowCustomizeUserProfileUI([In] GameUICompletionRoutine completionRoutine, [In] [Optional] void* context);
+HRESULT ShowCustomizeUserProfileUIForUser([In] IInspectable user, [In] GameUICompletionRoutine completionRoutine, [In] [Optional] void* context);
+HRESULT ShowUserSettingsUI([In] GameUICompletionRoutine completionRoutine, [In] [Optional] void* context);
+HRESULT ShowUserSettingsUIForUser([In] IInspectable user, [In] GameUICompletionRoutine completionRoutine, [In] [Optional] void* context);

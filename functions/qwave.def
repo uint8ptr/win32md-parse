@@ -1,0 +1,11 @@
+BOOL QOSCreateHandle([In] QOS_VERSION* Version, [Out] HANDLE* QOSHandle);
+BOOL QOSCloseHandle([In] HANDLE QOSHandle);
+BOOL QOSStartTrackingClient([In] HANDLE QOSHandle, [In] SOCKADDR* DestAddr, [Reserved] [In] uint Flags);
+BOOL QOSStopTrackingClient([In] HANDLE QOSHandle, [In] SOCKADDR* DestAddr, [Reserved] [In] uint Flags);
+BOOL QOSEnumerateFlows([In] HANDLE QOSHandle, [In] [Out] uint* Size, [MemorySize(BytesParamIndex = 1)] [Out] void* Buffer);
+BOOL QOSAddSocketToFlow([In] HANDLE QOSHandle, [In] SOCKET Socket, [In] [Optional] SOCKADDR* DestAddr, [In] QOS_TRAFFIC_TYPE TrafficType, [In] [Optional] uint Flags, [In] [Out] uint* FlowId);
+BOOL QOSRemoveSocketFromFlow([In] HANDLE QOSHandle, [In] [Optional] SOCKET Socket, [In] uint FlowId, [Reserved] [In] uint Flags);
+BOOL QOSSetFlow([In] HANDLE QOSHandle, [In] uint FlowId, [In] QOS_SET_FLOW Operation, [In] uint Size, [MemorySize(BytesParamIndex = 3)] [In] void* Buffer, [Reserved] [In] uint Flags, [Out] [Optional] OVERLAPPED* Overlapped);
+BOOL QOSQueryFlow([In] HANDLE QOSHandle, [In] uint FlowId, [In] QOS_QUERY_FLOW Operation, [In] [Out] uint* Size, [MemorySize(BytesParamIndex = 3)] [Out] void* Buffer, [In] [Optional] uint Flags, [Out] [Optional] OVERLAPPED* Overlapped);
+BOOL QOSNotifyFlow([In] HANDLE QOSHandle, [In] uint FlowId, [In] QOS_NOTIFY_FLOW Operation, [In] [Out] [Optional] uint* Size, [MemorySize(BytesParamIndex = 3)] [In] [Out] [Optional] void* Buffer, [Reserved] [In] uint Flags, [Out] [Optional] OVERLAPPED* Overlapped);
+BOOL QOSCancel([In] HANDLE QOSHandle, [In] OVERLAPPED* Overlapped);
