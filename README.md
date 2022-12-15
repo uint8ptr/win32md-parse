@@ -44,14 +44,14 @@ Out[3]: {'name': 'BOOLEAN', 'def': 'byte'}
 
 ## Limitations
 
-In the current state, all type identifiers can only be composed of one word, and if the type is a pointer, the `*` must be directly next to the type name, with no spaces in between.
+In the current state, all type identifiers can only be composed of one word and the `[]` operator is not supported.
 
 Examples of valid definitions:
 
 ```C#
 int number
 HWND hWnd
-void* memory
+void * memory
 char** argv
 ```
 
@@ -59,7 +59,6 @@ Examples of invalid definitions
 
 ```C#
 unsigned long number // can't use two words for type definition
-int *ptr // the '*' must be right after the type name
 char argv[] // [] are currently not supported
 ```
 

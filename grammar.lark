@@ -21,7 +21,7 @@ attr_param : LITERAL
            | IDENTIFIER "=" LITERAL
 
 IDENTIFIER : /[_a-zA-Z][_a-zA-Z0-9]*/
-TYPE_DECLARATION : IDENTIFIER /[\*]*/
+TYPE_DECLARATION : IDENTIFIER /[\s\*]*/
 LITERAL : /["._a-zA-Z0-9]+/
 
 %import common.WS
